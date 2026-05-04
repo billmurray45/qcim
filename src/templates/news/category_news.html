@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }} - Новости - Business Consulting{% endblock %}
+{% block meta_description %}Новости категории "{{ category.name }}" от компании Business Consulting{% endblock %}
+
+{% block content %}
+<main class="main">
+  <section class="news-section">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">Главная</a>
+        <span>/</span>
+        <a href="{% url 'news:list' %}">Новости</a>
+        <span>/</span>
+        <span>{{ category.name }}</span>
+      </nav>
+
+      <!-- Page Header -->
+      <header class="page-header">
+        <div class="page-header__eyebrow">Категория новостей</div>
+        <h1 class="page-header__title">{{ category.name }}</h1>
+        {% if category.description %}
+        <p class="page-header__subtitle">{{ category.description }}</p>
+        {% else %}
+        <p class="page-header__subtitle">Все новости из категории "{{ category.name }}"</p>
+        {% endif %}
+      </header>
+
+
+      <!-- Category Filter -->
+      <div class="news-categories">
+        <a href="{% url 'news:list' %}" class="category-tag">
+          Все
+        </a>
+        {% for cat in categories %}
+        <a href="{% url 'news:category' cat.slug %}" class="category-tag {% if cat.id == category.id %}is-active{% endif %}">
+          {{ cat.name }}
+        </a>
+        {% endfor %}
+      </div>
+
+      <!-- News Grid -->
+      {% if news_list %}
+      <div class="news-grid">
+        {% for news in news_list %}
+        <article class="news-card">
+          <a href="{{ news.get_absolute_url }}" class="news-card__link">
+            {% if news.image %}
+            <div class="news-card__image">
+              <img src="{{ news.image.url }}" alt="{{ news.title }}">
+            </div>
+            {% else %}
+            <div class="news-card__image news-card__image--placeholder">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            {% endif %}
+
+            <div class="news-card__content">
+              {% if news.category %}
+              <span class="news-card__category">{{ news.category.name }}</span>
+              {% endif %}
+
+              <h3 class="news-card__title">{{ news.title }}</h3>
+              <p class="news-card__excerpt">{{ news.excerpt|truncatewords:20 }}</p>
+
+              <div class="news-card__meta">
+                <span class="news-card__date">
+                  <i class="far fa-calendar"></i>
+                  {{ news.published_date|date:"d.m.Y" }}
+                </span>
+                <span class="news-card__views">
+                  <i class="far fa-eye"></i>
+                  {{ news.views_count }}
+                </span>
+              </div>
+            </div>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+
+      <!-- Pagination -->
+      {% if is_paginated %}
+      <div class="pagination">
+        {% if page_obj.has_previous %}
+        <a href="?page=1" class="pagination__link">
+          <i class="fas fa-angle-double-left"></i>
+        </a>
+        <a href="?page={{ page_obj.previous_page_number }}" class="pagination__link">
+          <i class="fas fa-angle-left"></i>
+        </a>
+        {% endif %}
+
+        <span class="pagination__current">
+          Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="pagination__link">
+          <i class="fas fa-angle-right"></i>
+        </a>
+        <a href="?page={{ page_obj.paginator.num_pages }}" class="pagination__link">
+          <i class="fas fa-angle-double-right"></i>
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% else %}
+      <div class="no-results">
+        <i class="fas fa-newspaper"></i>
+        <h3>Новостей пока нет</h3>
+        <p>В этой категории пока нет опубликованных новостей</p>
+        <a href="{% url 'news:list' %}" class="btn btn--primary">Все новости</a>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ news.meta_title|default:news.title }} - Business Consulting{% endblock %}
+{% block meta_description %}{{ news.meta_description|default:news.excerpt }}{% endblock %}
+
+{% block content %}
+<main class="main">
+  <!-- News Detail -->
+  <article class="news-detail">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">Главная</a>
+        <span>/</span>
+        <a href="{% url 'news:list' %}">Новости</a>
+        {% if news.category %}
+        <span>/</span>
+        <a href="{% url 'news:category' news.category.slug %}">{{ news.category.name }}</a>
+        {% endif %}
+        <span>/</span>
+        <span>{{ news.title|truncatewords:5 }}</span>
+      </nav>
+
+      <!-- Article Header -->
+      <header class="news-detail__header">
+        {% if news.category %}
+        <a href="{% url 'news:category' news.category.slug %}" class="news-detail__category">
+          {{ news.category.name }}
+        </a>
+        {% endif %}
+
+        <h1 class="news-detail__title">
+          {{ news.title }}
+        </h1>
+
+        <div class="news-detail__meta">
+          <span class="news-detail__date">
+            <i class="far fa-calendar"></i>
+            {{ news.published_date|date:"d.m.Y" }}
+          </span>
+          <span class="news-detail__views">
+            <i class="far fa-eye"></i>
+            {{ news.views_count }} просмотров
+          </span>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      {% if news.image %}
+      <div class="news-detail__image">
+        <img src="{{ news.image.url }}" alt="{{ news.title }}">
+      </div>
+      {% endif %}
+
+      <!-- Article Content -->
+      <div class="news-detail__content">
+        <div class="news-detail__excerpt">
+          {{ news.excerpt }}
+        </div>
+
+        <div class="news-detail__body">
+          {{ news.content|linebreaks }}
+        </div>
+      </div>
+
+      <!-- Share Buttons -->
+      <div class="news-detail__share">
+        <h4>Поделиться новостью:</h4>
+        <div class="share-buttons">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="share-btn share-btn--facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ news.title }}" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="share-btn share-btn--twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="share-btn share-btn--linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ news.title }}" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="share-btn share-btn--telegram">
+            <i class="fab fa-telegram-plane"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Related News -->
+      {% if related_news %}
+      <section class="related-news">
+        <h2 class="related-news__title">Похожие новости</h2>
+        <div class="news-grid">
+          {% for item in related_news %}
+          <article class="news-card">
+            <a href="{{ item.get_absolute_url }}" class="news-card__link">
+              {% if item.image %}
+              <div class="news-card__image">
+                <img src="{{ item.image.url }}" alt="{{ item.title }}">
+              </div>
+              {% else %}
+              <div class="news-card__image news-card__image--placeholder">
+                <i class="fas fa-newspaper"></i>
+              </div>
+              {% endif %}
+
+              <div class="news-card__content">
+                {% if item.category %}
+                <span class="news-card__category">{{ item.category.name }}</span>
+                {% endif %}
+
+                <h3 class="news-card__title">{{ item.title }}</h3>
+                <p class="news-card__excerpt">{{ item.excerpt|truncatewords:15 }}</p>
+
+                <div class="news-card__meta">
+                  <span class="news-card__date">
+                    <i class="far fa-calendar"></i>
+                    {{ item.published_date|date:"d.m.Y" }}
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      <!-- Back to List -->
+      <div class="news-detail__actions">
+        <a href="{% url 'news:list' %}" class="btn btn--outline">
+          <i class="fas fa-arrow-left"></i>
+          &nbsp;Все новости
+        </a>
+      </div>
+    </div>
+  </article>
+</main>
+{% endblock %}

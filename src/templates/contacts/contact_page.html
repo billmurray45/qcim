@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Контакты - QICM Ltd.{% endblock %}
+{% block meta_description %}Свяжитесь с QICM Ltd. Контакты, адрес, телефон и форма обратной связи.{% endblock %}
+
+{% block content %}
+<main class="main">
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <div class="page-header__inner">
+        <div class="page-header__left">
+          <div class="page-header__breadcrumbs">
+            <a href="{% url 'core:home' %}">Главная</a>
+            <span class="sep">/</span>
+            <span class="current">Контакты</span>
+          </div>
+          <h1 class="page-header__title">Свяжитесь с нами</h1>
+        </div>
+        <div class="page-header__accent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info Strip -->
+  <section class="ct-strip">
+    <div class="container">
+      <div class="ct-strip__grid">
+        <div class="ct-strip__item">
+          <div class="ct-strip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <p class="ct-strip__label">Юридический адрес</p>
+            <p class="ct-strip__value">пр. Мәңгілік Ел, 55А, Z05T2H3, Астана</p>
+          </div>
+        </div>
+        <div class="ct-strip__item">
+          <div class="ct-strip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.89a16 16 0 0 0 6 6l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          </div>
+          <div>
+            <p class="ct-strip__label">Телефон</p>
+            <a href="tel:+77172554222" class="ct-strip__value ct-strip__value--link">+7 (7172) 554-222</a>
+          </div>
+        </div>
+        <div class="ct-strip__item">
+          <div class="ct-strip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p class="ct-strip__label">Общие вопросы</p>
+            <a href="mailto:info@qicm.kz" class="ct-strip__value ct-strip__value--link">info@qicm.kz</a>
+          </div>
+        </div>
+        <div class="ct-strip__item">
+          <div class="ct-strip__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <p class="ct-strip__label">Режим работы</p>
+            <p class="ct-strip__value">Пн–Пт: 09:00 – 18:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="ct-main">
+    <div class="container">
+      <div class="ct-grid">
+
+        <!-- Left: Contact details -->
+        <div class="ct-info">
+
+          <!-- По проектам -->
+          <div class="ct-info__block">
+            <div class="ct-info__block-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              По вопросам проектов и сделок
+            </div>
+            <div class="ct-info__emails">
+              <a href="mailto:r.chinshanlo@qicm.kz">r.chinshanlo@qicm.kz</a>
+              <a href="mailto:m.iskendirov@qicm.kz">m.iskendirov@qicm.kz</a>
+            </div>
+          </div>
+
+          <!-- Темы обращений -->
+          <div class="ct-info__block">
+            <div class="ct-info__block-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Темы обращений
+            </div>
+            <div class="ct-topics">
+              <span class="ct-topic">Инвесторы</span>
+              <span class="ct-topic">Проекты</span>
+              <span class="ct-topic">Партнёрство</span>
+              <span class="ct-topic">СМИ</span>
+            </div>
+          </div>
+
+          <!-- Disclaimer -->
+          <div class="ct-disclaimer">
+            <p>Информация, размещённая на данном сайте, носит исключительно информационный характер и не является предложением или приглашением к совершению сделок с ценными бумагами либо иными финансовыми инструментами.</p>
+            <p>Доступ к инвестиционным продуктам и фондам QICM Ltd. предоставляется исключительно квалифицированным и/или институциональным инвесторам в соответствии с применимыми требованиями.</p>
+          </div>
+
+        </div>
+
+        <!-- Right: Form -->
+        <div class="ct-form-wrap">
+          <div class="ct-form-header">
+            <h2>Напишите нам</h2>
+            <p>Заполните форму, и команда QICM Ltd. свяжется с вами в кратчайшие сроки</p>
+          </div>
+
+          <form method="post" action="{% url 'contacts:submit' %}" class="ct-form" id="contact-form">
+            {% csrf_token %}
+
+            <div class="ct-form__row">
+              <div class="ct-form__group">
+                <label for="{{ form.name.id_for_label }}" class="ct-form__label">
+                  Имя <span class="ct-form__req">*</span>
+                </label>
+                {{ form.name }}
+                <div class="form-error" id="error-{{ form.name.id_for_label }}"></div>
+              </div>
+              <div class="ct-form__group">
+                <label for="{{ form.email.id_for_label }}" class="ct-form__label">
+                  Email <span class="ct-form__req">*</span>
+                </label>
+                {{ form.email }}
+                <div class="form-error" id="error-{{ form.email.id_for_label }}"></div>
+              </div>
+            </div>
+
+            <div class="ct-form__row">
+              <div class="ct-form__group">
+                <label for="{{ form.phone.id_for_label }}" class="ct-form__label">
+                  Телефон <span class="ct-form__req">*</span>
+                </label>
+                {{ form.phone }}
+                <div class="form-error" id="error-{{ form.phone.id_for_label }}"></div>
+              </div>
+              <div class="ct-form__group">
+                <label for="{{ form.subject.id_for_label }}" class="ct-form__label">
+                  Тема обращения
+                </label>
+                {{ form.subject }}
+                <div class="form-error" id="error-{{ form.subject.id_for_label }}"></div>
+              </div>
+            </div>
+
+            <div class="ct-form__group">
+              <label for="{{ form.message.id_for_label }}" class="ct-form__label">
+                Сообщение <span class="ct-form__req">*</span>
+              </label>
+              {{ form.message }}
+              <div class="form-error" id="error-{{ form.message.id_for_label }}"></div>
+            </div>
+
+            <div class="ct-form__actions">
+              <button type="submit" class="ct-form__btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Отправить сообщение
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+{% endblock %}

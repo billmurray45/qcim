@@ -1,0 +1,86 @@
+[
+  {
+    "model": "holdings.fund",
+    "pk": 1,
+    "fields": {
+      "name": "Adal Fund LP",
+      "badge": "Открытый фонд",
+      "fund_type": "Открытый специализированный фонд прямых инвестиций зонтичного типа · МФЦА",
+      "target_size": "$1 млрд",
+      "lifespan": "10 лет",
+      "registration_date": "2025-12-31",
+      "is_dark": false,
+      "is_active": true,
+      "order": 1
+    }
+  },
+  {
+    "model": "holdings.fund",
+    "pk": 2,
+    "fields": {
+      "name": "Kokzhiyek Fund LP",
+      "badge": "Закрытый фонд",
+      "fund_type": "Закрытый фонд прямых инвестиций · МФЦА",
+      "target_size": "$4 млрд",
+      "lifespan": "40 лет",
+      "registration_date": "2025-07-21",
+      "is_dark": true,
+      "is_active": true,
+      "order": 2
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 1,
+    "fields": {
+      "fund": 1,
+      "text": "Расширение экспортного потенциала аграрного сектора Республики Казахстан.",
+      "order": 1
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 2,
+    "fields": {
+      "fund": 1,
+      "text": "Обеспечение стабильных каналов сбыта для отечественных производителей.",
+      "order": 2
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 3,
+    "fields": {
+      "fund": 1,
+      "text": "Привлечение долгосрочного иностранного капитала в цепочки добавленной стоимости агропромышленного комплекса (АПК).",
+      "order": 3
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 4,
+    "fields": {
+      "fund": 2,
+      "text": "Поддержка крупнейших предприятий Республики Казахстан.",
+      "order": 1
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 5,
+    "fields": {
+      "fund": 2,
+      "text": "Увеличение объемов производства продукции и повышение экспортного потенциала.",
+      "order": 2
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 6,
+    "fields": {
+      "fund": 2,
+      "text": "Проведение модернизации и увеличение существующих производственных мощностей.",
+      "order": 3
+    }
+  }
+]

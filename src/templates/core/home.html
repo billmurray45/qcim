@@ -1,0 +1,380 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}QICM Ltd. — Управление инвестиционными фондами, МФЦА{% endblock %}
+
+{% block content %}
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <img class="hero-background active" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+        alt="Modern Financial District" data-slide="0">
+    <img class="hero-background" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80"
+        alt="Investment Portfolio" data-slide="1">
+    <img class="hero-background" src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1920&q=80"
+        alt="Sustainable Infrastructure" data-slide="2">
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-inner">
+                <div class="hero-line"></div>
+                <h1 class="hero-title slide-content active" data-slide="0">
+                    Инвестиции в <br>будущее <span class="highlight">Центральной Азии</span>
+                </h1>
+                <h1 class="hero-title slide-content" data-slide="1">
+                    Стратегическое <span class="highlight">управление портфелем</span><br>для роста
+                </h1>
+                <h1 class="hero-title slide-content" data-slide="2">
+                    Создание <span class="highlight">устойчивой</span><br>инфраструктуры
+                </h1>
+                <p class="hero-description slide-content active" data-slide="0">
+                    Специализируемся на прямых инвестициях и несырьевых секторах в рамках институциональной структуры
+                    МФЦА.
+                </p>
+                <p class="hero-description slide-content" data-slide="1">
+                    Обеспечиваем исключительную доходность через стратегические инвестиции в быстрорастущие компании
+                    Центральной Азии.
+                </p>
+                <p class="hero-description slide-content" data-slide="2">
+                    Инвестируем в возобновляемую энергетику и современную инфраструктуру для экономической
+                    диверсификации.
+                </p>
+                <div class="hero-buttons">
+                    <a href="{% url 'holdings:funds' %}" class="btn btn-primary">Наши фонды</a>
+                    <a href="{% url 'contacts:page' %}" class="btn btn-secondary">Контакты</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-pagination">
+        <button class="pagination-dot active" data-slide="0"></button>
+        <button class="pagination-dot" data-slide="1"></button>
+        <button class="pagination-dot" data-slide="2"></button>
+    </div>
+</section>
+
+<!-- ===== О КОМПАНИИ ===== -->
+<section class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-image-wrapper">
+                <img class="about-image" src="{% static 'images/about-main.jpg' %}" alt="Investment Management">
+                <div class="about-decoration-1"></div>
+                <div class="about-decoration-2"></div>
+            </div>
+            <div class="about-text">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">О компании</h2>
+                <p class="about-description">
+                    Частная компания Qazaqstan Investment Capital Management Ltd. (QICM Ltd.) является управляющей компанией, зарегистрированной на территории Международного финансового центра «Астана» (МФЦА), и специализируется на управлении фондами прямых инвестиций в Республике Казахстан.
+                </p>
+                <p class="about-description">
+                    QICM Ltd. является дочерней организацией АО «Qazaqstan Investment Corporation» (QIC) – фонда фондов прямых инвестиций, входящего в структуру АО «НИХ «Байтерек».
+                </p>
+                <div class="about-badges">
+                    <div class="about-badge">
+                        <i data-lucide="badge-check" class="about-badge__icon"></i>
+                        <div>
+                            <span class="about-badge__title">Лицензия MIS</span>
+                            <span class="about-badge__sub">Managing a Collective Investment Scheme</span>
+                        </div>
+                    </div>
+                    <div class="about-badge">
+                        <i data-lucide="badge-check" class="about-badge__icon"></i>
+                        <div>
+                            <span class="about-badge__title">Лицензия MI</span>
+                            <span class="about-badge__sub">Managing Investments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== МИССИЯ + СТРАТЕГИЧЕСКИЕ ЦЕЛИ ===== -->
+<section class="mission-vision-section">
+    <div class="container">
+        <div class="mission-goals-block">
+            <div class="mission-goals-block__mission">
+                <span class="section-tag">Our Mission</span>
+                <h3 class="mission-block__title">Наша миссия</h3>
+                <p class="mission-block__text">
+                    Направлять частный и институциональный капитал в устойчивые проекты несырьевых секторов
+                    экономики Республики Казахстан, формируя и развивая прозрачные рыночные структуры на базе МФЦА.
+                </p>
+            </div>
+            <div class="mission-goals-block__goals">
+                <span class="section-tag">Strategic Development</span>
+                <h3 class="mission-block__title">Стратегические цели</h3>
+                <div class="goals-grid">
+                    <div class="goal-item">
+                        <i data-lucide="badge-check" class="goal-item__icon"></i>
+                        <div>
+                            <span class="goal-item__title">Институциональный General Partner</span>
+                            <span class="goal-item__sub">Закрепить роль QICM Ltd. в качестве управляющей компании с полной инвестиционной экспертизой в сфере прямых инвестиций.</span>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <i data-lucide="badge-check" class="goal-item__icon"></i>
+                        <div>
+                            <span class="goal-item__title">Мобилизация долгосрочного капитала</span>
+                            <span class="goal-item__sub">Привлечение инвестиций в проекты с высокой добавленной стоимостью и значимым эффектом для экономики, занятости и экспорта.</span>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <i data-lucide="badge-check" class="goal-item__icon"></i>
+                        <div>
+                            <span class="goal-item__title">Корпоративное управление и ESG</span>
+                            <span class="goal-item__sub">Повышать стандарты корпоративного управления, устойчивости и прозрачности в портфельных компаниях, развивая инфраструктуру Private Equity в Республике Казахстан.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ESG ===== -->
+<section class="principles-section">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag">Sustainability &amp; ESG</span>
+            <h2 class="section-title-center">ESG и устойчивость</h2>
+        </div>
+
+        <p class="principles-intro">
+            QICM Ltd. интегрирует ESG-факторы в свою деятельность, ориентируясь на международные практики
+            ответственного инвестирования. ESG-критерии используются для оценки рисков и возможностей,
+            в особенности в таких секторах, как инфраструктура, энергетика, агропромышленный комплекс
+            и обрабатывающая промышленность.
+        </p>
+
+        <div class="principles-grid principles-grid--3col">
+            <div class="principle-item principle-item--centered">
+                <div class="principle-item__heading">
+                    <span class="principle-item__number">1</span>
+                    <h4 class="principle-item__title">Устойчивый рост</h4>
+                </div>
+                <p class="principle-item__text">
+                    Устойчивый рост и повышение ресурсной эффективности.
+                </p>
+            </div>
+            <div class="principle-item principle-item--centered">
+                <div class="principle-item__heading">
+                    <span class="principle-item__number">2</span>
+                    <h4 class="principle-item__title">Зелёные технологии</h4>
+                </div>
+                <p class="principle-item__text">
+                    Поддержка проектов, способствующих декарбонизации, развитию «зелёных» технологий и повышению энергоэффективности.
+                </p>
+            </div>
+            <div class="principle-item principle-item--centered">
+                <div class="principle-item__heading">
+                    <span class="principle-item__number">3</span>
+                    <h4 class="principle-item__title">Корпоративное управление</h4>
+                </div>
+                <p class="principle-item__text">
+                    Улучшение стандартов корпоративного управления и прозрачности в портфельных компаниях.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== КОМАНДА ===== -->
+<section class="team-section">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="section-tag">Our Team</span>
+            <h2 class="section-title-center">Наша команда</h2>
+        </div>
+
+        {% if team_management %}
+        <div class="team-subsection">
+            <div class="team-subsection__label">Руководство</div>
+            <div class="team-grid">
+                {% for member in team_management %}
+                <div class="team-card" onclick="openTeamModal('modal-{{ member.pk }}')">
+                    <div class="team-card__photo">
+                        {% if member.photo %}
+                        <img class="team-card__img" src="{{ member.photo.url }}" alt="{{ member.get_full_name }}">
+                        {% else %}
+                        <div class="team-card__avatar">{{ member.get_initials }}</div>
+                        {% endif %}
+                        <div class="team-card__expand"><i class="fas fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></div>
+                    </div>
+                    <div class="team-card__info">
+                        <div class="team-card__name">{{ member.get_full_name }}</div>
+                        <p class="team-card__position">{{ member.position }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if team_board %}
+        <div class="team-subsection">
+            <div class="team-subsection__label">Совет директоров</div>
+            <div class="team-grid">
+                {% for member in team_board %}
+                <div class="team-card" onclick="openTeamModal('modal-{{ member.pk }}')">
+                    <div class="team-card__photo">
+                        {% if member.photo %}
+                        <img class="team-card__img" src="{{ member.photo.url }}" alt="{{ member.get_full_name }}">
+                        {% else %}
+                        <div class="team-card__avatar">{{ member.get_initials }}</div>
+                        {% endif %}
+                        <div class="team-card__expand"><i class="fas fa-arrow-up-right-from-square" style="font-size:0.75rem;"></i></div>
+                    </div>
+                    <div class="team-card__info">
+                        <div class="team-card__name">{{ member.get_full_name }}</div>
+                        <p class="team-card__position">{{ member.position }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</section>
+
+<!-- ===== MODALS ===== -->
+{% for member in team_management %}
+<div id="modal-{{ member.pk }}" class="team-modal">
+    <div class="team-modal__overlay" onclick="closeTeamModal('modal-{{ member.pk }}')"></div>
+    <div class="team-modal__content">
+        <div class="team-modal__toolbar"><button class="team-modal__close" onclick="closeTeamModal('modal-{{ member.pk }}')">&times;</button></div>
+        <div class="team-modal__body-wrap">
+            <div class="team-modal__left">
+                <div class="team-modal__photo">
+                    {% if member.photo %}
+                    <img class="team-modal__img" src="{{ member.photo.url }}" alt="{{ member.get_full_name }}">
+                    {% else %}
+                    <div class="team-modal__avatar">{{ member.get_initials }}</div>
+                    {% endif %}
+                </div>
+                <div class="team-modal__identity">
+                    <div class="team-modal__name">{{ member.get_full_name }}</div>
+                    <p class="team-modal__position">{{ member.position }}</p>
+                </div>
+            </div>
+            <div class="team-modal__right">
+                <p class="team-modal__meta-info">Гражданство: {{ member.citizenship }}</p>
+                {% for section in member.bio_sections.all %}
+                <p class="team-modal__section-title">{{ section.title }}:</p>
+                <ul class="team-modal__bio-list">
+                    {% for item in section.items.all %}
+                    <li>{{ item.text }}</li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% for member in team_board %}
+<div id="modal-{{ member.pk }}" class="team-modal">
+    <div class="team-modal__overlay" onclick="closeTeamModal('modal-{{ member.pk }}')"></div>
+    <div class="team-modal__content">
+        <div class="team-modal__toolbar"><button class="team-modal__close" onclick="closeTeamModal('modal-{{ member.pk }}')">&times;</button></div>
+        <div class="team-modal__body-wrap">
+            <div class="team-modal__left">
+                <div class="team-modal__photo">
+                    {% if member.photo %}
+                    <img class="team-modal__img" src="{{ member.photo.url }}" alt="{{ member.get_full_name }}">
+                    {% else %}
+                    <div class="team-modal__avatar">{{ member.get_initials }}</div>
+                    {% endif %}
+                </div>
+                <div class="team-modal__identity">
+                    <div class="team-modal__name">{{ member.get_full_name }}</div>
+                    <p class="team-modal__position">{{ member.position }}</p>
+                </div>
+            </div>
+            <div class="team-modal__right">
+                <p class="team-modal__meta-info">Гражданство: {{ member.citizenship }}</p>
+                {% for section in member.bio_sections.all %}
+                <p class="team-modal__section-title">{{ section.title }}:</p>
+                <ul class="team-modal__bio-list">
+                    {% for item in section.items.all %}
+                    <li>{{ item.text }}</li>
+                    {% endfor %}
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<script>
+    (function () {
+        // Hero Slider
+        let currentSlide = 0;
+        const totalSlides = 3;
+        let slideInterval;
+
+        const backgrounds = document.querySelectorAll('.hero-background');
+        const paginationDots = document.querySelectorAll('.pagination-dot');
+        const slideContents = document.querySelectorAll('.slide-content');
+
+        function showSlide(index) {
+            backgrounds.forEach(bg => bg.classList.remove('active'));
+            paginationDots.forEach(dot => dot.classList.remove('active'));
+            slideContents.forEach(el => el.classList.remove('active'));
+            backgrounds[index].classList.add('active');
+            paginationDots[index].classList.add('active');
+            slideContents.forEach(el => {
+                if (parseInt(el.dataset.slide) === index) el.classList.add('active');
+            });
+            currentSlide = index;
+        }
+
+        paginationDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                clearInterval(slideInterval);
+                showSlide(i);
+                slideInterval = setInterval(() => showSlide((currentSlide + 1) % totalSlides), 5000);
+            });
+        });
+
+        slideInterval = setInterval(() => showSlide((currentSlide + 1) % totalSlides), 5000);
+
+        // Team Modals
+        function openTeamModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) { modal.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
+        }
+
+        function closeTeamModal(id) {
+            const modal = document.getElementById(id);
+            if (modal) { modal.classList.remove('is-open'); document.body.style.overflow = ''; }
+        }
+
+        window.openTeamModal = openTeamModal;
+        window.closeTeamModal = closeTeamModal;
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.team-modal.is-open').forEach(m => {
+                    m.classList.remove('is-open');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+
+        lucide.createIcons();
+    })();
+</script>
+{% endblock %}

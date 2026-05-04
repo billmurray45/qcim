@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Privacy Notice - QICM Ltd.{% endblock %}
+
+{% block content %}
+<main class="main">
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__inner">
+                <div class="page-header__left">
+                    <div class="page-header__breadcrumbs">
+                        <a href="{% url 'core:home' %}">Главная</a>
+                        <span class="sep">/</span>
+                        <span class="current">Privacy Notice</span>
+                    </div>
+                    <h1 class="page-header__title">Privacy Notice</h1>
+                </div>
+                <div class="page-header__accent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <section class="pn-content">
+        <div class="container">
+            <div class="pn-layout">
+
+                <!-- Sidebar TOC (desktop only) -->
+                <aside class="pn-toc" aria-hidden="true">
+                    <div class="pn-toc__inner">
+                        <p class="pn-toc__label">Содержание</p>
+                        <div class="pn-toc__nav">
+                            <a href="#intro" class="pn-toc__link">Введение</a>
+                            <a href="#collect" class="pn-toc__link">Какие данные мы собираем</a>
+                            <a href="#purpose" class="pn-toc__link">Для чего используем</a>
+                            <a href="#basis" class="pn-toc__link">Правовые основания</a>
+                            <a href="#transfer" class="pn-toc__link">Кому передаём</a>
+                            <a href="#storage" class="pn-toc__link">Хранение данных</a>
+                            <a href="#rights" class="pn-toc__link">Ваши права</a>
+                        </div>
+                        <div class="pn-toc__contact">
+                            <p>По вопросам обработки данных:</p>
+                            <a href="mailto:info@qicm.kz">info@qicm.kz</a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main body -->
+                <article class="pn-body">
+
+                    <!-- Intro notice -->
+                    <div id="intro" class="pn-notice">
+                        <div class="pn-notice__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        </div>
+                        <div>
+                            <p>
+                                Личный кабинет заявителя предоставляется частной компанией <strong>Qazaqstan Investment Capital Management Ltd.</strong> (далее — QICM Ltd.), зарегистрированной в Международном финансовом центре «Астана» (AIFC), регулируемой соответствующими органами AIFC.
+                            </p>
+                            <p>
+                                Ваши данные обрабатываются совместно Частной компанией Qazaqstan Investment Capital Management Ltd. (МФЦА) и АО «Qazaqstan Investment Corporation» (далее — QIC) (Республика Казахстан). Мы являемся Совместными контролерами ваших данных.
+                            </p>
+                            <p>
+                                Информационная система находится в режиме опытной эксплуатации. В соответствии с требованиями МФЦА, такая обработка классифицируется как деятельность с высоким уровнем риска. Компания принимает все надлежащие технические и организационные меры для обеспечения безопасности Ваших данных в соответствии со стандартами МФЦА.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Section 1 -->
+                    <div id="collect" class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">01</span>
+                            <h2 class="pn-section__title">Какие данные мы собираем</h2>
+                        </div>
+                        <p class="pn-text">При регистрации и подаче заявки через Личный кабинет мы можем собирать:</p>
+
+                        <div class="pn-party-block">
+                            <div class="pn-party-block__label">QICM Ltd.</div>
+                            <p class="pn-party-block__desc">Приём и экспертиза инвестиционных заявок, структурирование сделок:</p>
+                            <ul class="pn-list">
+                                <li>ФИО, должность и контактные данные представителей заявителя, но не ограничиваясь;</li>
+                                <li>данные, необходимые для идентификации (ИИН/паспорт и т.п., но не ограничиваясь);</li>
+                                <li>информацию о компании и проекте (реквизиты, финансовая отчётность, структура собственности, но не ограничиваясь);</li>
+                                <li>данные о бенефициарах и ключевых лицах для KYC/AML и оценки риска, в том числе сведения из кредитного бюро и другие финансовые данные;</li>
+                                <li>техническую информацию об использовании Личного кабинета (IP-адрес, лог-записи входа и действий) для целей безопасности и аудита.</li>
+                            </ul>
+                        </div>
+
+                        <div class="pn-party-block pn-party-block--alt">
+                            <div class="pn-party-block__label pn-party-block__label--alt">QIC</div>
+                            <p class="pn-party-block__desc">Техническое обеспечение Личного кабинета, мониторинг инвестиционной деятельности Группы и формирование корпоративной отчётности.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 2 -->
+                    <div id="purpose" class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">02</span>
+                            <h2 class="pn-section__title">Для чего мы используем данные</h2>
+                        </div>
+                        <p class="pn-text">Ваши данные используются для:</p>
+                        <ul class="pn-list pn-list--check">
+                            <li>регистрации и управления вашей учётной записью в Личном кабинете;</li>
+                            <li>приёма, рассмотрения и структурирования вашей заявки;</li>
+                            <li>проведения KYC/AML и иных комплаенс-процедур;</li>
+                            <li>подготовки и исполнения договоров и сделок;</li>
+                            <li>выполнения требований регуляторов и законодательства;</li>
+                            <li>обеспечения безопасности и корректной работы наших систем.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 3 -->
+                    <div id="basis" class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">03</span>
+                            <h2 class="pn-section__title">Правовые основания обработки</h2>
+                        </div>
+                        <p class="pn-text">Мы обрабатываем ваши данные на основе:</p>
+                        <div class="pn-basis-grid">
+                            <div class="pn-basis-item">
+                                <svg class="pn-basis-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <p>Необходимости для рассмотрения вашей заявки</p>
+                            </div>
+                            <div class="pn-basis-item">
+                                <svg class="pn-basis-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                <p>Выполнения юридических обязательств (KYC/AML и иные требования регуляторов)</p>
+                            </div>
+                            <div class="pn-basis-item">
+                                <svg class="pn-basis-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <p>Наших законных интересов по управлению рисками и защите прав, при соблюдении баланса с вашими правами</p>
+                            </div>
+                            <div class="pn-basis-item">
+                                <svg class="pn-basis-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <p>Вашего согласия</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section 4 -->
+                    <div id="transfer" class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">04</span>
+                            <h2 class="pn-section__title">Кому мы передаём данные</h2>
+                        </div>
+                        <p class="pn-text">Ваши данные могут передаваться:</p>
+                        <ul class="pn-list">
+                            <li>нашей материнской компании АО «Qazaqstan Investment Corporation», которая предоставляет ИТ-инфраструктуру и сопровождение Личного кабинета; АО «НИХ «Байтерек», выступающего в качестве получателя отчётности Группы, а также партнёрам ЧК QICM Ltd.;</li>
+                            <li>банкам, аудиторам, юридическим и финансовым консультантам, иным партнёрам, вовлечённым в структурирование сделок;</li>
+                            <li>государственным органам и регуляторам, если это предусмотрено законом.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Section 5 -->
+                    <div id="storage" class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">05</span>
+                            <h2 class="pn-section__title">Хранение данных</h2>
+                        </div>
+                        <p class="pn-text">
+                            Данные будут храниться на серверах АО «Qazaqstan Investment Corporation». Ваши данные хранятся в течение срока рассмотрения заявки и реализации потенциальной сделки, а затем — в течение сроков, предусмотренных законодательством и нашими внутренними правилами по архивированию.
+                        </p>
+                        <div class="pn-warning">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            <p>Обращаем Ваше внимание, что данные передаются в АО «Qazaqstan Investment Corporation», находящейся в юрисдикции Республики Казахстан (вне МФЦА). Поскольку юрисдикция Республики Казахстан признаётся Третьей страной, не имеющей статуса защиты в МФЦА, передача осуществляется с применением надлежащих мер безопасности, соответствующих требованиям AIFC Data Protection Regulations.</p>
+                        </div>
+                    </div>
+
+                    <!-- Section 6 -->
+                    <div id="rights" class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">06</span>
+                            <h2 class="pn-section__title">Ваши права</h2>
+                        </div>
+                        <p class="pn-text">Вы имеете право:</p>
+                        <ul class="pn-list pn-list--check">
+                            <li>запросить доступ к вашим персональным данным;</li>
+                            <li>требовать исправления или блокировки неточных или устаревших данных;</li>
+                            <li>просить удалить или ограничить обработку данных в предусмотренных случаях;</li>
+                            <li>возражать против определённых видов обработки, основанных на законных интересах;</li>
+                            <li>отозвать своё согласие, если обработка основана на согласии;</li>
+                            <li>подать жалобу в офис AIFC Commissioner of Data Protection;</li>
+                            <li>по запросу получать письменное подтверждение о способе, целях обработки и категориях данных;</li>
+                            <li>иные права в соответствии с применимым законодательством.</li>
+                        </ul>
+
+                        <div class="pn-contact-cta">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <div>
+                                <p>Для реализации своих прав свяжитесь с нами:</p>
+                                <a href="mailto:info@qicm.kz">info@qicm.kz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+        </div>
+    </section>
+
+</main>
+{% endblock %}

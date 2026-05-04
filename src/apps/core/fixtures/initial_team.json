@@ -1,0 +1,51 @@
+[
+  {"model": "core.teammember", "pk": 1, "fields": {"last_name": "Жунисбекова", "first_name": "Айзада", "middle_name": "Телжановна", "position": "Главный исполнительный директор (Senior Executive Officer)", "group": "management", "citizenship": "Республика Казахстан", "is_active": true, "order": 1}},
+  {"model": "core.teammember", "pk": 2, "fields": {"last_name": "Искендиров", "first_name": "Максат", "middle_name": "", "position": "Заместитель по инвестиционной деятельности (Deputy SEO)", "group": "management", "citizenship": "Республика Казахстан", "is_active": true, "order": 2}},
+  {"model": "core.teammember", "pk": 3, "fields": {"last_name": "Чиншанло", "first_name": "Рада", "middle_name": "", "position": "Заместитель по инвестиционной деятельности (Deputy SEO)", "group": "management", "citizenship": "Республика Казахстан", "is_active": true, "order": 3}},
+  {"model": "core.teammember", "pk": 4, "fields": {"last_name": "Агибаев", "first_name": "Алмас", "middle_name": "Кудиярбекович", "position": "Финансовый директор (CFO)", "group": "management", "citizenship": "Республика Казахстан", "is_active": true, "order": 4}},
+  {"model": "core.teammember", "pk": 5, "fields": {"last_name": "Бегулиев", "first_name": "Тимур", "middle_name": "", "position": "Председатель Совета директоров", "group": "board", "citizenship": "Республика Казахстан", "is_active": true, "order": 1}},
+  {"model": "core.teammember", "pk": 6, "fields": {"last_name": "Смагулов", "first_name": "Ермек", "middle_name": "Серикович", "position": "Член Совета директоров", "group": "board", "citizenship": "Республика Казахстан", "is_active": true, "order": 2}},
+
+  {"model": "core.teammemberbiosection", "pk": 1, "fields": {"member": 1, "title": "Сведения о трудовой деятельности", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 1, "fields": {"section": 1, "text": "Более 20 лет опыта в области управления активами, корпоративных финансов, инвестиционного банкинга и частного капитала в ведущих компаниях и финансовых учреждениях Казахстана и стран СНГ, национальных компаниях и семейных офисах.", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 2, "fields": {"section": 1, "text": "Занимала руководящие должности в течение 13 лет.", "order": 2}},
+  {"model": "core.teammemberbioitem", "pk": 3, "fields": {"section": 1, "text": "Послужной список включает в себя в общей сложности 3,5 млрд долларов на рынках долгового капитала и 2,2 млрд долларов в частном капитале.", "order": 3}},
+
+  {"model": "core.teammemberbiosection", "pk": 2, "fields": {"member": 2, "title": "Сведения о трудовой деятельности", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 4, "fields": {"section": 2, "text": "Более 15 лет опыта работы в области кредитного риска, корпоративных финансов и управления инвестициями в ведущих финансовых учреждениях и организациях по развитию.", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 5, "fields": {"section": 2, "text": "Имеет подтверждённый опыт в структурировании крупномасштабных инвестиций, внедрении систем управления рисками и осуществлении сложных проектных финансовых операций.", "order": 2}},
+  {"model": "core.teammemberbioitem", "pk": 6, "fields": {"section": 2, "text": "Включая знаковую инвестицию в размере 1 млрд долларов США.", "order": 3}},
+
+  {"model": "core.teammemberbiosection", "pk": 3, "fields": {"member": 3, "title": "Сведения о трудовой деятельности", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 7, "fields": {"section": 3, "text": "20 лет опыта работы в сфере корпоративных финансов, банковского дела и частного капитала.", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 8, "fields": {"section": 3, "text": "Общий портфель проектов составляет около 500 млн долларов.", "order": 2}},
+  {"model": "core.teammemberbioitem", "pk": 9, "fields": {"section": 3, "text": "Присоединилась к ТОО «BVM» в 2019 году и в 2025 году была назначена Заместителем по инвестиционной деятельности (CIO).", "order": 3}},
+  {"model": "core.teammemberbioitem", "pk": 10, "fields": {"section": 3, "text": "Руководила структурированием и осуществлением финансовых транзакций для ключевых проектов.", "order": 4}},
+  {"model": "core.teammemberbioitem", "pk": 11, "fields": {"section": 3, "text": "Внесла вклад в запуск Adal Fund LP (AIFC).", "order": 5}},
+
+  {"model": "core.teammemberbiosection", "pk": 4, "fields": {"member": 4, "title": "Образование", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 12, "fields": {"section": 4, "text": "Казахская государственная академия управления — специальность «Международные экономические отношения»", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 13, "fields": {"section": 4, "text": "Warwick Business School (UK) — степень MBA", "order": 2}},
+  {"model": "core.teammemberbiosection", "pk": 5, "fields": {"member": 4, "title": "Сведения о трудовой деятельности", "order": 2}},
+  {"model": "core.teammemberbioitem", "pk": 14, "fields": {"section": 5, "text": "Более 20 лет опыта работы в сфере управления активами, корпоративных финансов, прямых инвестиций в ведущих государственных и частных финансовых институтах, а также на государственной службе.", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 15, "fields": {"section": 5, "text": "Свыше 10 лет занимал руководящие позиции.", "order": 2}},
+
+  {"model": "core.teammemberbiosection", "pk": 6, "fields": {"member": 5, "title": "Образование", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 16, "fields": {"section": 6, "text": "Бакалавр в области делового администрирования — KIMEP University", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 17, "fields": {"section": 6, "text": "Магистр в области финансов — The George Washington University (США)", "order": 2}},
+  {"model": "core.teammemberbiosection", "pk": 7, "fields": {"member": 5, "title": "Сведения о трудовой деятельности", "order": 2}},
+  {"model": "core.teammemberbioitem", "pk": 18, "fields": {"section": 7, "text": "Заместитель Председателя правления АО «Qazaqstan Investment Corporation».", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 19, "fields": {"section": 7, "text": "Обладает обширным управленческим опытом в сферах корпоративного управления, HR, IT, бухгалтерии, корпоративного права, закупок и государственного регулирования.", "order": 2}},
+  {"model": "core.teammemberbioitem", "pk": 20, "fields": {"section": 7, "text": "Генеральный директор управляющей компании фонда Warp Capital Management.", "order": 3}},
+  {"model": "core.teammemberbioitem", "pk": 21, "fields": {"section": 7, "text": "Глава представительства АО «Казахстанская фондовая биржа KASE».", "order": 4}},
+  {"model": "core.teammemberbiosection", "pk": 8, "fields": {"member": 5, "title": "Награды", "order": 3}},
+  {"model": "core.teammemberbioitem", "pk": 22, "fields": {"section": 8, "text": "Медаль «Заслуженный финансист Казахстана».", "order": 1}},
+
+  {"model": "core.teammemberbiosection", "pk": 9, "fields": {"member": 6, "title": "Образование", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 23, "fields": {"section": 9, "text": "Бакалавр в области финансов — Павлодарский государственный университет", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 24, "fields": {"section": 9, "text": "Магистр в области экономики — Павлодарский государственный университет", "order": 2}},
+  {"model": "core.teammemberbiosection", "pk": 10, "fields": {"member": 6, "title": "Сведения о трудовой деятельности", "order": 2}},
+  {"model": "core.teammemberbioitem", "pk": 25, "fields": {"section": 10, "text": "Управляющий директор департамента кэптивных фондов АО «Qazaqstan Investment Corporation».", "order": 1}},
+  {"model": "core.teammemberbioitem", "pk": 26, "fields": {"section": 10, "text": "Более 24 лет опыта работы в финансовой сфере, в том числе 18 лет опыта работы на руководящих должностях.", "order": 2}},
+  {"model": "core.teammemberbioitem", "pk": 27, "fields": {"section": 10, "text": "Корпоративный секретарь, директор департамента кэптивных фондов и управляющий директор в АО «Qazaqstan Investment Corporation» с 2021 года по настоящее время.", "order": 3}}
+]

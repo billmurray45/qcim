@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ category.name }} - Инвестиционные проекты - Business Consulting{% endblock %}
+{% block meta_description %}Проекты категории "{{ category.name }}" от компании Business Consulting{% endblock %}
+
+{% block content %}
+<main class="main">
+  <section class="projects-section">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">Главная</a>
+        <span>/</span>
+        <a href="{% url 'projects:list' %}">Проекты</a>
+        <span>/</span>
+        <span>{{ category.name }}</span>
+      </nav>
+
+      <!-- Page Header -->
+      <header class="page-header">
+        <div class="page-header__eyebrow">Категория проектов</div>
+        <h1 class="page-header__title">
+          {% if category.icon %}
+          <i class="{{ category.icon }}"></i>
+          {% endif %}
+          {{ category.name }}
+        </h1>
+        {% if category.description %}
+        <p class="page-header__subtitle">{{ category.description }}</p>
+        {% else %}
+        <p class="page-header__subtitle">Инвестиционные проекты в категории "{{ category.name }}"</p>
+        {% endif %}
+      </header>
+
+      <!-- Category Filter -->
+      <div class="projects-categories">
+        <a href="{% url 'projects:list' %}" class="category-tag">
+          Все категории
+        </a>
+        {% for cat in categories %}
+        <a href="{% url 'projects:category' cat.slug %}" class="category-tag {% if cat.id == category.id %}is-active{% endif %}">
+          {% if cat.icon %}
+          <i class="{{ cat.icon }}"></i>
+          {% endif %}
+          {{ cat.name }}
+        </a>
+        {% endfor %}
+      </div>
+
+      <!-- Projects Grid -->
+      {% if projects %}
+      <div class="projects-grid">
+        {% for project in projects %}
+        <article class="project-card">
+          <a href="{{ project.get_absolute_url }}" class="project-card__link">
+            {% if project.image %}
+            <div class="project-card__image">
+              <img src="{{ project.image.url }}" alt="{{ project.title }}">
+              {% if project.is_featured %}
+              <div class="project-card__badge project-card__badge--star">
+                <i class="fas fa-star"></i>
+              </div>
+              {% endif %}
+            </div>
+            {% else %}
+            <div class="project-card__image project-card__image--placeholder">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            {% endif %}
+
+            <div class="project-card__content">
+              <div class="project-card__header">
+                {% if project.category %}
+                <span class="project-card__category">{{ project.category.name }}</span>
+                {% endif %}
+                <span class="project-card__status project-card__status--{{ project.status }}">
+                  {{ project.get_status_display }}
+                </span>
+              </div>
+
+              <h3 class="project-card__title">{{ project.title }}</h3>
+              <p class="project-card__description">{{ project.short_description|truncatewords:20 }}</p>
+
+              <div class="project-card__details">
+                {% if project.investment_amount %}
+                <div class="project-info">
+                  <i class="fas fa-coins"></i>
+                  <span>{{ project.investment_amount|floatformat:0 }} {{ project.currency }}</span>
+                </div>
+                {% endif %}
+                {% if project.location %}
+                <div class="project-info">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>{{ project.location }}</span>
+                </div>
+                {% endif %}
+              </div>
+
+              <div class="project-card__meta">
+                <span class="project-card__date">
+                  <i class="far fa-calendar"></i>
+                  {{ project.published_date|date:"d.m.Y" }}
+                </span>
+                <span class="project-card__views">
+                  <i class="far fa-eye"></i>
+                  {{ project.views_count }}
+                </span>
+              </div>
+            </div>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+
+      <!-- Pagination -->
+      {% if is_paginated %}
+      <div class="pagination">
+        {% if page_obj.has_previous %}
+        <a href="?page=1" class="pagination__link">
+          <i class="fas fa-angle-double-left"></i>
+        </a>
+        <a href="?page={{ page_obj.previous_page_number }}" class="pagination__link">
+          <i class="fas fa-angle-left"></i>
+        </a>
+        {% endif %}
+
+        <span class="pagination__current">
+          Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}" class="pagination__link">
+          <i class="fas fa-angle-right"></i>
+        </a>
+        <a href="?page={{ page_obj.paginator.num_pages }}" class="pagination__link">
+          <i class="fas fa-angle-double-right"></i>
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% else %}
+      <div class="no-results">
+        <i class="fas fa-briefcase"></i>
+        <h3>Проектов пока нет</h3>
+        <p>В этой категории пока нет опубликованных проектов</p>
+        <a href="{% url 'projects:list' %}" class="btn btn--primary">Все проекты</a>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+</main>
+{% endblock %}

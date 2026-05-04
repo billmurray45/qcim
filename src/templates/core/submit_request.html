@@ -1,0 +1,448 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Личный кабинет - МФЦА Управление Капиталом{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="page-header-section">
+    <div class="container">
+        <nav class="breadcrumbs">
+            <a href="{% url 'core:home' %}">Главная</a>
+            <span>/</span>
+            <span>Личный кабинет</span>
+        </nav>
+        <div class="hero-line"></div>
+        <h1 class="page-title">Личный кабинет</h1>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="invest-content">
+    <div class="container">
+        <div class="invest-grid">
+            <!-- Left Column - Timeline -->
+            <div class="invest-timeline invest-timeline--no-box">
+                <h2 class="invest-section-title invest-section-title--standalone">Этапы рассмотрения заявок по инвестиционным проектам</h2>
+
+                <p class="timeline-description" style="margin-bottom: 1.5rem;">
+                    После получения полного пакета, перед началом рассмотрения Заявки, подписывается Соглашение о конфиденциальности и неразглашения информации (NDA) и Согласие на сбор, обработку персональных данных. А также, информация по Заявителю направляется в ИС Бақылауда для соответствующей проверки:
+                </p>
+
+                <p class="timeline-description" style="margin-bottom: 2rem; font-weight: 600;">
+                    Заявка подается через Личный кабинет
+                </p>
+
+                <!-- Stage 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-number">1</span>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Индикативный этап</h3>
+                        <div class="timeline-duration">
+                            <i class="fas fa-clock"></i>
+                            Срок: 25 рабочих дней
+                        </div>
+                        <p class="timeline-description">
+                            На 1 этапе определяются индикативные (предварительные) условия финансирования, в рамках которых проводится экспертиза проекта, включающая в себя финансово-экономическую, юридическую, экологическую и социальную оценку проекта и оценка рисков. Срок проведения: в течение 25 рабочих дней со дня предоставления Заявителем полного пакета документов.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Stage 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="timeline-number">2</span>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Финальный этап</h3>
+                        <div class="timeline-duration">
+                            <i class="fas fa-clock"></i>
+                            Срок: 35 рабочих дней
+                        </div>
+                        <p class="timeline-description">
+                            На 2 этапе – финальном этапе рассмотрения проекта проводится экспертиза проекта, включающая в себя финансово-экономическую, юридическую, экологическую и социальную оценку проекта и оценка рисков с учетом исполнения отлагательных условий, принятых в ходе индикативного этапа рассмотрения и предоставления независимых экспертиз по проекту (при необходимости). Срок проведения: в течение 35 рабочих дней со дня предоставления Заявителем полного пакета документов, исполнения полного перечня отлагательных условий, включая анализ и утверждение основных условий финансирования по проекту.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Contacts & CTA -->
+            <div class="invest-sidebar">
+                <h2 class="invest-section-title invest-section-title--standalone">Контакты для связи</h2>
+
+                <!-- Contact Card 1 -->
+                <div class="contact-card">
+                    <div class="contact-card__photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="contact-card__info">
+                        <h4 class="contact-card__name">Джурабекова Сания Едыгеевна</h4>
+                        <p class="contact-card__position">Инвестиционный директор</p>
+                        <div class="contact-card__details">
+                            <a href="tel:+77172554222">
+                                <i class="fas fa-phone"></i>
+                                +7 (7172) 239-55-85
+                            </a>
+                            <a href="mailto:s.jurabekova@qicm.kz">
+                                <i class="fas fa-envelope"></i>
+                                s.jurabekova@qicm.kz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Card 2 -->
+                <div class="contact-card">
+                    <div class="contact-card__photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="contact-card__info">
+                        <h4 class="contact-card__name">Сердалин Алмас Амантаевич</h4>
+                        <p class="contact-card__position">Инвестиционный директор</p>
+                        <div class="contact-card__details">
+                            <a href="tel:+77172554222">
+                                <i class="fas fa-phone"></i>
+                                +7 (7172) 252-55-90
+                            </a>
+                            <a href="mailto:a.serdalin@qicm.kz">
+                                <i class="fas fa-envelope"></i>
+                                a.serdalin@qicm.kz
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Box -->
+                <div class="invest-cta-box">
+                    <h3 class="invest-cta-box__title">Готовы подать заявку?</h3>
+                    <p class="invest-cta-box__text">Перейдите в личный кабинет</p>
+                    <button type="button" class="invest-cta-box__btn" id="open-privacy-modal">
+                        ПЕРЕЙТИ В ЛИЧНЫЙ КАБИНЕТ
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy Notice Modal -->
+        <div class="pn-modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="pn-modal-title">
+            <div class="pn-modal__backdrop" id="pn-modal-backdrop"></div>
+            <div class="pn-modal__dialog">
+                <div class="pn-modal__header">
+                    <h2 class="pn-modal__title" id="pn-modal-title">Privacy Notice</h2>
+                    <button class="pn-modal__close" id="pn-modal-close" aria-label="Закрыть">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>
+                <div class="pn-modal__body">
+
+                    <div class="pn-notice">
+                        <div class="pn-notice__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                        </div>
+                        <div>
+                            <p>Личный кабинет заявителя предоставляется частной компанией <strong>Qazaqstan Investment Capital Management Ltd.</strong> (далее — QICM Ltd.), зарегистрированной в Международном финансовом центре «Астана» (AIFC), регулируемой соответствующими органами AIFC.</p>
+                            <p>Ваши данные обрабатываются совместно Частной компанией Qazaqstan Investment Capital Management Ltd. (МФЦА) и АО «Qazaqstan Investment Corporation» (далее — QIC) (Республика Казахстан). Мы являемся <strong>Совместными контролерами</strong> ваших данных.</p>
+                            <p>Информационная система находится в режиме опытной эксплуатации. В соответствии с требованиями МФЦА, такая обработка классифицируется как деятельность с высоким уровнем риска. Компания принимает все надлежащие технические и организационные меры для обеспечения безопасности Ваших данных в соответствии со стандартами МФЦА.</p>
+                        </div>
+                    </div>
+
+                    <div class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">01</span>
+                            <h3 class="pn-section__title">Какие данные мы собираем</h3>
+                        </div>
+                        <p class="pn-text">При регистрации и подаче заявки через Личный кабинет мы можем собирать:</p>
+                        <div class="pn-party-block">
+                            <div class="pn-party-block__label">QICM Ltd.</div>
+                            <p class="pn-party-block__desc">Приём и экспертиза инвестиционных заявок, структурирование сделок:</p>
+                            <ul class="pn-list">
+                                <li>ФИО, должность и контактные данные представителей заявителя, но не ограничиваясь;</li>
+                                <li>данные, необходимые для идентификации (ИИН/паспорт и т.п., но не ограничиваясь);</li>
+                                <li>информацию о компании и проекте (реквизиты, финансовая отчётность, структура собственности, но не ограничиваясь);</li>
+                                <li>данные о бенефициарах и ключевых лицах для KYC/AML и оценки риска, в том числе сведения из кредитного бюро и другие финансовые данные;</li>
+                                <li>техническую информацию об использовании Личного кабинета (IP-адрес, лог-записи входа и действий) для целей безопасности и аудита.</li>
+                            </ul>
+                        </div>
+                        <div class="pn-party-block pn-party-block--alt">
+                            <div class="pn-party-block__label pn-party-block__label--alt">QIC</div>
+                            <p class="pn-party-block__desc">Техническое обеспечение Личного кабинета, мониторинг инвестиционной деятельности Группы и формирование корпоративной отчётности.</p>
+                        </div>
+                    </div>
+
+                    <div class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">02</span>
+                            <h3 class="pn-section__title">Для чего мы используем данные</h3>
+                        </div>
+                        <p class="pn-text">Ваши данные используются для:</p>
+                        <ul class="pn-list pn-list--check">
+                            <li>регистрации и управления вашей учётной записью в Личном кабинете;</li>
+                            <li>приёма, рассмотрения и структурирования вашей заявки;</li>
+                            <li>проведения KYC/AML и иных комплаенс-процедур;</li>
+                            <li>подготовки и исполнения договоров и сделок;</li>
+                            <li>выполнения требований регуляторов и законодательства;</li>
+                            <li>обеспечения безопасности и корректной работы наших систем.</li>
+                        </ul>
+                    </div>
+
+                    <div class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">03</span>
+                            <h3 class="pn-section__title">Правовые основания обработки</h3>
+                        </div>
+                        <p class="pn-text">Мы обрабатываем ваши данные на основе:</p>
+                        <div class="pn-basis-grid">
+                            <div class="pn-basis-item">
+                                <svg class="pn-basis-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                <p>Необходимости для рассмотрения вашей заявки</p>
+                            </div>
+                            <div class="pn-basis-item">
+                                <svg class="pn-basis-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                <p>Выполнения юридических обязательств (KYC/AML и иные требования регуляторов)</p>
+                            </div>
+                            <div class="pn-basis-item">
+                                <svg class="pn-basis-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                <p>Наших законных интересов по управлению рисками и защите прав, при соблюдении баланса с вашими правами</p>
+                            </div>
+                            <div class="pn-basis-item">
+                                <svg class="pn-basis-item__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                <p>Вашего согласия</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">04</span>
+                            <h3 class="pn-section__title">Кому мы передаём данные</h3>
+                        </div>
+                        <p class="pn-text">Ваши данные могут передаваться:</p>
+                        <ul class="pn-list">
+                            <li>нашей материнской компании АО «Qazaqstan Investment Corporation», которая предоставляет ИТ-инфраструктуру и сопровождение Личного кабинета; АО «НИХ «Байтерек», выступающего в качестве получателя отчётности Группы, а также партнёрам ЧК QICM Ltd.;</li>
+                            <li>банкам, аудиторам, юридическим и финансовым консультантам, иным партнёрам, вовлечённым в структурирование сделок;</li>
+                            <li>государственным органам и регуляторам, если это предусмотрено законом.</li>
+                        </ul>
+                    </div>
+
+                    <div class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">05</span>
+                            <h3 class="pn-section__title">Хранение данных</h3>
+                        </div>
+                        <p class="pn-text">Данные будут храниться на серверах АО «Qazaqstan Investment Corporation». Ваши данные хранятся в течение срока рассмотрения заявки и реализации потенциальной сделки, а затем — в течение сроков, предусмотренных законодательством и нашими внутренними правилами по архивированию.</p>
+                        <div class="pn-warning">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                            <p>Обращаем Ваше внимание, что данные передаются в АО «Qazaqstan Investment Corporation», находящейся в юрисдикции Республики Казахстан (вне МФЦА). Поскольку юрисдикция Республики Казахстан признаётся Третьей страной, не имеющей статуса адекватной защиты в МФЦА, передача осуществляется с применением надлежащих мер безопасности, соответствующих требованиям AIFC Data Protection Regulations.</p>
+                        </div>
+                    </div>
+
+                    <div class="pn-section">
+                        <div class="pn-section__header">
+                            <span class="pn-section__num">06</span>
+                            <h3 class="pn-section__title">Ваши права</h3>
+                        </div>
+                        <p class="pn-text">Вы имеете право:</p>
+                        <ul class="pn-list pn-list--check">
+                            <li>запросить доступ к вашим персональным данным;</li>
+                            <li>требовать исправления или блокировки неточных или устаревших данных;</li>
+                            <li>просить удалить или ограничить обработку данных в предусмотренных случаях;</li>
+                            <li>возражать против определённых видов обработки, основанных на законных интересах;</li>
+                            <li>отозвать своё согласие, если обработка основана на согласии;</li>
+                            <li>подать жалобу в офис AIFC Commissioner of Data Protection;</li>
+                            <li>по запросу получать письменное подтверждение о способе, целях обработки и категориях данных;</li>
+                            <li>иные права в соответствии с применимым законодательством.</li>
+                        </ul>
+                        <div class="pn-contact-cta">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <div>
+                                <p>Для реализации своих прав свяжитесь с нами:</p>
+                                <a href="mailto:info@qicm.kz">info@qicm.kz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pn-modal__footer">
+                    <a href="https://binvest.qic.kz/ru/login" target="_blank" rel="noopener noreferrer" class="pn-modal__proceed-btn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                        Перейти в личный кабинет
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Documents Section -->
+        <div class="invest-documents invest-documents--no-box">
+
+            <h2 class="invest-section-title invest-section-title--standalone">Перечень документов</h2>
+            <div class="doc-list">
+                <a href="{% static 'docs/Пакет документов для предварительного рассмотрения.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Пакет документов для предварительного рассмотрения</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Пакет документов для финального рассмотрения.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Пакет документов для финального рассмотрения</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Пакет документов для реструктуризации.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Пакет документов для реструктуризации</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Анкета для юридического лица - AML.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Анкета для юридического лица — AML</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Паспорт проекта.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Паспорт проекта</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Образец Инвестиционного тизера.pptx' %}" download class="doc-item">
+                    <i class="fas fa-file-powerpoint doc-item__icon doc-item__icon--pptx"></i>
+                    <span class="doc-item__name">Образец Инвестиционного тизера</span>
+                    <span class="doc-item__ext">PPTX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Сведения об аффилированных лицах.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Сведения об аффилированных лицах</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Согласия в ПКБ.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Согласия в ПКБ</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Анализ контрактов по сырью.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Анализ контрактов по сырью</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Анализ контрактов, обеспечивающих выручку и сбыт продукции.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Анализ контрактов, обеспечивающих выручку и сбыт продукции</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Опросник для проведения ESG due diligence.xlsx' %}" download class="doc-item">
+                    <i class="fas fa-file-excel doc-item__icon doc-item__icon--xlsx"></i>
+                    <span class="doc-item__name">Опросник для проведения ESG Due Diligence</span>
+                    <span class="doc-item__ext">XLSX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Перечень инвестиционных затрат по основным категориям расходов.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">Перечень инвестиционных затрат по основным категориям расходов</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/План-график инвестиционной фазы проекта.docx' %}" download class="doc-item">
+                    <i class="fas fa-file-word doc-item__icon doc-item__icon--docx"></i>
+                    <span class="doc-item__name">План-график инвестиционной фазы проекта</span>
+                    <span class="doc-item__ext">DOCX</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+            </div>
+
+            <h2 class="invest-section-title invest-section-title--standalone" style="margin-top: 2.5rem;">Требования соответствия</h2>
+            <div class="doc-list">
+                <a href="{% static 'docs/Требования к договорам в рамках инвестпроектов, финансируемых фондами прямых инвестиций ЧК.pdf' %}" download class="doc-item">
+                    <i class="fas fa-file-pdf doc-item__icon doc-item__icon--pdf"></i>
+                    <span class="doc-item__name">Требования к договорам в рамках инвестпроектов, финансируемых фондами прямых инвестиций ЧК</span>
+                    <span class="doc-item__ext">PDF</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Требования к договорам эскроу и контролю расходных операций по счетам БВУ в инвестпроектах.pdf' %}" download class="doc-item">
+                    <i class="fas fa-file-pdf doc-item__icon doc-item__icon--pdf"></i>
+                    <span class="doc-item__name">Требования к договорам эскроу и контролю расходных операций по счетам БВУ в инвестпроектах</span>
+                    <span class="doc-item__ext">PDF</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Требования к маркетинговому отчету, предоставляемому в ЧК.pdf' %}" download class="doc-item">
+                    <i class="fas fa-file-pdf doc-item__icon doc-item__icon--pdf"></i>
+                    <span class="doc-item__name">Требования к маркетинговому отчёту, предоставляемому в ЧК</span>
+                    <span class="doc-item__ext">PDF</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Требования к оценке гарантоспособности гаранта в рамках реализации инвест проектов ЧК.pdf' %}" download class="doc-item">
+                    <i class="fas fa-file-pdf doc-item__icon doc-item__icon--pdf"></i>
+                    <span class="doc-item__name">Требования к оценке гарантоспособности гаранта в рамках реализации инвестпроектов ЧК</span>
+                    <span class="doc-item__ext">PDF</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Требования к оценке технической проработанности и закупок инвестиционных проектов.pdf' %}" download class="doc-item">
+                    <i class="fas fa-file-pdf doc-item__icon doc-item__icon--pdf"></i>
+                    <span class="doc-item__name">Требования к оценке технической проработанности и закупок инвестиционных проектов</span>
+                    <span class="doc-item__ext">PDF</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Требования к условиям страхования в рамках реализации инвест проектов ЧК.pdf' %}" download class="doc-item">
+                    <i class="fas fa-file-pdf doc-item__icon doc-item__icon--pdf"></i>
+                    <span class="doc-item__name">Требования к условиям страхования в рамках реализации инвестпроектов ЧК</span>
+                    <span class="doc-item__ext">PDF</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Требования к финансово-техническому контролеру по мониторингу и управлению затратами инвестиционных проектов ЧК.pdf' %}" download class="doc-item">
+                    <i class="fas fa-file-pdf doc-item__icon doc-item__icon--pdf"></i>
+                    <span class="doc-item__name">Требования к финансово-техническому контролёру по мониторингу и управлению затратами инвестиционных проектов ЧК</span>
+                    <span class="doc-item__ext">PDF</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+                <a href="{% static 'docs/Требования к финансово-техническому контролеру по мониторингу и управлению затратами инвестиционных проектов ЧК - копия.pdf' %}" download class="doc-item">
+                    <i class="fas fa-file-pdf doc-item__icon doc-item__icon--pdf"></i>
+                    <span class="doc-item__name">Требования к финансово-техническому контролёру по мониторингу и управлению затратами инвестиционных проектов ЧК (копия)</span>
+                    <span class="doc-item__ext">PDF</span>
+                    <i class="fas fa-download doc-item__dl"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+(function () {
+    var modal = document.getElementById('privacy-modal');
+    var openBtn = document.getElementById('open-privacy-modal');
+    var closeBtn = document.getElementById('pn-modal-close');
+    var backdrop = document.getElementById('pn-modal-backdrop');
+
+    function openModal() {
+        modal.classList.add('pn-modal--open');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('pn-modal--open');
+        document.body.style.overflow = '';
+    }
+
+    if (openBtn) openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('pn-modal--open')) {
+            closeModal();
+        }
+    });
+})();
+</script>
+{% endblock %}

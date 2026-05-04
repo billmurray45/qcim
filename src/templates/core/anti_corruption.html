@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Антикоррупционная политика - QICM Ltd.{% endblock %}
+
+{% block content %}
+<main class="main">
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header__inner">
+                <div class="page-header__left">
+                    <div class="page-header__breadcrumbs">
+                        <a href="{% url 'core:home' %}">Главная</a>
+                        <span class="sep">/</span>
+                        <span class="current">Антикоррупционная политика</span>
+                    </div>
+                    <h1 class="page-header__title">Антикоррупционная политика</h1>
+                </div>
+                <div class="page-header__accent"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-content-page">
+        <div class="container">
+            <div class="content-block">
+
+                <p>
+                    QICM Ltd. проводит активную работу по противодействию коррупции, внедряя функции контроля по профилактике, предупреждению и выявлению коррупции, а также формированию в организации атмосферы жёсткого неприятия коррупции в любых её проявлениях.
+                </p>
+                <p>
+                    В этих целях Советом директоров утверждена Политика противодействия коррупции, предусматривающая комплекс мер по борьбе с коррупцией, а также формирование антикоррупционной культуры работников QICM Ltd., обеспечивающей соблюдение принципов честности и прозрачности при выполнении трудовых обязанностей.
+                </p>
+
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}

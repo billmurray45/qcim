@@ -1,0 +1,12 @@
+Django==6.0.4
+python-dotenv==1.2.2
+psycopg2-binary==2.9.12
+django-jazzmin==3.0.4
+django-axes==8.3.1
+django-compressor==4.6.0
+django-htmlmin==0.11.0
+whitenoise==6.12.0
+gunicorn==25.3.0
+requests==2.33.1
+beautifulsoup4==4.14.3
+Pillow==12.2.0

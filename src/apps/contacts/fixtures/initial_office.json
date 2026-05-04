@@ -1,0 +1,26 @@
+[
+  {
+    "model": "contacts.office",
+    "pk": 1,
+    "fields": {
+      "city": "Астана",
+      "address": "пр. Мәңгілік Ел, 55А, Z05T2H3",
+      "phone": "+7 (7172) 554-222",
+      "email": "info@qicm.kz",
+      "working_hours": "Пн–Пт: 09:00 – 18:00",
+      "latitude": "51.090000",
+      "longitude": "71.418000",
+      "instagram": "",
+      "facebook": "",
+      "linkedin": "",
+      "twitter": "",
+      "youtube": "",
+      "telegram": "",
+      "whatsapp": "",
+      "tiktok": "",
+      "is_main": true,
+      "is_active": true,
+      "order": 0
+    }
+  }
+]

@@ -1,0 +1,327 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ project.meta_title|default:project.title }} - Business Consulting{% endblock %}
+{% block meta_description %}{{ project.meta_description|default:project.short_description }}{% endblock %}
+
+{% block content %}
+<main class="main">
+  <!-- Project Detail -->
+  <article class="project-detail">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{% url 'core:home' %}">Главная</a>
+        <span>/</span>
+        <a href="{% url 'projects:list' %}">Проекты</a>
+        {% if project.category %}
+        <span>/</span>
+        <a href="{% url 'projects:category' project.category.slug %}">{{ project.category.name }}</a>
+        {% endif %}
+        <span>/</span>
+        <span>{{ project.title|truncatewords:5 }}</span>
+      </nav>
+
+      <!-- Project Header -->
+      <header class="project-detail__header">
+        <div class="project-detail__tags">
+          {% if project.category %}
+          <a href="{% url 'projects:category' project.category.slug %}" class="project-detail__category">
+            {{ project.category.name }}
+          </a>
+          {% endif %}
+          <span class="project-detail__status project-detail__status--{{ project.status }}">
+            {{ project.get_status_display }}
+          </span>
+          {% if project.is_featured %}
+          <span class="project-detail__featured">
+            <i class="fas fa-star"></i>
+            Избранный проект
+          </span>
+          {% endif %}
+        </div>
+
+        <h1 class="project-detail__title">
+          {{ project.title }}
+        </h1>
+
+        <div class="project-detail__meta">
+          <span class="project-detail__date">
+            <i class="far fa-calendar"></i>
+            {{ project.published_date|date:"d.m.Y" }}
+          </span>
+          <span class="project-detail__views">
+            <i class="far fa-eye"></i>
+            {{ project.views_count }} просмотров
+          </span>
+          {% if project.location %}
+          <span class="project-detail__location">
+            <i class="fas fa-map-marker-alt"></i>
+            {{ project.location }}
+          </span>
+          {% endif %}
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      {% if project.image %}
+      <div class="project-detail__image">
+        <img src="{{ project.image.url }}" alt="{{ project.title }}">
+      </div>
+      {% endif %}
+
+      <div class="project-detail__layout">
+        <!-- Main Content -->
+        <div class="project-detail__main">
+          <!-- Short Description -->
+          <div class="project-detail__excerpt">
+            {{ project.short_description }}
+          </div>
+
+          <!-- Full Description -->
+          <div class="project-detail__content">
+            <h2>О проекте</h2>
+            <div class="project-detail__body">
+              {{ project.description|linebreaks }}
+            </div>
+          </div>
+
+          <!-- Partners -->
+          {% if project.partners %}
+          <div class="project-detail__partners">
+            <h3><i class="fas fa-handshake"></i> Партнеры и инвесторы</h3>
+            <div class="partners-content">
+              {{ project.partners|linebreaks }}
+            </div>
+          </div>
+          {% endif %}
+
+          <!-- Share Buttons -->
+          <div class="project-detail__share">
+            <h4>Поделиться проектом:</h4>
+            <div class="share-buttons">
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="share-btn share-btn--facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ project.title }}"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="share-btn share-btn--twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ request.build_absolute_uri }}"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="share-btn share-btn--linkedin">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ project.title }}"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="share-btn share-btn--telegram">
+                <i class="fab fa-telegram-plane"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="project-detail__sidebar">
+          <!-- Key Info Card -->
+          <div class="info-card">
+            <h3 class="info-card__title">
+              <i class="fas fa-info-circle"></i>
+              Ключевая информация
+            </h3>
+
+            <div class="info-card__content">
+              {% if project.investment_amount %}
+              <div class="info-item">
+                <div class="info-item__label">
+                  <i class="fas fa-coins"></i>
+                  Сумма инвестиций
+                </div>
+                <div class="info-item__value">
+                  {{ project.investment_amount|floatformat:0 }} {{ project.currency }}
+                </div>
+              </div>
+              {% endif %}
+
+              {% if project.expected_roi %}
+              <div class="info-item">
+                <div class="info-item__label">
+                  <i class="fas fa-chart-line"></i>
+                  Ожидаемая доходность
+                </div>
+                <div class="info-item__value">
+                  {{ project.expected_roi }}%
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="info-item">
+                <div class="info-item__label">
+                  <i class="fas fa-flag"></i>
+                  Статус проекта
+                </div>
+                <div class="info-item__value">
+                  <span class="badge badge--{{ project.status }}">
+                    {{ project.get_status_display }}
+                  </span>
+                </div>
+              </div>
+
+              {% if project.start_date %}
+              <div class="info-item">
+                <div class="info-item__label">
+                  <i class="fas fa-calendar-check"></i>
+                  Дата начала
+                </div>
+                <div class="info-item__value">
+                  {{ project.start_date|date:"d.m.Y" }}
+                </div>
+              </div>
+              {% endif %}
+
+              {% if project.end_date %}
+              <div class="info-item">
+                <div class="info-item__label">
+                  <i class="fas fa-calendar-times"></i>
+                  Дата окончания
+                </div>
+                <div class="info-item__value">
+                  {{ project.end_date|date:"d.m.Y" }}
+                </div>
+              </div>
+              {% endif %}
+
+              {% if project.location %}
+              <div class="info-item">
+                <div class="info-item__label">
+                  <i class="fas fa-map-marker-alt"></i>
+                  Местоположение
+                </div>
+                <div class="info-item__value">
+                  {{ project.location }}, {{ project.country }}
+                </div>
+              </div>
+              {% endif %}
+            </div>
+
+            <!-- Contact CTA -->
+            <div class="info-card__cta">
+              <a href="{% url 'core:home' %}#contact" class="btn btn--primary btn--block">
+                <i class="fas fa-envelope"></i>
+                &nbsp;Связаться с нами
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="quick-links">
+            <h4>Навигация</h4>
+            <ul>
+              <li>
+                <a href="{% url 'projects:list' %}">
+                  <i class="fas fa-arrow-left"></i>
+                  Все проекты
+                </a>
+              </li>
+              {% if project.category %}
+              <li>
+                <a href="{% url 'projects:category' project.category.slug %}">
+                  <i class="fas fa-folder"></i>
+                  {{ project.category.name }}
+                </a>
+              </li>
+              {% endif %}
+              <li>
+                <a href="{% url 'projects:list' %}?status={{ project.status }}">
+                  <i class="fas fa-filter"></i>
+                  Проекты со статусом "{{ project.get_status_display }}"
+                </a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Related Projects -->
+      {% if related_projects %}
+      <section class="related-projects">
+        <h2 class="related-projects__title">Похожие проекты</h2>
+        <div class="projects-grid">
+          {% for item in related_projects %}
+          <article class="project-card">
+            <a href="{{ item.get_absolute_url }}" class="project-card__link">
+              {% if item.image %}
+              <div class="project-card__image">
+                <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                {% if item.is_featured %}
+                <div class="project-card__badge project-card__badge--star">
+                  <i class="fas fa-star"></i>
+                </div>
+                {% endif %}
+              </div>
+              {% else %}
+              <div class="project-card__image project-card__image--placeholder">
+                <i class="fas fa-briefcase"></i>
+              </div>
+              {% endif %}
+
+              <div class="project-card__content">
+                <div class="project-card__header">
+                  {% if item.category %}
+                  <span class="project-card__category">{{ item.category.name }}</span>
+                  {% endif %}
+                  <span class="project-card__status project-card__status--{{ item.status }}">
+                    {{ item.get_status_display }}
+                  </span>
+                </div>
+
+                <h3 class="project-card__title">{{ item.title }}</h3>
+                <p class="project-card__description">{{ item.short_description|truncatewords:15 }}</p>
+
+                <div class="project-card__details">
+                  {% if item.investment_amount %}
+                  <div class="project-info">
+                    <i class="fas fa-coins"></i>
+                    <span>{{ item.investment_amount|floatformat:0 }} {{ item.currency }}</span>
+                  </div>
+                  {% endif %}
+                  {% if item.location %}
+                  <div class="project-info">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>{{ item.location }}</span>
+                  </div>
+                  {% endif %}
+                </div>
+
+                <div class="project-card__meta">
+                  <span class="project-card__date">
+                    <i class="far fa-calendar"></i>
+                    {{ item.published_date|date:"d.m.Y" }}
+                  </span>
+                </div>
+              </div>
+            </a>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+      {% endif %}
+
+      <!-- Back to List -->
+      <div class="project-detail__actions">
+        <a href="{% url 'projects:list' %}" class="btn btn--outline">
+          <i class="fas fa-arrow-left"></i>
+          &nbsp;Все проекты
+        </a>
+      </div>
+    </div>
+  </article>
+</main>
+{% endblock %}
