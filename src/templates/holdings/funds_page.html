@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n i18n_extras %}
 
-{% block title %}Наши фонды - QICM Ltd.{% endblock %}
-{% block meta_description %}Информация о фондах QICM Ltd.: Adal Fund LP и Kokzhiyek Fund LP - инвестиционные фонды для развития несырьевых секторов Казахстана{% endblock %}
+{% block title %}{% trans 'Наши фонды - QICM Ltd.' %}{% endblock %}
+{% block meta_description %}{% trans 'Информация о фондах QICM Ltd.: Adal Fund LP и Kokzhiyek Fund LP - инвестиционные фонды для развития несырьевых секторов Казахстана' %}{% endblock %}
 
 {% block content %}
 <main class="main">
@@ -11,20 +11,20 @@
     <section class="hero">
         <img class="hero-background active"
             src="https://www.caclubindia.com/img/preview/articles/20240529112403_gpf.png"
-            alt="Наши фонды">
+            alt="{% trans 'Наши фонды' %}">
         <div class="hero-overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="hero-inner" style="padding-top: 5rem;">
                     <nav class="breadcrumbs" style="position: relative; z-index: 20; margin-top: 0; margin-bottom: 2rem;">
-                        <a href="{% url 'core:home' %}">Главная</a>
+                        <a href="{% url 'core:home' %}">{% trans 'Главная' %}</a>
                         <span>/</span>
-                        <span>Наши фонды</span>
+                        <span>{% trans 'Наши фонды' %}</span>
                     </nav>
                     <div class="hero-line"></div>
-                    <h1 class="hero-title">Наши фонды</h1>
+                    <h1 class="hero-title">{% trans 'Наши фонды' %}</h1>
                     <p class="hero-description" style="max-width: 640px;">
-                        QICM Ltd. управляет специализированными фондами прямых инвестиций, направленными на развитие ключевых секторов экономики Казахстана и Центральной Азии.
+                        {% blocktrans %}QICM Ltd. управляет специализированными фондами прямых инвестиций, направленными на развитие ключевых секторов экономики Казахстана и Центральной Азии.{% endblocktrans %}
                     </p>
                 </div>
             </div>
@@ -36,35 +36,35 @@
         <div class="container">
             <div class="funds-intro-grid">
                 <div class="funds-intro-text">
-                    <span class="section-tag">Investment Approach</span>
-                    <h2 class="funds-intro-title">Инвестиционная философия</h2>
+                    <span class="section-tag">{% trans 'Investment Approach' %}</span>
+                    <h2 class="funds-intro-title">{% trans 'Инвестиционная философия' %}</h2>
                     <p class="funds-intro-desc">
-                        Фокус на компаниях и проектах с прозрачной бизнес-моделью, устойчивыми денежными
+                        {% blocktrans %}Фокус на компаниях и проектах с прозрачной бизнес-моделью, устойчивыми денежными
                         потоками и потенциалом для масштабирования как в регионе, так и за его пределами.
                         Активное участие QICM Ltd. в создании стоимости через стратегическое развитие,
-                        операционные улучшения и привлечение дополнительных источников финансирования.
+                        операционные улучшения и привлечение дополнительных источников финансирования.{% endblocktrans %}
                     </p>
                     <div class="funds-intro-geo">
                         <div class="about-intro-item__icon"></div>
-                        <span><strong>География:</strong> Казахстан как ключевой рынок</span>
+                        <span><strong>{% trans 'География:' %}</strong> {% trans 'Казахстан как ключевой рынок' %}</span>
                     </div>
                 </div>
                 <div class="funds-intro-sectors">
-                    <h3 class="funds-sectors-title">Приоритетные отрасли</h3>
+                    <h3 class="funds-sectors-title">{% trans 'Приоритетные отрасли' %}</h3>
                     <div class="funds-sectors-list">
-                        <div class="funds-sector-item"><i class="fas fa-shopping-cart"></i><span>Торговля и экспортные операции</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-tractor"></i><span>Агропромышленный комплекс</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-industry"></i><span>Обрабатывающая промышленность</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-hammer"></i><span>Горно-металлургическая промышленность</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-utensils"></i><span>Пищевая промышленность</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-truck"></i><span>Транспорт и логистика</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-bolt"></i><span>Энергетика и инфраструктура</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-heartbeat"></i><span>Здравоохранение и образование</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-leaf"></i><span>Зелёные технологии</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-plane"></i><span>Туризм</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-wifi"></i><span>Информация и связь</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-globe"></i><span>Экспортно-ориентированные проекты, а также проекты, направленные на повышение производительности труда в различных секторах экономики</span></div>
-                        <div class="funds-sector-item"><i class="fas fa-landmark"></i><span>Иные сектора в соответствии со стратегическими документами АО «НИХ «Байтерек», QIC и управляющей компании</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-shopping-cart"></i><span>{% trans 'Торговля и экспортные операции' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-tractor"></i><span>{% trans 'Агропромышленный комплекс' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-industry"></i><span>{% trans 'Обрабатывающая промышленность' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-hammer"></i><span>{% trans 'Горно-металлургическая промышленность' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-utensils"></i><span>{% trans 'Пищевая промышленность' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-truck"></i><span>{% trans 'Транспорт и логистика' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-bolt"></i><span>{% trans 'Энергетика и инфраструктура' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-heartbeat"></i><span>{% trans 'Здравоохранение и образование' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-leaf"></i><span>{% trans 'Зелёные технологии' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-plane"></i><span>{% trans 'Туризм' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-wifi"></i><span>{% trans 'Информация и связь' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-globe"></i><span>{% trans 'Экспортно-ориентированные проекты, а также проекты, направленные на повышение производительности труда в различных секторах экономики' %}</span></div>
+                        <div class="funds-sector-item"><i class="fas fa-landmark"></i><span>{% trans 'Иные сектора в соответствии со стратегическими документами АО «НИХ «Байтерек», QIC и управляющей компании' %}</span></div>
                     </div>
                 </div>
             </div>
@@ -75,41 +75,41 @@
     <section class="strategic-goals-section">
         <div class="container">
             <div class="section-header-center">
-                <span class="section-tag">Our Funds</span>
-                <h2 class="section-title-center">Фонды под управлением</h2>
+                <span class="section-tag">{% trans 'Our Funds' %}</span>
+                <h2 class="section-title-center">{% trans 'Фонды под управлением' %}</h2>
             </div>
 
             <div class="funds-bento">
                 {% for fund in funds %}
                 <div class="fund-bento-card{% if fund.is_dark %} fund-bento-card--dark{% endif %}">
                     <div class="fund-bento-card__top">
-                        <div class="fund-bento-card__badge{% if fund.is_dark %} fund-bento-card__badge--light{% endif %}">{{ fund.badge }}</div>
-                        <h3 class="fund-bento-card__name">{{ fund.name }}</h3>
-                        <p class="fund-bento-card__type">{{ fund.fund_type }}</p>
+                        <div class="fund-bento-card__badge{% if fund.is_dark %} fund-bento-card__badge--light{% endif %}">{{ fund|localized:'badge' }}</div>
+                        <h3 class="fund-bento-card__name">{{ fund|localized:'name' }}</h3>
+                        <p class="fund-bento-card__type">{{ fund|localized:'fund_type' }}</p>
                     </div>
 
                     <div class="fund-bento-card__stats">
                         <div class="fund-bento-stat fund-bento-stat--large">
-                            <span class="fund-bento-stat__value">{{ fund.target_size }}</span>
-                            <span class="fund-bento-stat__label">Целевой размер</span>
+                            <span class="fund-bento-stat__value">{{ fund|localized:'target_size' }}</span>
+                            <span class="fund-bento-stat__label">{% trans 'Целевой размер' %}</span>
                         </div>
                         <div class="fund-bento-stat">
-                            <span class="fund-bento-stat__value">{{ fund.lifespan }}</span>
-                            <span class="fund-bento-stat__label">Срок жизни</span>
+                            <span class="fund-bento-stat__value">{{ fund|localized:'lifespan' }}</span>
+                            <span class="fund-bento-stat__label">{% trans 'Срок жизни' %}</span>
                         </div>
                         <div class="fund-bento-stat">
                             <span class="fund-bento-stat__value">{{ fund.registration_date|date:"d.m.Y" }}</span>
-                            <span class="fund-bento-stat__label">Дата регистрации</span>
+                            <span class="fund-bento-stat__label">{% trans 'Дата регистрации' %}</span>
                         </div>
                     </div>
 
                     <div class="fund-bento-card__divider"></div>
 
                     <div class="fund-bento-card__goals">
-                        <p class="fund-bento-card__goals-label">Цели фонда</p>
+                        <p class="fund-bento-card__goals-label">{% trans 'Цели фонда' %}</p>
                         <ul class="fund-bento-card__goals-list">
                             {% for goal in fund.goals.all %}
-                            <li>{{ goal.text }}</li>
+                            <li>{{ goal|localized:'text' }}</li>
                             {% endfor %}
                         </ul>
                     </div>

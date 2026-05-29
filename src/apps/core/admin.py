@@ -6,13 +6,13 @@ from .models import TeamMember, TeamMemberBioSection, TeamMemberBioItem
 class TeamMemberBioItemInline(admin.TabularInline):
     model = TeamMemberBioItem
     extra = 1
-    fields = ('text', 'order')
+    fields = ('text', 'text_kk', 'text_en', 'order')
 
 
 class TeamMemberBioSectionInline(admin.StackedInline):
     model = TeamMemberBioSection
     extra = 1
-    fields = ('title', 'order')
+    fields = ('title', 'title_kk', 'title_en', 'order')
     show_change_link = True
 
 
@@ -21,18 +21,28 @@ class TeamMemberAdmin(admin.ModelAdmin):
     list_display = ('photo_preview', 'get_full_name', 'position', 'group', 'is_active', 'order')
     list_filter = ('group', 'is_active')
     list_editable = ('order',)
-    search_fields = ('last_name', 'first_name', 'position')
+    search_fields = (
+        'last_name', 'first_name', 'position',
+        'last_name_kk', 'first_name_kk', 'position_kk',
+        'last_name_en', 'first_name_en', 'position_en',
+    )
     inlines = [TeamMemberBioSectionInline]
 
     fieldsets = (
-        (None, {
+        ('Русский', {
             'fields': ('last_name', 'first_name', 'middle_name', 'position', 'group')
+        }),
+        ('Қазақша', {
+            'fields': ('last_name_kk', 'first_name_kk', 'middle_name_kk', 'position_kk')
+        }),
+        ('English', {
+            'fields': ('last_name_en', 'first_name_en', 'middle_name_en', 'position_en')
         }),
         ('Фото', {
             'fields': ('photo', 'photo_preview_large'),
         }),
         ('Дополнительно', {
-            'fields': ('citizenship', 'is_active', 'order')
+            'fields': ('citizenship', 'citizenship_kk', 'citizenship_en', 'is_active', 'order')
         }),
     )
     readonly_fields = ('photo_preview_large',)
@@ -59,4 +69,5 @@ class TeamMemberAdmin(admin.ModelAdmin):
 @admin.register(TeamMemberBioSection)
 class TeamMemberBioSectionAdmin(admin.ModelAdmin):
     list_display = ('member', 'title', 'order')
+    search_fields = ('member__last_name', 'title', 'title_kk', 'title_en')
     inlines = [TeamMemberBioItemInline]

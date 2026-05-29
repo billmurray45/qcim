@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n i18n_extras %}
 
-{% block title %}QICM Ltd. — Управление инвестиционными фондами, МФЦА{% endblock %}
+{% block title %}{% trans 'QICM Ltd. — Управление инвестиционными фондами, МФЦА' %}{% endblock %}
 
 {% block content %}
 
@@ -20,29 +20,29 @@
             <div class="hero-inner">
                 <div class="hero-line"></div>
                 <h1 class="hero-title slide-content active" data-slide="0">
-                    Инвестиции в <br>будущее <span class="highlight">Центральной Азии</span>
+                    {% blocktrans %}Инвестиции в <br>будущее <span class="highlight">Центральной Азии</span>{% endblocktrans %}
                 </h1>
                 <h1 class="hero-title slide-content" data-slide="1">
-                    Стратегическое <span class="highlight">управление портфелем</span><br>для роста
+                    {% blocktrans %}Стратегическое <span class="highlight">управление портфелем</span><br>для роста{% endblocktrans %}
                 </h1>
                 <h1 class="hero-title slide-content" data-slide="2">
-                    Создание <span class="highlight">устойчивой</span><br>инфраструктуры
+                    {% blocktrans %}Создание <span class="highlight">устойчивой</span><br>инфраструктуры{% endblocktrans %}
                 </h1>
                 <p class="hero-description slide-content active" data-slide="0">
-                    Специализируемся на прямых инвестициях и несырьевых секторах в рамках институциональной структуры
-                    МФЦА.
+                    {% blocktrans %}Специализируемся на прямых инвестициях и несырьевых секторах в рамках институциональной структуры
+                    МФЦА.{% endblocktrans %}
                 </p>
                 <p class="hero-description slide-content" data-slide="1">
-                    Обеспечиваем исключительную доходность через стратегические инвестиции в быстрорастущие компании
-                    Центральной Азии.
+                    {% blocktrans %}Обеспечиваем исключительную доходность через стратегические инвестиции в быстрорастущие компании
+                    Центральной Азии.{% endblocktrans %}
                 </p>
                 <p class="hero-description slide-content" data-slide="2">
-                    Инвестируем в возобновляемую энергетику и современную инфраструктуру для экономической
-                    диверсификации.
+                    {% blocktrans %}Инвестируем в возобновляемую энергетику и современную инфраструктуру для экономической
+                    диверсификации.{% endblocktrans %}
                 </p>
                 <div class="hero-buttons">
-                    <a href="{% url 'holdings:funds' %}" class="btn btn-primary">Наши фонды</a>
-                    <a href="{% url 'contacts:page' %}" class="btn btn-secondary">Контакты</a>
+                    <a href="{% url 'holdings:funds' %}" class="btn btn-primary">{% trans 'Наши фонды' %}</a>
+                    <a href="{% url 'contacts:page' %}" class="btn btn-secondary">{% trans 'Контакты' %}</a>
                 </div>
             </div>
         </div>
@@ -65,26 +65,26 @@
                 <div class="about-decoration-2"></div>
             </div>
             <div class="about-text">
-                <span class="section-tag">About Us</span>
-                <h2 class="section-title">О компании</h2>
+                <span class="section-tag">{% trans 'About Us' %}</span>
+                <h2 class="section-title">{% trans 'О компании' %}</h2>
                 <p class="about-description">
-                    Частная компания Qazaqstan Investment Capital Management Ltd. (QICM Ltd.) является управляющей компанией, зарегистрированной на территории Международного финансового центра «Астана» (МФЦА), и специализируется на управлении фондами прямых инвестиций в Республике Казахстан.
+                    {% blocktrans %}Частная компания Qazaqstan Investment Capital Management Ltd. (QICM Ltd.) является управляющей компанией, зарегистрированной на территории Международного финансового центра «Астана» (МФЦА), и специализируется на управлении фондами прямых инвестиций в Республике Казахстан.{% endblocktrans %}
                 </p>
                 <p class="about-description">
-                    QICM Ltd. является дочерней организацией АО «Qazaqstan Investment Corporation» (QIC) – фонда фондов прямых инвестиций, входящего в структуру АО «НИХ «Байтерек».
+                    {% blocktrans %}QICM Ltd. является дочерней организацией АО «Qazaqstan Investment Corporation» (QIC) – фонда фондов прямых инвестиций, входящего в структуру АО «НИХ «Байтерек».{% endblocktrans %}
                 </p>
                 <div class="about-badges">
                     <div class="about-badge">
                         <i data-lucide="badge-check" class="about-badge__icon"></i>
                         <div>
-                            <span class="about-badge__title">Лицензия MIS</span>
+                            <span class="about-badge__title">{% trans 'Лицензия MIS' %}</span>
                             <span class="about-badge__sub">Managing a Collective Investment Scheme</span>
                         </div>
                     </div>
                     <div class="about-badge">
                         <i data-lucide="badge-check" class="about-badge__icon"></i>
                         <div>
-                            <span class="about-badge__title">Лицензия MI</span>
+                            <span class="about-badge__title">{% trans 'Лицензия MI' %}</span>
                             <span class="about-badge__sub">Managing Investments</span>
                         </div>
                     </div>
@@ -99,36 +99,36 @@
     <div class="container">
         <div class="mission-goals-block">
             <div class="mission-goals-block__mission">
-                <span class="section-tag">Our Mission</span>
-                <h3 class="mission-block__title">Наша миссия</h3>
+                <span class="section-tag">{% trans 'Our Mission' %}</span>
+                <h3 class="mission-block__title">{% trans 'Наша миссия' %}</h3>
                 <p class="mission-block__text">
-                    Направлять частный и институциональный капитал в устойчивые проекты несырьевых секторов
-                    экономики Республики Казахстан, формируя и развивая прозрачные рыночные структуры на базе МФЦА.
+                    {% blocktrans %}Направлять частный и институциональный капитал в устойчивые проекты несырьевых секторов
+                    экономики Республики Казахстан, формируя и развивая прозрачные рыночные структуры на базе МФЦА.{% endblocktrans %}
                 </p>
             </div>
             <div class="mission-goals-block__goals">
-                <span class="section-tag">Strategic Development</span>
-                <h3 class="mission-block__title">Стратегические цели</h3>
+                <span class="section-tag">{% trans 'Strategic Development' %}</span>
+                <h3 class="mission-block__title">{% trans 'Стратегические цели' %}</h3>
                 <div class="goals-grid">
                     <div class="goal-item">
                         <i data-lucide="badge-check" class="goal-item__icon"></i>
                         <div>
-                            <span class="goal-item__title">Институциональный General Partner</span>
-                            <span class="goal-item__sub">Закрепить роль QICM Ltd. в качестве управляющей компании с полной инвестиционной экспертизой в сфере прямых инвестиций.</span>
+                            <span class="goal-item__title">{% trans 'Институциональный General Partner' %}</span>
+                            <span class="goal-item__sub">{% blocktrans %}Закрепить роль QICM Ltd. в качестве управляющей компании с полной инвестиционной экспертизой в сфере прямых инвестиций.{% endblocktrans %}</span>
                         </div>
                     </div>
                     <div class="goal-item">
                         <i data-lucide="badge-check" class="goal-item__icon"></i>
                         <div>
-                            <span class="goal-item__title">Мобилизация долгосрочного капитала</span>
-                            <span class="goal-item__sub">Привлечение инвестиций в проекты с высокой добавленной стоимостью и значимым эффектом для экономики, занятости и экспорта.</span>
+                            <span class="goal-item__title">{% trans 'Мобилизация долгосрочного капитала' %}</span>
+                            <span class="goal-item__sub">{% blocktrans %}Привлечение инвестиций в проекты с высокой добавленной стоимостью и значимым эффектом для экономики, занятости и экспорта.{% endblocktrans %}</span>
                         </div>
                     </div>
                     <div class="goal-item">
                         <i data-lucide="badge-check" class="goal-item__icon"></i>
                         <div>
-                            <span class="goal-item__title">Корпоративное управление и ESG</span>
-                            <span class="goal-item__sub">Повышать стандарты корпоративного управления, устойчивости и прозрачности в портфельных компаниях, развивая инфраструктуру Private Equity в Республике Казахстан.</span>
+                            <span class="goal-item__title">{% trans 'Корпоративное управление и ESG' %}</span>
+                            <span class="goal-item__sub">{% blocktrans %}Повышать стандарты корпоративного управления, устойчивости и прозрачности в портфельных компаниях, развивая инфраструктуру Private Equity в Республике Казахстан.{% endblocktrans %}</span>
                         </div>
                     </div>
                 </div>
@@ -141,43 +141,43 @@
 <section class="principles-section">
     <div class="container">
         <div class="section-header-center">
-            <span class="section-tag">Sustainability &amp; ESG</span>
-            <h2 class="section-title-center">ESG и устойчивость</h2>
+            <span class="section-tag">{% trans 'Sustainability & ESG' %}</span>
+            <h2 class="section-title-center">{% trans 'ESG и устойчивость' %}</h2>
         </div>
 
         <p class="principles-intro">
-            QICM Ltd. интегрирует ESG-факторы в свою деятельность, ориентируясь на международные практики
+            {% blocktrans %}QICM Ltd. интегрирует ESG-факторы в свою деятельность, ориентируясь на международные практики
             ответственного инвестирования. ESG-критерии используются для оценки рисков и возможностей,
             в особенности в таких секторах, как инфраструктура, энергетика, агропромышленный комплекс
-            и обрабатывающая промышленность.
+            и обрабатывающая промышленность.{% endblocktrans %}
         </p>
 
         <div class="principles-grid principles-grid--3col">
             <div class="principle-item principle-item--centered">
                 <div class="principle-item__heading">
                     <span class="principle-item__number">1</span>
-                    <h4 class="principle-item__title">Устойчивый рост</h4>
+                    <h4 class="principle-item__title">{% trans 'Устойчивый рост' %}</h4>
                 </div>
                 <p class="principle-item__text">
-                    Устойчивый рост и повышение ресурсной эффективности.
+                    {% trans 'Устойчивый рост и повышение ресурсной эффективности.' %}
                 </p>
             </div>
             <div class="principle-item principle-item--centered">
                 <div class="principle-item__heading">
                     <span class="principle-item__number">2</span>
-                    <h4 class="principle-item__title">Зелёные технологии</h4>
+                    <h4 class="principle-item__title">{% trans 'Зелёные технологии' %}</h4>
                 </div>
                 <p class="principle-item__text">
-                    Поддержка проектов, способствующих декарбонизации, развитию «зелёных» технологий и повышению энергоэффективности.
+                    {% trans 'Поддержка проектов, способствующих декарбонизации, развитию «зелёных» технологий и повышению энергоэффективности.' %}
                 </p>
             </div>
             <div class="principle-item principle-item--centered">
                 <div class="principle-item__heading">
                     <span class="principle-item__number">3</span>
-                    <h4 class="principle-item__title">Корпоративное управление</h4>
+                    <h4 class="principle-item__title">{% trans 'Корпоративное управление' %}</h4>
                 </div>
                 <p class="principle-item__text">
-                    Улучшение стандартов корпоративного управления и прозрачности в портфельных компаниях.
+                    {% trans 'Улучшение стандартов корпоративного управления и прозрачности в портфельных компаниях.' %}
                 </p>
             </div>
         </div>
@@ -188,13 +188,13 @@
 <section class="team-section">
     <div class="container">
         <div class="section-header-center">
-            <span class="section-tag">Our Team</span>
-            <h2 class="section-title-center">Наша команда</h2>
+            <span class="section-tag">{% trans 'Our Team' %}</span>
+            <h2 class="section-title-center">{% trans 'Наша команда' %}</h2>
         </div>
 
         {% if team_management %}
         <div class="team-subsection">
-            <div class="team-subsection__label">Руководство</div>
+            <div class="team-subsection__label">{% trans 'Руководство' %}</div>
             <div class="team-grid">
                 {% for member in team_management %}
                 <div class="team-card" onclick="openTeamModal('modal-{{ member.pk }}')">
@@ -208,7 +208,7 @@
                     </div>
                     <div class="team-card__info">
                         <div class="team-card__name">{{ member.get_full_name }}</div>
-                        <p class="team-card__position">{{ member.position }}</p>
+                        <p class="team-card__position">{{ member|localized:'position' }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -218,7 +218,7 @@
 
         {% if team_board %}
         <div class="team-subsection">
-            <div class="team-subsection__label">Совет директоров</div>
+            <div class="team-subsection__label">{% trans 'Совет директоров' %}</div>
             <div class="team-grid">
                 {% for member in team_board %}
                 <div class="team-card" onclick="openTeamModal('modal-{{ member.pk }}')">
@@ -232,7 +232,7 @@
                     </div>
                     <div class="team-card__info">
                         <div class="team-card__name">{{ member.get_full_name }}</div>
-                        <p class="team-card__position">{{ member.position }}</p>
+                        <p class="team-card__position">{{ member|localized:'position' }}</p>
                     </div>
                 </div>
                 {% endfor %}
@@ -260,16 +260,16 @@
                 </div>
                 <div class="team-modal__identity">
                     <div class="team-modal__name">{{ member.get_full_name }}</div>
-                    <p class="team-modal__position">{{ member.position }}</p>
+                    <p class="team-modal__position">{{ member|localized:'position' }}</p>
                 </div>
             </div>
             <div class="team-modal__right">
-                <p class="team-modal__meta-info">Гражданство: {{ member.citizenship }}</p>
+                <p class="team-modal__meta-info">{% trans 'Гражданство' %}: {{ member|localized:'citizenship' }}</p>
                 {% for section in member.bio_sections.all %}
-                <p class="team-modal__section-title">{{ section.title }}:</p>
+                <p class="team-modal__section-title">{{ section|localized:'title' }}:</p>
                 <ul class="team-modal__bio-list">
                     {% for item in section.items.all %}
-                    <li>{{ item.text }}</li>
+                    <li>{{ item|localized:'text' }}</li>
                     {% endfor %}
                 </ul>
                 {% endfor %}
@@ -295,16 +295,16 @@
                 </div>
                 <div class="team-modal__identity">
                     <div class="team-modal__name">{{ member.get_full_name }}</div>
-                    <p class="team-modal__position">{{ member.position }}</p>
+                    <p class="team-modal__position">{{ member|localized:'position' }}</p>
                 </div>
             </div>
             <div class="team-modal__right">
-                <p class="team-modal__meta-info">Гражданство: {{ member.citizenship }}</p>
+                <p class="team-modal__meta-info">{% trans 'Гражданство' %}: {{ member|localized:'citizenship' }}</p>
                 {% for section in member.bio_sections.all %}
-                <p class="team-modal__section-title">{{ section.title }}:</p>
+                <p class="team-modal__section-title">{{ section|localized:'title' }}:</p>
                 <ul class="team-modal__bio-list">
                     {% for item in section.items.all %}
-                    <li>{{ item.text }}</li>
+                    <li>{{ item|localized:'text' }}</li>
                     {% endfor %}
                 </ul>
                 {% endfor %}

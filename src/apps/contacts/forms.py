@@ -21,7 +21,7 @@ class ContactForm(forms.ModelForm):
         max_length=150,
         required=True,
         widget=forms.TextInput(attrs={
-            'placeholder': 'Ваше имя *',
+            'placeholder': _('Ваше имя *'),
             'class': 'form-control',
             'minlength': 2,
             'maxlength': 150,
@@ -39,7 +39,7 @@ class ContactForm(forms.ModelForm):
         required=True,
         validators=[EmailValidator()],
         widget=forms.EmailInput(attrs={
-            'placeholder': 'Email адрес *',
+            'placeholder': _('Email адрес *'),
             'class': 'form-control',
             'maxlength': 254
         }),
@@ -54,7 +54,7 @@ class ContactForm(forms.ModelForm):
         required=True,
         validators=[phone_validator],
         widget=forms.TextInput(attrs={
-            'placeholder': 'Номер телефона *',
+            'placeholder': _('Номер телефона *'),
             'class': 'form-control',
             'type': 'tel',
             'inputmode': 'tel',
@@ -80,7 +80,7 @@ class ContactForm(forms.ModelForm):
     message = forms.CharField(
         required=True,
         widget=forms.Textarea(attrs={
-            'placeholder': 'Ваше сообщение *',
+            'placeholder': _('Ваше сообщение *'),
             'class': 'form-control',
             'rows': 5,
             'minlength': 10,

@@ -8,13 +8,19 @@ from .models import ProjectCategory, Project
 class ProjectCategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug', 'active_status_icon', 'project_count', 'created_at']
     list_filter = ['is_active', 'created_at']
-    search_fields = ['name', 'description']
+    search_fields = ['name', 'description', 'name_kk', 'description_kk', 'name_en', 'description_en']
     prepopulated_fields = {'slug': ('name',)}
     readonly_fields = ['created_at', 'updated_at']
 
     fieldsets = (
-        ('Основная информация', {
+        ('Русский', {
             'fields': ('name', 'slug', 'description', 'icon', 'is_active')
+        }),
+        ('Қазақша', {
+            'fields': ('name_kk', 'description_kk')
+        }),
+        ('English', {
+            'fields': ('name_en', 'description_en')
         }),
         ('Даты', {
             'fields': ('created_at', 'updated_at'),
@@ -50,7 +56,11 @@ class ProjectAdmin(admin.ModelAdmin):
         'created_at'
     ]
     list_filter = ['status', 'is_published', 'is_featured', 'category', 'published_date', 'created_at']
-    search_fields = ['title', 'description', 'short_description', 'location']
+    search_fields = [
+        'title', 'description', 'short_description', 'location',
+        'title_kk', 'description_kk', 'short_description_kk', 'location_kk',
+        'title_en', 'description_en', 'short_description_en', 'location_en',
+    ]
     prepopulated_fields = {'slug': ('title',)}
     date_hierarchy = 'published_date'
 
@@ -65,8 +75,14 @@ class ProjectAdmin(admin.ModelAdmin):
         """Разные fieldsets для создания и редактирования"""
         if obj:  # Редактирование - показываем превью
             return (
-                ('Основная информация', {
+                ('Русский', {
                     'fields': ('title', 'slug', 'category', 'short_description')
+                }),
+                ('Қазақша', {
+                    'fields': ('title_kk', 'short_description_kk', 'description_kk')
+                }),
+                ('English', {
+                    'fields': ('title_en', 'short_description_en', 'description_en')
                 }),
                 ('Полное описание', {
                     'fields': ('description',)
@@ -75,16 +91,24 @@ class ProjectAdmin(admin.ModelAdmin):
                     'fields': ('image', 'image_preview', 'gallery')
                 }),
                 ('Финансы', {
-                    'fields': ('investment_amount', 'currency', 'expected_roi', 'partners')
+                    'fields': ('investment_amount', 'currency', 'expected_roi', 'partners', 'partners_kk', 'partners_en')
                 }),
                 ('Сроки и локация', {
-                    'fields': ('start_date', 'end_date', 'location', 'country')
+                    'fields': (
+                        'start_date', 'end_date',
+                        'location', 'location_kk', 'location_en',
+                        'country', 'country_kk', 'country_en',
+                    )
                 }),
                 ('Статус', {
                     'fields': ('status', 'is_published', 'is_featured', 'published_date')
                 }),
                 ('SEO', {
-                    'fields': ('meta_title', 'meta_description', 'meta_keywords'),
+                    'fields': (
+                        'meta_title', 'meta_description', 'meta_keywords',
+                        'meta_title_kk', 'meta_description_kk', 'meta_keywords_kk',
+                        'meta_title_en', 'meta_description_en', 'meta_keywords_en',
+                    ),
                     'classes': ('collapse',)
                 }),
                 ('Статистика', {
@@ -94,8 +118,14 @@ class ProjectAdmin(admin.ModelAdmin):
             )
         else:  # Создание - без превью
             return (
-                ('Основная информация', {
+                ('Русский', {
                     'fields': ('title', 'slug', 'category', 'short_description')
+                }),
+                ('Қазақша', {
+                    'fields': ('title_kk', 'short_description_kk', 'description_kk')
+                }),
+                ('English', {
+                    'fields': ('title_en', 'short_description_en', 'description_en')
                 }),
                 ('Полное описание', {
                     'fields': ('description',)
@@ -104,16 +134,24 @@ class ProjectAdmin(admin.ModelAdmin):
                     'fields': ('image', 'gallery')
                 }),
                 ('Финансы', {
-                    'fields': ('investment_amount', 'currency', 'expected_roi', 'partners')
+                    'fields': ('investment_amount', 'currency', 'expected_roi', 'partners', 'partners_kk', 'partners_en')
                 }),
                 ('Сроки и локация', {
-                    'fields': ('start_date', 'end_date', 'location', 'country')
+                    'fields': (
+                        'start_date', 'end_date',
+                        'location', 'location_kk', 'location_en',
+                        'country', 'country_kk', 'country_en',
+                    )
                 }),
                 ('Статус', {
                     'fields': ('status', 'is_published', 'is_featured', 'published_date')
                 }),
                 ('SEO', {
-                    'fields': ('meta_title', 'meta_description', 'meta_keywords'),
+                    'fields': (
+                        'meta_title', 'meta_description', 'meta_keywords',
+                        'meta_title_kk', 'meta_description_kk', 'meta_keywords_kk',
+                        'meta_title_en', 'meta_description_en', 'meta_keywords_en',
+                    ),
                     'classes': ('collapse',)
                 }),
             )

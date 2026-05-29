@@ -17,17 +17,23 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('i18n/', include('django.conf.urls.i18n')),
+]
+
+urlpatterns += i18n_patterns(
     path('auth/', include('apps.users.urls')),
     path('contact/', include('apps.contacts.urls')),
     path('news/', include('apps.news.urls')),
     path('projects/', include('apps.projects.urls')),
     path('funds/', include('apps.holdings.urls')),
     path('', include('apps.core.urls')),
-]
+    prefix_default_language=False,
+)
 
 # Serve media files in development
 if settings.DEBUG:

@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n i18n_extras %}
 
-{% block title %}Новости - QICM Ltd.{% endblock %}
-{% block meta_description %}Новости QICM Ltd., холдинга Байтерек и QIC{% endblock %}
+{% block title %}{% trans 'Новости - QICM Ltd.' %}{% endblock %}
+{% block meta_description %}{% trans 'Новости QICM Ltd., холдинга Байтерек и QIC' %}{% endblock %}
 
 {% block content %}
 <main class="main">
 
   <section class="news-page-header">
-    <img class="news-page-header__bg" src="{% static 'images/news-header.jpg' %}" alt="Новости QICM Ltd.">
+    <img class="news-page-header__bg" src="{% static 'images/news-header.jpg' %}" alt="{% trans 'Новости QICM Ltd.' %}">
     <div class="news-page-header__overlay"></div>
     <div class="container">
       <div class="news-page-header__content">
         <nav class="breadcrumbs">
-          <a href="{% url 'core:home' %}">Главная</a>
+          <a href="{% url 'core:home' %}">{% trans 'Главная' %}</a>
           <span>/</span>
-          <span>Новости</span>
+          <span>{% trans 'Новости' %}</span>
         </nav>
         <div class="hero-line"></div>
-        <h1 class="hero-title">Новости</h1>
-        <p class="hero-description">Актуальные события и обновления QICM Ltd.</p>
+        <h1 class="hero-title">{% trans 'Новости' %}</h1>
+        <p class="hero-description">{% trans 'Актуальные события и обновления QICM Ltd.' %}</p>
       </div>
     </div>
   </section>
@@ -29,12 +29,11 @@
 
       <div class="news-tabs" role="tablist">
         <button class="news-tab {% if active_tab == 'own' %}news-tab--active{% endif %}" data-tab="own" role="tab"
-          aria-selected="{% if active_tab == 'own' %}true{% else %}false{% endif %}">ЧК QICM Ltd.</button>
+          aria-selected="{% if active_tab == 'own' %}true{% else %}false{% endif %}">{% trans 'ЧК QICM Ltd.' %}</button>
         <button class="news-tab {% if active_tab == 'baiterek' %}news-tab--active{% endif %}" data-tab="baiterek"
-          role="tab" aria-selected="{% if active_tab == 'baiterek' %}true{% else %}false{% endif %}">АО «НИХ
-          «Байтерек»</button>
+          role="tab" aria-selected="{% if active_tab == 'baiterek' %}true{% else %}false{% endif %}">{% trans 'АО «НИХ «Байтерек»' %}</button>
         <button class="news-tab {% if active_tab == 'qic' %}news-tab--active{% endif %}" data-tab="qic" role="tab"
-          aria-selected="{% if active_tab == 'qic' %}true{% else %}false{% endif %}">АО «QIC»</button>
+          aria-selected="{% if active_tab == 'qic' %}true{% else %}false{% endif %}">{% trans 'АО «QIC»' %}</button>
       </div>
 
       {# ===== QICM Ltd. ===== #}
@@ -47,7 +46,7 @@
           <article class="news-card">
             <a href="{{ item.get_absolute_url }}" class="news-card__link">
               {% if item.image %}
-              <div class="news-card__image"><img src="{{ item.image.url }}" alt="{{ item.title }}" loading="lazy"></div>
+              <div class="news-card__image"><img src="{{ item.image.url }}" alt="{{ item|localized:'title' }}" loading="lazy"></div>
               {% else %}
               <div class="news-card__image news-card__image--placeholder">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -60,13 +59,13 @@
               {% endif %}
               <div class="news-card__body">
                 <div class="news-card__top">
-                  <span class="news-card__source">QICM Ltd.{% if item.category %} · {{ item.category.name }}{% endif %}</span>
+                  <span class="news-card__source">QICM Ltd.{% if item.category %} · {{ item.category|localized:'name' }}{% endif %}</span>
                   <span class="news-card__date">{{ item.published_date|date:"d.m.Y" }}</span>
                 </div>
-                <h3 class="news-card__title">{{ item.title }}</h3>
-                {% if item.excerpt %}<p class="news-card__excerpt">{{ item.excerpt|truncatewords:18 }}</p>{% endif %}
+                <h3 class="news-card__title">{{ item|localized:'title' }}</h3>
+                {% if item.excerpt %}<p class="news-card__excerpt">{{ item|localized:'excerpt'|truncatewords:18 }}</p>{% endif %}
                 <div class="news-card__footer">
-                  <span class="news-card__views">{{ item.views_count }} просм.</span>
+                  <span class="news-card__views">{{ item.views_count }} {% trans 'просм.' %}</span>
                 </div>
               </div>
             </a>
@@ -98,7 +97,7 @@
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
             <polyline points="14 2 14 8 20 8" />
           </svg>
-          <p>Новости не найдены</p>
+          <p>{% trans 'Новости не найдены' %}</p>
         </div>
         {% endif %}
       </div>
@@ -112,7 +111,7 @@
           <article class="news-card">
             <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="news-card__link">
               {% if item.image_url %}
-              <div class="news-card__image"><img src="{{ item.image_url }}" alt="{{ item.title }}" loading="lazy"></div>
+              <div class="news-card__image"><img src="{{ item.image_url }}" alt="{{ item|localized:'title' }}" loading="lazy"></div>
               {% else %}
               <div class="news-card__image news-card__image--placeholder">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -125,10 +124,10 @@
               {% endif %}
               <div class="news-card__body">
                 <div class="news-card__top">
-                  <span class="news-card__source news-card__source--ext">Байтерек</span>
+                  <span class="news-card__source news-card__source--ext">{% trans 'Байтерек' %}</span>
                   <span class="news-card__date">{{ item.published_date|date:"d.m.Y" }}</span>
                 </div>
-                <h3 class="news-card__title">{{ item.title }}</h3>
+                <h3 class="news-card__title">{{ item|localized:'title' }}</h3>
                 <div class="news-card__footer">
                   <span class="news-card__ext-link">
                     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -152,7 +151,7 @@
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
             <polyline points="14 2 14 8 20 8" />
           </svg>
-          <p>Нет данных. Запустите <code>python manage.py fetch_external_news</code></p>
+          <p>{% blocktrans %}Нет данных. Запустите <code>python manage.py fetch_external_news</code>{% endblocktrans %}</p>
         </div>
         {% endif %}
       </div>
@@ -166,7 +165,7 @@
           <article class="news-card">
             <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer" class="news-card__link">
               {% if item.image_url %}
-              <div class="news-card__image"><img src="{{ item.image_url }}" alt="{{ item.title }}" loading="lazy"></div>
+              <div class="news-card__image"><img src="{{ item.image_url }}" alt="{{ item|localized:'title' }}" loading="lazy"></div>
               {% else %}
               <div class="news-card__image news-card__image--placeholder">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
@@ -182,7 +181,7 @@
                   <span class="news-card__source news-card__source--ext">QIC</span>
                   <span class="news-card__date">{{ item.published_date|date:"d.m.Y" }}</span>
                 </div>
-                <h3 class="news-card__title">{{ item.title }}</h3>
+                <h3 class="news-card__title">{{ item|localized:'title' }}</h3>
                 <div class="news-card__footer">
                   <span class="news-card__ext-link">
                     <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -206,7 +205,7 @@
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
             <polyline points="14 2 14 8 20 8" />
           </svg>
-          <p>Нет данных. Запустите <code>python manage.py fetch_external_news</code></p>
+          <p>{% blocktrans %}Нет данных. Запустите <code>python manage.py fetch_external_news</code>{% endblocktrans %}</p>
         </div>
         {% endif %}
       </div>

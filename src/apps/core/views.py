@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.utils.translation import gettext_lazy as _
 from django.views.generic import TemplateView
 from apps.news.models import News
 from apps.contacts.models import Office
@@ -10,7 +11,7 @@ class SubmitRequestView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Оставить заявку'
+        context['title'] = _('Оставить заявку')
         return context
 
 
@@ -30,7 +31,7 @@ def home_page(request):
     ).prefetch_related('bio_sections__items')
 
     context = {
-        'title': 'Главная страница',
+        'title': _('Главная страница'),
         'latest_news': latest_news,
         'main_office': main_office,
         'team_management': team_management,

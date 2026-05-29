@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n i18n_extras %}
 
-{% block title %}{{ news.meta_title|default:news.title }} - Business Consulting{% endblock %}
-{% block meta_description %}{{ news.meta_description|default:news.excerpt }}{% endblock %}
+{% block title %}{% with meta_title=news|localized:'meta_title' title=news|localized:'title' %}{{ meta_title|default:title }} - QICM Ltd.{% endwith %}{% endblock %}
+{% block meta_description %}{% with meta_description=news|localized:'meta_description' excerpt=news|localized:'excerpt' %}{{ meta_description|default:excerpt }}{% endwith %}{% endblock %}
 
 {% block content %}
 <main class="main">
@@ -11,27 +11,27 @@
     <div class="container">
       <!-- Breadcrumbs -->
       <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="{% url 'core:home' %}">Главная</a>
+        <a href="{% url 'core:home' %}">{% trans 'Главная' %}</a>
         <span>/</span>
-        <a href="{% url 'news:list' %}">Новости</a>
+        <a href="{% url 'news:list' %}">{% trans 'Новости' %}</a>
         {% if news.category %}
         <span>/</span>
-        <a href="{% url 'news:category' news.category.slug %}">{{ news.category.name }}</a>
+        <a href="{% url 'news:category' news.category.slug %}">{{ news.category|localized:'name' }}</a>
         {% endif %}
         <span>/</span>
-        <span>{{ news.title|truncatewords:5 }}</span>
+        <span>{{ news|localized:'title'|truncatewords:5 }}</span>
       </nav>
 
       <!-- Article Header -->
       <header class="news-detail__header">
         {% if news.category %}
         <a href="{% url 'news:category' news.category.slug %}" class="news-detail__category">
-          {{ news.category.name }}
+          {{ news.category|localized:'name' }}
         </a>
         {% endif %}
 
         <h1 class="news-detail__title">
-          {{ news.title }}
+          {{ news|localized:'title' }}
         </h1>
 
         <div class="news-detail__meta">
@@ -41,7 +41,7 @@
           </span>
           <span class="news-detail__views">
             <i class="far fa-eye"></i>
-            {{ news.views_count }} просмотров
+            {{ news.views_count }} {% trans 'просмотров' %}
           </span>
         </div>
       </header>
@@ -49,24 +49,24 @@
       <!-- Featured Image -->
       {% if news.image %}
       <div class="news-detail__image">
-        <img src="{{ news.image.url }}" alt="{{ news.title }}">
+        <img src="{{ news.image.url }}" alt="{{ news|localized:'title' }}">
       </div>
       {% endif %}
 
       <!-- Article Content -->
       <div class="news-detail__content">
         <div class="news-detail__excerpt">
-          {{ news.excerpt }}
+          {{ news|localized:'excerpt' }}
         </div>
 
         <div class="news-detail__body">
-          {{ news.content|linebreaks }}
+          {{ news|localized:'content'|linebreaks }}
         </div>
       </div>
 
       <!-- Share Buttons -->
       <div class="news-detail__share">
-        <h4>Поделиться новостью:</h4>
+        <h4>{% trans 'Поделиться новостью:' %}</h4>
         <div class="share-buttons">
           <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" 
              target="_blank" 
@@ -74,7 +74,7 @@
              class="share-btn share-btn--facebook">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ news.title }}" 
+          <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ news|localized:'title'|urlencode }}" 
              target="_blank" 
              rel="noopener noreferrer"
              class="share-btn share-btn--twitter">
@@ -86,7 +86,7 @@
              class="share-btn share-btn--linkedin">
             <i class="fab fa-linkedin-in"></i>
           </a>
-          <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ news.title }}" 
+          <a href="https://t.me/share/url?url={{ request.build_absolute_uri }}&text={{ news|localized:'title'|urlencode }}" 
              target="_blank" 
              rel="noopener noreferrer"
              class="share-btn share-btn--telegram">
@@ -98,14 +98,14 @@
       <!-- Related News -->
       {% if related_news %}
       <section class="related-news">
-        <h2 class="related-news__title">Похожие новости</h2>
+        <h2 class="related-news__title">{% trans 'Похожие новости' %}</h2>
         <div class="news-grid">
           {% for item in related_news %}
           <article class="news-card">
             <a href="{{ item.get_absolute_url }}" class="news-card__link">
               {% if item.image %}
               <div class="news-card__image">
-                <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                <img src="{{ item.image.url }}" alt="{{ item|localized:'title' }}">
               </div>
               {% else %}
               <div class="news-card__image news-card__image--placeholder">
@@ -115,11 +115,11 @@
 
               <div class="news-card__content">
                 {% if item.category %}
-                <span class="news-card__category">{{ item.category.name }}</span>
+                <span class="news-card__category">{{ item.category|localized:'name' }}</span>
                 {% endif %}
 
-                <h3 class="news-card__title">{{ item.title }}</h3>
-                <p class="news-card__excerpt">{{ item.excerpt|truncatewords:15 }}</p>
+                <h3 class="news-card__title">{{ item|localized:'title' }}</h3>
+                <p class="news-card__excerpt">{{ item|localized:'excerpt'|truncatewords:15 }}</p>
 
                 <div class="news-card__meta">
                   <span class="news-card__date">
@@ -139,7 +139,7 @@
       <div class="news-detail__actions">
         <a href="{% url 'news:list' %}" class="btn btn--outline">
           <i class="fas fa-arrow-left"></i>
-          &nbsp;Все новости
+          &nbsp;{% trans 'Все новости' %}
         </a>
       </div>
     </div>

@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n i18n_extras %}
 
-{% block title %}{{ category.name }} - Инвестиционные проекты - Business Consulting{% endblock %}
-{% block meta_description %}Проекты категории "{{ category.name }}" от компании Business Consulting{% endblock %}
+{% block title %}{{ category|localized:'name' }} - {% trans 'Инвестиционные проекты' %} - QICM Ltd.{% endblock %}
+{% block meta_description %}{% blocktrans with category_name=category|localized:'name' %}Проекты категории "{{ category_name }}" от компании QICM Ltd.{% endblocktrans %}{% endblock %}
 
 {% block content %}
 <main class="main">
@@ -10,40 +10,40 @@
     <div class="container">
       <!-- Breadcrumbs -->
       <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="{% url 'core:home' %}">Главная</a>
+        <a href="{% url 'core:home' %}">{% trans 'Главная' %}</a>
         <span>/</span>
-        <a href="{% url 'projects:list' %}">Проекты</a>
+        <a href="{% url 'projects:list' %}">{% trans 'Проекты' %}</a>
         <span>/</span>
-        <span>{{ category.name }}</span>
+        <span>{{ category|localized:'name' }}</span>
       </nav>
 
       <!-- Page Header -->
       <header class="page-header">
-        <div class="page-header__eyebrow">Категория проектов</div>
+        <div class="page-header__eyebrow">{% trans 'Категория проектов' %}</div>
         <h1 class="page-header__title">
           {% if category.icon %}
           <i class="{{ category.icon }}"></i>
           {% endif %}
-          {{ category.name }}
+          {{ category|localized:'name' }}
         </h1>
-        {% if category.description %}
-        <p class="page-header__subtitle">{{ category.description }}</p>
+        {% if category|localized:'description' %}
+        <p class="page-header__subtitle">{{ category|localized:'description' }}</p>
         {% else %}
-        <p class="page-header__subtitle">Инвестиционные проекты в категории "{{ category.name }}"</p>
+        <p class="page-header__subtitle">{% blocktrans with category_name=category|localized:'name' %}Инвестиционные проекты в категории "{{ category_name }}"{% endblocktrans %}</p>
         {% endif %}
       </header>
 
       <!-- Category Filter -->
       <div class="projects-categories">
         <a href="{% url 'projects:list' %}" class="category-tag">
-          Все категории
+          {% trans 'Все категории' %}
         </a>
         {% for cat in categories %}
         <a href="{% url 'projects:category' cat.slug %}" class="category-tag {% if cat.id == category.id %}is-active{% endif %}">
           {% if cat.icon %}
           <i class="{{ cat.icon }}"></i>
           {% endif %}
-          {{ cat.name }}
+          {{ cat|localized:'name' }}
         </a>
         {% endfor %}
       </div>
@@ -56,7 +56,7 @@
           <a href="{{ project.get_absolute_url }}" class="project-card__link">
             {% if project.image %}
             <div class="project-card__image">
-              <img src="{{ project.image.url }}" alt="{{ project.title }}">
+              <img src="{{ project.image.url }}" alt="{{ project|localized:'title' }}">
               {% if project.is_featured %}
               <div class="project-card__badge project-card__badge--star">
                 <i class="fas fa-star"></i>
@@ -72,15 +72,15 @@
             <div class="project-card__content">
               <div class="project-card__header">
                 {% if project.category %}
-                <span class="project-card__category">{{ project.category.name }}</span>
+                <span class="project-card__category">{{ project.category|localized:'name' }}</span>
                 {% endif %}
                 <span class="project-card__status project-card__status--{{ project.status }}">
                   {{ project.get_status_display }}
                 </span>
               </div>
 
-              <h3 class="project-card__title">{{ project.title }}</h3>
-              <p class="project-card__description">{{ project.short_description|truncatewords:20 }}</p>
+              <h3 class="project-card__title">{{ project|localized:'title' }}</h3>
+              <p class="project-card__description">{{ project|localized:'short_description'|truncatewords:20 }}</p>
 
               <div class="project-card__details">
                 {% if project.investment_amount %}
@@ -89,10 +89,10 @@
                   <span>{{ project.investment_amount|floatformat:0 }} {{ project.currency }}</span>
                 </div>
                 {% endif %}
-                {% if project.location %}
+                {% if project|localized:'location' %}
                 <div class="project-info">
                   <i class="fas fa-map-marker-alt"></i>
-                  <span>{{ project.location }}</span>
+                  <span>{{ project|localized:'location' }}</span>
                 </div>
                 {% endif %}
               </div>
@@ -126,7 +126,7 @@
         {% endif %}
 
         <span class="pagination__current">
-          Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+          {% blocktrans with number=page_obj.number total=page_obj.paginator.num_pages %}Страница {{ number }} из {{ total }}{% endblocktrans %}
         </span>
 
         {% if page_obj.has_next %}
@@ -142,9 +142,9 @@
       {% else %}
       <div class="no-results">
         <i class="fas fa-briefcase"></i>
-        <h3>Проектов пока нет</h3>
-        <p>В этой категории пока нет опубликованных проектов</p>
-        <a href="{% url 'projects:list' %}" class="btn btn--primary">Все проекты</a>
+        <h3>{% trans 'Проектов пока нет' %}</h3>
+        <p>{% trans 'В этой категории пока нет опубликованных проектов' %}</p>
+        <a href="{% url 'projects:list' %}" class="btn btn--primary">{% trans 'Все проекты' %}</a>
       </div>
       {% endif %}
     </div>

@@ -35,9 +35,17 @@ class ProjectListView(ListView):
         if search_query:
             queryset = queryset.filter(
                 Q(title__icontains=search_query) |
+                Q(title_kk__icontains=search_query) |
+                Q(title_en__icontains=search_query) |
                 Q(description__icontains=search_query) |
+                Q(description_kk__icontains=search_query) |
+                Q(description_en__icontains=search_query) |
                 Q(short_description__icontains=search_query) |
-                Q(location__icontains=search_query)
+                Q(short_description_kk__icontains=search_query) |
+                Q(short_description_en__icontains=search_query) |
+                Q(location__icontains=search_query) |
+                Q(location_kk__icontains=search_query) |
+                Q(location_en__icontains=search_query)
             )
 
         return queryset

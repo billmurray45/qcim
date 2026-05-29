@@ -241,14 +241,24 @@ class OfficeAdmin(admin.ModelAdmin):
 
     search_fields = [
         'city',
+        'city_kk',
+        'city_en',
         'address',
+        'address_kk',
+        'address_en',
         'phone',
         'email',
     ]
 
     fieldsets = (
-        (_('Основная информация'), {
+        (_('Русский'), {
             'fields': ('city', 'address', 'phone', 'email', 'working_hours')
+        }),
+        (_('Қазақша'), {
+            'fields': ('city_kk', 'address_kk', 'working_hours_kk')
+        }),
+        (_('English'), {
+            'fields': ('city_en', 'address_en', 'working_hours_en')
         }),
         (_('Координаты для карты'), {
             'fields': ('latitude', 'longitude'),

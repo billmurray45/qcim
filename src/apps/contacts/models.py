@@ -123,10 +123,16 @@ class Office(models.Model):
     """Офисы компании"""
 
     city = models.CharField(_('город'), max_length=100)
+    city_kk = models.CharField(_('город (казахский)'), max_length=100, blank=True)
+    city_en = models.CharField(_('город (английский)'), max_length=100, blank=True)
     address = models.CharField(_('адрес'), max_length=255)
+    address_kk = models.CharField(_('адрес (казахский)'), max_length=255, blank=True)
+    address_en = models.CharField(_('адрес (английский)'), max_length=255, blank=True)
     phone = models.CharField(_('телефон'), max_length=50)
     email = models.EmailField(_('email'), blank=True)
     working_hours = models.CharField(_('режим работы'), max_length=200, default='Пн-Пт 9:00-18:00')
+    working_hours_kk = models.CharField(_('режим работы (казахский)'), max_length=200, blank=True)
+    working_hours_en = models.CharField(_('режим работы (английский)'), max_length=200, blank=True)
 
     # Координаты для карты
     latitude = models.DecimalField(

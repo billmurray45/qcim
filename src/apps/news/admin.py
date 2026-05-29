@@ -8,13 +8,19 @@ from .models import Category, News, ExternalNews
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ['name', 'slug', 'active_status_icon', 'news_count', 'created_at']
     list_filter = ['is_active', 'created_at']
-    search_fields = ['name', 'description']
+    search_fields = ['name', 'description', 'name_kk', 'description_kk', 'name_en', 'description_en']
     prepopulated_fields = {'slug': ('name',)}
     readonly_fields = ['created_at', 'updated_at']
 
     fieldsets = (
-        ('Основная информация', {
+        ('Русский', {
             'fields': ('name', 'slug', 'description', 'is_active')
+        }),
+        ('Қазақша', {
+            'fields': ('name_kk', 'description_kk')
+        }),
+        ('English', {
+            'fields': ('name_en', 'description_en')
         }),
         ('Даты', {
             'fields': ('created_at', 'updated_at'),
@@ -48,7 +54,11 @@ class NewsAdmin(admin.ModelAdmin):
         'created_at'
     ]
     list_filter = ['is_published', 'category', 'published_date', 'created_at']
-    search_fields = ['title', 'excerpt', 'content']
+    search_fields = [
+        'title', 'excerpt', 'content',
+        'title_kk', 'excerpt_kk', 'content_kk',
+        'title_en', 'excerpt_en', 'content_en',
+    ]
     prepopulated_fields = {'slug': ('title',)}
     date_hierarchy = 'published_date'
 
@@ -63,8 +73,14 @@ class NewsAdmin(admin.ModelAdmin):
         """Разные fieldsets для создания и редактирования"""
         if obj:  # Редактирование - показываем превью
             return (
-                ('Основная информация', {
+                ('Русский', {
                     'fields': ('title', 'slug', 'category', 'excerpt')
+                }),
+                ('Қазақша', {
+                    'fields': ('title_kk', 'excerpt_kk', 'content_kk')
+                }),
+                ('English', {
+                    'fields': ('title_en', 'excerpt_en', 'content_en')
                 }),
                 ('Содержание', {
                     'fields': ('content', 'image', 'image_preview')
@@ -73,7 +89,11 @@ class NewsAdmin(admin.ModelAdmin):
                     'fields': ('published_date', 'is_published')
                 }),
                 ('SEO', {
-                    'fields': ('meta_title', 'meta_description', 'meta_keywords'),
+                    'fields': (
+                        'meta_title', 'meta_description', 'meta_keywords',
+                        'meta_title_kk', 'meta_description_kk', 'meta_keywords_kk',
+                        'meta_title_en', 'meta_description_en', 'meta_keywords_en',
+                    ),
                     'classes': ('collapse',)
                 }),
                 ('Статистика', {
@@ -83,8 +103,14 @@ class NewsAdmin(admin.ModelAdmin):
             )
         else:  # Создание - без превью
             return (
-                ('Основная информация', {
+                ('Русский', {
                     'fields': ('title', 'slug', 'category', 'excerpt')
+                }),
+                ('Қазақша', {
+                    'fields': ('title_kk', 'excerpt_kk', 'content_kk')
+                }),
+                ('English', {
+                    'fields': ('title_en', 'excerpt_en', 'content_en')
                 }),
                 ('Содержание', {
                     'fields': ('content', 'image')
@@ -93,7 +119,11 @@ class NewsAdmin(admin.ModelAdmin):
                     'fields': ('published_date', 'is_published')
                 }),
                 ('SEO', {
-                    'fields': ('meta_title', 'meta_description', 'meta_keywords'),
+                    'fields': (
+                        'meta_title', 'meta_description', 'meta_keywords',
+                        'meta_title_kk', 'meta_description_kk', 'meta_keywords_kk',
+                        'meta_title_en', 'meta_description_en', 'meta_keywords_en',
+                    ),
                     'classes': ('collapse',)
                 }),
             )
@@ -134,6 +164,6 @@ class NewsAdmin(admin.ModelAdmin):
 class ExternalNewsAdmin(admin.ModelAdmin):
     list_display = ["title", "source", "published_date", "fetched_at", "url"]
     list_filter = ["source", "published_date"]
-    search_fields = ["title"]
+    search_fields = ["title", "title_kk", "title_en"]
     readonly_fields = ["source", "external_id", "title", "url", "image_url", "published_date", "fetched_at"]
     ordering = ["-published_date"]

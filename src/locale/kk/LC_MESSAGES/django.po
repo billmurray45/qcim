@@ -1,0 +1,2557 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-05-29 10:28+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: apps/contacts/admin.py:55
+msgid "Основная информация"
+msgstr ""
+
+#: apps/contacts/admin.py:58 templates/contacts/contact_page.html:159
+msgid "Сообщение"
+msgstr "Хабарлама"
+
+#: apps/contacts/admin.py:61 apps/contacts/admin.py:102
+msgid "Статус"
+msgstr ""
+
+#: apps/contacts/admin.py:64
+msgid "Метаданные"
+msgstr ""
+
+#: apps/contacts/admin.py:84
+msgid "Тема"
+msgstr ""
+
+#: apps/contacts/admin.py:111
+msgid "Пользователь"
+msgstr ""
+
+#: apps/contacts/admin.py:116 apps/news/models.py:74 apps/news/models.py:224
+#: apps/projects/models.py:57 apps/projects/models.py:316
+msgid "Дата создания"
+msgstr ""
+
+#: apps/contacts/admin.py:127
+msgid "Предпросмотр сообщения"
+msgstr ""
+
+#: apps/contacts/admin.py:129
+msgid "Отметить как прочитанное"
+msgstr ""
+
+#: apps/contacts/admin.py:139
+#, python-brace-format
+msgid "Отмечено как прочитанное: {count} сообщений."
+msgstr ""
+
+#: apps/contacts/admin.py:146
+msgid "Отметить как непрочитанное"
+msgstr ""
+
+#: apps/contacts/admin.py:153
+#, python-brace-format
+msgid "Отмечено как непрочитанное: {count} сообщений."
+msgstr ""
+
+#: apps/contacts/admin.py:160
+msgid "Отметить что ответили"
+msgstr ""
+
+#: apps/contacts/admin.py:172
+#, python-brace-format
+msgid "Отмечено что ответили: {count} сообщений."
+msgstr ""
+
+#: apps/contacts/admin.py:179
+msgid "Перевести в статус \"В обработке\""
+msgstr ""
+
+#: apps/contacts/admin.py:189
+#, python-brace-format
+msgid "Переведено в статус \"В обработке\": {count} сообщений."
+msgstr ""
+
+#: apps/contacts/admin.py:254
+msgid "Русский"
+msgstr ""
+
+#: apps/contacts/admin.py:257
+msgid "Қазақша"
+msgstr ""
+
+#: apps/contacts/admin.py:260
+msgid "English"
+msgstr "English"
+
+#: apps/contacts/admin.py:263
+msgid "Координаты для карты"
+msgstr ""
+
+#: apps/contacts/admin.py:267
+msgid "Социальные сети"
+msgstr ""
+
+#: apps/contacts/admin.py:272
+msgid "Настройки"
+msgstr ""
+
+#: apps/contacts/admin.py:291
+msgid "Активность"
+msgstr ""
+
+#: apps/contacts/admin.py:302
+msgid "Тип"
+msgstr ""
+
+#: apps/contacts/forms.py:16
+msgid "Введите корректный номер телефона."
+msgstr ""
+
+#: apps/contacts/forms.py:24
+msgid "Ваше имя *"
+msgstr ""
+
+#: apps/contacts/forms.py:30
+msgid "Имя от 2 до 150 символов, без цифр"
+msgstr ""
+
+#: apps/contacts/forms.py:33
+msgid "Пожалуйста, укажите ваше имя."
+msgstr ""
+
+#: apps/contacts/forms.py:34
+msgid "Имя не должно превышать 150 символов."
+msgstr ""
+
+#: apps/contacts/forms.py:42
+msgid "Email адрес *"
+msgstr ""
+
+#: apps/contacts/forms.py:47
+msgid "Пожалуйста, укажите ваш email."
+msgstr ""
+
+#: apps/contacts/forms.py:48
+msgid "Введите корректный email адрес."
+msgstr ""
+
+#: apps/contacts/forms.py:57
+msgid "Номер телефона *"
+msgstr ""
+
+#: apps/contacts/forms.py:64
+msgid ""
+"Телефон от 7 до 20 символов, можно использовать +, пробелы, дефисы и скобки"
+msgstr ""
+
+#: apps/contacts/forms.py:67
+msgid "Пожалуйста, укажите ваш номер телефона."
+msgstr ""
+
+#: apps/contacts/forms.py:83
+msgid "Ваше сообщение *"
+msgstr ""
+
+#: apps/contacts/forms.py:88
+msgid "Сообщение от 10 до 2000 символов"
+msgstr ""
+
+#: apps/contacts/forms.py:91
+msgid "Пожалуйста, введите ваше сообщение."
+msgstr ""
+
+#: apps/contacts/forms.py:104
+msgid "Имя должно содержать минимум 2 символа."
+msgstr ""
+
+#: apps/contacts/forms.py:108
+msgid "Имя не должно содержать цифры."
+msgstr ""
+
+#: apps/contacts/forms.py:117
+msgid "Сообщение должно содержать минимум 10 символов."
+msgstr ""
+
+#: apps/contacts/forms.py:120
+msgid "Сообщение не должно превышать 2000 символов."
+msgstr ""
+
+#: apps/contacts/forms.py:124
+msgid ""
+"Сообщение выглядит подозрительно. Пожалуйста, напишите нормальный текст."
+msgstr ""
+
+#: apps/contacts/forms.py:140
+msgid "Пожалуйста, используйте постоянный email адрес."
+msgstr ""
+
+#: apps/contacts/models.py:13 templates/projects/category_projects.html:4
+#: templates/projects/project_list.html:21
+msgid "Инвестиционные проекты"
+msgstr "Инвестициялық жобалар"
+
+#: apps/contacts/models.py:14
+msgid "Консультации"
+msgstr ""
+
+#: apps/contacts/models.py:15
+msgid "Сотрудничество"
+msgstr ""
+
+#: apps/contacts/models.py:16
+msgid "Другое"
+msgstr ""
+
+#: apps/contacts/models.py:19
+msgid "Новая"
+msgstr ""
+
+#: apps/contacts/models.py:20
+msgid "Прочитано"
+msgstr ""
+
+#: apps/contacts/models.py:21
+msgid "В обработке"
+msgstr ""
+
+#: apps/contacts/models.py:22
+msgid "Ответ отправлен"
+msgstr ""
+
+#: apps/contacts/models.py:23
+msgid "Отменена"
+msgstr ""
+
+#: apps/contacts/models.py:32 apps/users/models.py:48
+msgid "пользователь"
+msgstr ""
+
+#: apps/contacts/models.py:36 apps/users/models.py:21
+msgid "имя"
+msgstr ""
+
+#: apps/contacts/models.py:37 apps/contacts/models.py:132
+msgid "email"
+msgstr "email"
+
+#: apps/contacts/models.py:38 apps/contacts/models.py:131
+#: apps/users/models.py:25
+msgid "телефон"
+msgstr ""
+
+#: apps/contacts/models.py:40
+msgid "тема"
+msgstr ""
+
+#: apps/contacts/models.py:45 apps/contacts/models.py:66
+msgid "сообщение"
+msgstr ""
+
+#: apps/contacts/models.py:48
+msgid "IP адрес"
+msgstr ""
+
+#: apps/contacts/models.py:49
+msgid "User Agent"
+msgstr "User Agent"
+
+#: apps/contacts/models.py:53
+msgid "статус"
+msgstr ""
+
+#: apps/contacts/models.py:58
+msgid "прочитано"
+msgstr ""
+
+#: apps/contacts/models.py:59
+msgid "ответ отправлен"
+msgstr ""
+
+#: apps/contacts/models.py:62 apps/contacts/models.py:169
+msgid "дата создания"
+msgstr ""
+
+#: apps/contacts/models.py:63
+msgid "дата прочтения"
+msgstr ""
+
+#: apps/contacts/models.py:67
+msgid "сообщения"
+msgstr ""
+
+#: apps/contacts/models.py:125
+msgid "город"
+msgstr ""
+
+#: apps/contacts/models.py:126
+msgid "город (казахский)"
+msgstr ""
+
+#: apps/contacts/models.py:127
+msgid "город (английский)"
+msgstr ""
+
+#: apps/contacts/models.py:128
+msgid "адрес"
+msgstr ""
+
+#: apps/contacts/models.py:129
+msgid "адрес (казахский)"
+msgstr ""
+
+#: apps/contacts/models.py:130
+msgid "адрес (английский)"
+msgstr ""
+
+#: apps/contacts/models.py:133
+msgid "режим работы"
+msgstr ""
+
+#: apps/contacts/models.py:134
+msgid "режим работы (казахский)"
+msgstr ""
+
+#: apps/contacts/models.py:135
+msgid "режим работы (английский)"
+msgstr ""
+
+#: apps/contacts/models.py:139
+msgid "широта"
+msgstr ""
+
+#: apps/contacts/models.py:147
+msgid "долгота"
+msgstr ""
+
+#: apps/contacts/models.py:156
+msgid "Instagram"
+msgstr "Instagram"
+
+#: apps/contacts/models.py:157
+msgid "Facebook"
+msgstr "Facebook"
+
+#: apps/contacts/models.py:158
+msgid "LinkedIn"
+msgstr "LinkedIn"
+
+#: apps/contacts/models.py:159
+msgid "Twitter/X"
+msgstr "Twitter/X"
+
+#: apps/contacts/models.py:160
+msgid "YouTube"
+msgstr "YouTube"
+
+#: apps/contacts/models.py:161
+msgid "Telegram"
+msgstr "Telegram"
+
+#: apps/contacts/models.py:162
+msgid "WhatsApp"
+msgstr "WhatsApp"
+
+#: apps/contacts/models.py:163
+msgid "TikTok"
+msgstr "TikTok"
+
+#: apps/contacts/models.py:165
+msgid "главный офис"
+msgstr ""
+
+#: apps/contacts/models.py:166 apps/users/models.py:36
+msgid "активен"
+msgstr ""
+
+#: apps/contacts/models.py:167
+msgid "порядок"
+msgstr ""
+
+#: apps/contacts/models.py:170
+msgid "дата обновления"
+msgstr ""
+
+#: apps/contacts/models.py:173
+msgid "офис"
+msgstr ""
+
+#: apps/contacts/models.py:174
+msgid "офисы"
+msgstr ""
+
+#: apps/contacts/views.py:112
+msgid "Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время."
+msgstr ""
+
+#: apps/contacts/views.py:147 apps/contacts/views.py:151
+#: templates/base.html:334
+msgid "Пожалуйста, исправьте ошибки в форме."
+msgstr "Формадағы қателерді түзетіңіз."
+
+#: apps/core/models.py:17 templates/core/home.html:197
+msgid "Руководство"
+msgstr "Басшылық"
+
+#: apps/core/models.py:18 templates/core/home.html:221
+msgid "Совет директоров"
+msgstr "Директорлар кеңесі"
+
+#: apps/core/models.py:20 templates/base.html:150
+#: templates/contacts/contact_page.html:126
+msgid "Имя"
+msgstr "Аты"
+
+#: apps/core/models.py:21
+msgid "Имя (казахский)"
+msgstr ""
+
+#: apps/core/models.py:22
+msgid "Имя (английский)"
+msgstr ""
+
+#: apps/core/models.py:23 templates/base.html:154
+msgid "Фамилия"
+msgstr "Тегі"
+
+#: apps/core/models.py:24
+msgid "Фамилия (казахский)"
+msgstr ""
+
+#: apps/core/models.py:25
+msgid "Фамилия (английский)"
+msgstr ""
+
+#: apps/core/models.py:26
+msgid "Отчество"
+msgstr ""
+
+#: apps/core/models.py:27
+msgid "Отчество (казахский)"
+msgstr ""
+
+#: apps/core/models.py:28
+msgid "Отчество (английский)"
+msgstr ""
+
+#: apps/core/models.py:29
+msgid "Должность"
+msgstr ""
+
+#: apps/core/models.py:30
+msgid "Должность (казахский)"
+msgstr ""
+
+#: apps/core/models.py:31
+msgid "Должность (английский)"
+msgstr ""
+
+#: apps/core/models.py:32
+msgid "Группа"
+msgstr ""
+
+#: apps/core/models.py:33
+msgid "Фото"
+msgstr ""
+
+#: apps/core/models.py:34 templates/core/home.html:267
+#: templates/core/home.html:302
+msgid "Гражданство"
+msgstr "Азаматтығы"
+
+#: apps/core/models.py:35
+msgid "Гражданство (казахский)"
+msgstr ""
+
+#: apps/core/models.py:36
+msgid "Гражданство (английский)"
+msgstr ""
+
+#: apps/core/models.py:37 apps/holdings/models.py:23
+msgid "Активен"
+msgstr ""
+
+#: apps/core/models.py:38 apps/core/models.py:66 apps/core/models.py:82
+#: apps/holdings/models.py:24 apps/holdings/models.py:40
+msgid "Порядок"
+msgstr ""
+
+#: apps/core/models.py:41
+msgid "Член команды"
+msgstr ""
+
+#: apps/core/models.py:42
+msgid "Команда"
+msgstr ""
+
+#: apps/core/models.py:63 apps/news/models.py:100 apps/news/models.py:283
+msgid "Заголовок"
+msgstr ""
+
+#: apps/core/models.py:64 apps/news/models.py:105 apps/news/models.py:288
+msgid "Заголовок (казахский)"
+msgstr ""
+
+#: apps/core/models.py:65 apps/news/models.py:110 apps/news/models.py:293
+msgid "Заголовок (английский)"
+msgstr ""
+
+#: apps/core/models.py:69
+msgid "Раздел биографии"
+msgstr ""
+
+#: apps/core/models.py:70
+msgid "Разделы биографии"
+msgstr ""
+
+#: apps/core/models.py:79
+msgid "Текст"
+msgstr ""
+
+#: apps/core/models.py:80
+msgid "Текст (казахский)"
+msgstr ""
+
+#: apps/core/models.py:81
+msgid "Текст (английский)"
+msgstr ""
+
+#: apps/core/models.py:85
+msgid "Пункт биографии"
+msgstr ""
+
+#: apps/core/models.py:86
+msgid "Пункты биографии"
+msgstr ""
+
+#: apps/core/views.py:14
+msgid "Оставить заявку"
+msgstr ""
+
+#: apps/core/views.py:34
+msgid "Главная страница"
+msgstr ""
+
+#: apps/holdings/models.py:6 apps/news/models.py:38 apps/projects/models.py:15
+msgid "Название"
+msgstr ""
+
+#: apps/holdings/models.py:7 apps/news/models.py:43 apps/projects/models.py:20
+msgid "Название (казахский)"
+msgstr ""
+
+#: apps/holdings/models.py:8 apps/news/models.py:48 apps/projects/models.py:25
+msgid "Название (английский)"
+msgstr ""
+
+#: apps/holdings/models.py:9
+msgid "Бейдж"
+msgstr ""
+
+#: apps/holdings/models.py:10
+msgid "Бейдж (казахский)"
+msgstr ""
+
+#: apps/holdings/models.py:11
+msgid "Бейдж (английский)"
+msgstr ""
+
+#: apps/holdings/models.py:12
+msgid "Тип фонда"
+msgstr ""
+
+#: apps/holdings/models.py:13
+msgid "Тип фонда (казахский)"
+msgstr ""
+
+#: apps/holdings/models.py:14
+msgid "Тип фонда (английский)"
+msgstr ""
+
+#: apps/holdings/models.py:15 templates/holdings/funds_page.html:94
+msgid "Целевой размер"
+msgstr "Нысаналы көлемі"
+
+#: apps/holdings/models.py:16
+msgid "Целевой размер (казахский)"
+msgstr ""
+
+#: apps/holdings/models.py:17
+msgid "Целевой размер (английский)"
+msgstr ""
+
+#: apps/holdings/models.py:18 templates/holdings/funds_page.html:98
+msgid "Срок жизни"
+msgstr "Қолданылу мерзімі"
+
+#: apps/holdings/models.py:19
+msgid "Срок жизни (казахский)"
+msgstr ""
+
+#: apps/holdings/models.py:20
+msgid "Срок жизни (английский)"
+msgstr ""
+
+#: apps/holdings/models.py:21 templates/base.html:218
+#: templates/holdings/funds_page.html:102
+msgid "Дата регистрации"
+msgstr "Тіркелген күні"
+
+#: apps/holdings/models.py:22
+msgid "Тёмная карточка"
+msgstr ""
+
+#: apps/holdings/models.py:27
+msgid "Фонд"
+msgstr ""
+
+#: apps/holdings/models.py:28 templates/base.html:37
+msgid "Фонды"
+msgstr "Қорлар"
+
+#: apps/holdings/models.py:37
+msgid "Цель"
+msgstr ""
+
+#: apps/holdings/models.py:38
+msgid "Цель (казахский)"
+msgstr ""
+
+#: apps/holdings/models.py:39
+msgid "Цель (английский)"
+msgstr ""
+
+#: apps/holdings/models.py:43
+msgid "Цель фонда"
+msgstr ""
+
+#: apps/holdings/models.py:44 templates/holdings/funds_page.html:109
+msgid "Цели фонда"
+msgstr "Қордың мақсаттары"
+
+#: apps/news/models.py:54 apps/news/models.py:116 apps/projects/models.py:31
+#: apps/projects/models.py:108
+msgid "URL слаг"
+msgstr ""
+
+#: apps/news/models.py:58 apps/projects/models.py:35
+msgid "Описание"
+msgstr ""
+
+#: apps/news/models.py:62 apps/projects/models.py:39
+msgid "Описание (казахский)"
+msgstr ""
+
+#: apps/news/models.py:66 apps/projects/models.py:43
+msgid "Описание (английский)"
+msgstr ""
+
+#: apps/news/models.py:70 apps/projects/models.py:52
+msgid "Активна"
+msgstr ""
+
+#: apps/news/models.py:78 apps/news/models.py:228 apps/news/models.py:309
+#: apps/projects/models.py:61 apps/projects/models.py:320
+msgid "Дата обновления"
+msgstr ""
+
+#: apps/news/models.py:82 apps/news/models.py:124 apps/projects/models.py:118
+msgid "Категория"
+msgstr ""
+
+#: apps/news/models.py:83
+msgid "Категории"
+msgstr ""
+
+#: apps/news/models.py:128 apps/projects/models.py:124
+msgid "Краткое описание"
+msgstr ""
+
+#: apps/news/models.py:133 apps/projects/models.py:129
+msgid "Краткое описание (казахский)"
+msgstr ""
+
+#: apps/news/models.py:138 apps/projects/models.py:134
+msgid "Краткое описание (английский)"
+msgstr ""
+
+#: apps/news/models.py:141 templates/core/privacy_notice.html:34
+msgid "Содержание"
+msgstr "Мазмұны"
+
+#: apps/news/models.py:145
+msgid "Содержание (казахский)"
+msgstr ""
+
+#: apps/news/models.py:149
+msgid "Содержание (английский)"
+msgstr ""
+
+#: apps/news/models.py:155
+msgid "Изображение"
+msgstr ""
+
+#: apps/news/models.py:161 apps/news/models.py:305 apps/projects/models.py:310
+msgid "Дата публикации"
+msgstr ""
+
+#: apps/news/models.py:165 apps/projects/models.py:306
+msgid "Опубликовано"
+msgstr ""
+
+#: apps/news/models.py:171 apps/projects/models.py:302
+msgid "Количество просмотров"
+msgstr ""
+
+#: apps/news/models.py:178 apps/projects/models.py:256
+msgid "SEO заголовок"
+msgstr ""
+
+#: apps/news/models.py:183 apps/projects/models.py:261
+msgid "SEO заголовок (казахский)"
+msgstr ""
+
+#: apps/news/models.py:188 apps/projects/models.py:266
+msgid "SEO заголовок (английский)"
+msgstr ""
+
+#: apps/news/models.py:193 apps/projects/models.py:271
+msgid "SEO описание"
+msgstr ""
+
+#: apps/news/models.py:198 apps/projects/models.py:276
+msgid "SEO описание (казахский)"
+msgstr ""
+
+#: apps/news/models.py:203 apps/projects/models.py:281
+msgid "SEO описание (английский)"
+msgstr ""
+
+#: apps/news/models.py:208 apps/projects/models.py:286
+msgid "SEO ключевые слова"
+msgstr ""
+
+#: apps/news/models.py:213 apps/projects/models.py:291
+msgid "SEO ключевые слова (казахский)"
+msgstr ""
+
+#: apps/news/models.py:218 apps/projects/models.py:296
+msgid "SEO ключевые слова (английский)"
+msgstr ""
+
+#: apps/news/models.py:232
+msgid "Новость"
+msgstr ""
+
+#: apps/news/models.py:233 templates/base.html:38
+#: templates/news/category_news.html:4 templates/news/category_news.html:15
+#: templates/news/news_detail.html:16 templates/news/news_list.html:18
+#: templates/news/news_list.html:21
+msgid "Новости"
+msgstr "Жаңалықтар"
+
+#: apps/news/models.py:275
+msgid "Источник"
+msgstr ""
+
+#: apps/news/models.py:279
+msgid "Внешний ID"
+msgstr ""
+
+#: apps/news/models.py:297
+msgid "Ссылка"
+msgstr ""
+
+#: apps/news/models.py:302
+msgid "URL изображения"
+msgstr ""
+
+#: apps/news/models.py:313
+msgid "Внешняя новость"
+msgstr ""
+
+#: apps/news/models.py:314
+msgid "Внешние новости"
+msgstr ""
+
+#: apps/projects/models.py:48
+msgid "Иконка (FontAwesome класс)"
+msgstr ""
+
+#: apps/projects/models.py:65
+msgid "Категория проекта"
+msgstr ""
+
+#: apps/projects/models.py:66
+msgid "Категории проектов"
+msgstr ""
+
+#: apps/projects/models.py:80
+msgid "Планирование"
+msgstr ""
+
+#: apps/projects/models.py:81
+msgid "Активный"
+msgstr ""
+
+#: apps/projects/models.py:82
+msgid "Завершен"
+msgstr ""
+
+#: apps/projects/models.py:83
+msgid "Приостановлен"
+msgstr ""
+
+#: apps/projects/models.py:92
+msgid "Название проекта"
+msgstr ""
+
+#: apps/projects/models.py:97
+msgid "Название проекта (казахский)"
+msgstr ""
+
+#: apps/projects/models.py:102
+msgid "Название проекта (английский)"
+msgstr ""
+
+#: apps/projects/models.py:137
+msgid "Полное описание"
+msgstr ""
+
+#: apps/projects/models.py:141
+msgid "Полное описание (казахский)"
+msgstr ""
+
+#: apps/projects/models.py:145
+msgid "Полное описание (английский)"
+msgstr ""
+
+#: apps/projects/models.py:152
+msgid "Главное изображение"
+msgstr ""
+
+#: apps/projects/models.py:158
+msgid "Галерея изображений (URLs)"
+msgstr ""
+
+#: apps/projects/models.py:167 templates/projects/project_detail.html:145
+msgid "Сумма инвестиций"
+msgstr "Инвестиция сомасы"
+
+#: apps/projects/models.py:172
+msgid "Валюта"
+msgstr ""
+
+#: apps/projects/models.py:179
+msgid "Ожидаемая доходность (%)"
+msgstr ""
+
+#: apps/projects/models.py:186 templates/projects/project_detail.html:181
+msgid "Дата начала"
+msgstr "Басталу күні"
+
+#: apps/projects/models.py:191 templates/projects/project_detail.html:193
+msgid "Дата окончания"
+msgstr "Аяқталу күні"
+
+#: apps/projects/models.py:199 templates/projects/project_detail.html:168
+msgid "Статус проекта"
+msgstr "Жоба мәртебесі"
+
+#: apps/projects/models.py:203 templates/projects/project_detail.html:39
+msgid "Избранный проект"
+msgstr "Таңдаулы жоба"
+
+#: apps/projects/models.py:210
+msgid "Местоположение (город/регион)"
+msgstr ""
+
+#: apps/projects/models.py:215
+msgid "Местоположение (казахский)"
+msgstr ""
+
+#: apps/projects/models.py:220
+msgid "Местоположение (английский)"
+msgstr ""
+
+#: apps/projects/models.py:225
+msgid "Страна"
+msgstr ""
+
+#: apps/projects/models.py:230
+msgid "Страна (казахский)"
+msgstr ""
+
+#: apps/projects/models.py:235
+msgid "Страна (английский)"
+msgstr ""
+
+#: apps/projects/models.py:241
+msgid "Партнеры/инвесторы"
+msgstr ""
+
+#: apps/projects/models.py:245
+msgid "Партнеры/инвесторы (казахский)"
+msgstr ""
+
+#: apps/projects/models.py:249
+msgid "Партнеры/инвесторы (английский)"
+msgstr ""
+
+#: apps/projects/models.py:324
+msgid "Проект"
+msgstr ""
+
+#: apps/projects/models.py:325 templates/contacts/contact_page.html:99
+#: templates/projects/category_projects.html:15
+#: templates/projects/project_detail.html:16
+#: templates/projects/project_list.html:15
+msgid "Проекты"
+msgstr "Жобалар"
+
+#: apps/users/admin.py:48 templates/base.html:206
+msgid "Личная информация"
+msgstr "Жеке ақпарат"
+
+#: apps/users/admin.py:51
+msgid "Права и роль"
+msgstr ""
+
+#: apps/users/admin.py:54
+msgid "Важные даты"
+msgstr ""
+
+#: apps/users/models.py:15
+msgid "Администратор"
+msgstr ""
+
+#: apps/users/models.py:16
+msgid "Редактор"
+msgstr ""
+
+#: apps/users/models.py:17
+msgid "Контент-менеджер"
+msgstr ""
+
+#: apps/users/models.py:18
+msgid "Наблюдатель"
+msgstr ""
+
+#: apps/users/models.py:20
+msgid "email адрес"
+msgstr ""
+
+#: apps/users/models.py:22
+msgid "фамилия"
+msgstr ""
+
+#: apps/users/models.py:26
+msgid "должность"
+msgstr ""
+
+#: apps/users/models.py:28
+msgid "роль"
+msgstr ""
+
+#: apps/users/models.py:35
+msgid "статус персонала"
+msgstr ""
+
+#: apps/users/models.py:39
+msgid "дата регистрации"
+msgstr ""
+
+#: apps/users/models.py:40
+msgid "последний вход"
+msgstr ""
+
+#: apps/users/models.py:49
+msgid "пользователи"
+msgstr ""
+
+#: apps/users/views.py:37
+msgid "Вы успешно вошли в систему!"
+msgstr ""
+
+#: apps/users/views.py:59
+msgid "Неверный email или пароль."
+msgstr ""
+
+#: apps/users/views.py:77
+msgid "Вы вышли из системы."
+msgstr ""
+
+#: apps/users/views.py:113 templates/base.html:151
+msgid "Введите имя"
+msgstr "Атыңызды енгізіңіз"
+
+#: apps/users/views.py:115
+msgid "Имя слишком короткое"
+msgstr ""
+
+#: apps/users/views.py:119 templates/base.html:155
+msgid "Введите фамилию"
+msgstr "Тегіңізді енгізіңіз"
+
+#: apps/users/views.py:121
+msgid "Фамилия слишком короткая"
+msgstr ""
+
+#: apps/users/views.py:125 templates/base.html:128 templates/base.html:160
+msgid "Введите email"
+msgstr "Email енгізіңіз"
+
+#: apps/users/views.py:130
+msgid "Некорректный email адрес"
+msgstr ""
+
+#: apps/users/views.py:134
+msgid "Пользователь с таким email уже существует"
+msgstr ""
+
+#: apps/users/views.py:138 templates/base.html:132
+msgid "Введите пароль"
+msgstr "Құпиясөзді енгізіңіз"
+
+#: apps/users/views.py:140
+msgid "Пароль должен содержать минимум 8 символов"
+msgstr ""
+
+#: apps/users/views.py:142
+msgid "Пароль не может состоять только из цифр"
+msgstr ""
+
+#: apps/users/views.py:146
+msgid "Пароли не совпадают"
+msgstr ""
+
+#: apps/users/views.py:150
+msgid "Необходимо принять условия использования"
+msgstr ""
+
+#: apps/users/views.py:158
+msgid "Пожалуйста, исправьте ошибки в форме"
+msgstr ""
+
+#: apps/users/views.py:181
+#, python-format
+msgid "Добро пожаловать, %(name)s! Регистрация прошла успешно."
+msgstr ""
+
+#: apps/users/views.py:185
+msgid "Регистрация прошла успешно!"
+msgstr ""
+
+#: apps/users/views.py:194
+msgid "Произошла ошибка при регистрации. Попробуйте позже."
+msgstr ""
+
+#: templates/base.html:10
+msgid ""
+"МФЦА Управление Капиталом - ведущая компания по управлению инвестиционными "
+"фондами"
+msgstr ""
+"АХҚО Капиталды басқару - инвестициялық қорларды басқару саласындағы жетекші "
+"компания"
+
+#: templates/base.html:11
+msgid "МФЦА Управление Капиталом"
+msgstr "АХҚО Капиталды басқару"
+
+#: templates/base.html:36 templates/contacts/contact_page.html:16
+#: templates/core/anti_corruption.html:13 templates/core/disclaimers.html:13
+#: templates/core/privacy_notice.html:15 templates/core/submit_request.html:11
+#: templates/holdings/funds_page.html:20 templates/news/category_news.html:13
+#: templates/news/news_detail.html:14 templates/news/news_list.html:16
+#: templates/projects/category_projects.html:13
+#: templates/projects/project_detail.html:14
+#: templates/projects/project_list.html:13 templates/users/cabinet.html:11
+msgid "Главная"
+msgstr "Басты бет"
+
+#: templates/base.html:39 templates/contacts/contact_page.html:18
+#: templates/core/home.html:45
+msgid "Контакты"
+msgstr "Байланыс"
+
+#: templates/base.html:44 templates/base.html:226
+#: templates/core/submit_request.html:13 templates/core/submit_request.html:16
+#: templates/users/cabinet.html:13 templates/users/cabinet.html:15
+msgid "Личный кабинет"
+msgstr "Жеке кабинет"
+
+#: templates/base.html:73 templates/base.html:238
+msgid "Уведомления"
+msgstr "Хабарландырулар"
+
+#: templates/base.html:89 templates/base.html:327
+msgid "Успешно"
+msgstr "Сәтті"
+
+#: templates/base.html:90 templates/base.html:326
+msgid "Ошибка"
+msgstr "Қате"
+
+#: templates/base.html:91
+msgid "Предупреждение"
+msgstr "Ескерту"
+
+#: templates/base.html:92
+msgid "Информация"
+msgstr "Ақпарат"
+
+#: templates/base.html:96 templates/base.html:325
+#: templates/core/submit_request.html:135
+msgid "Закрыть"
+msgstr "Жабу"
+
+#: templates/base.html:117
+msgid "Вход"
+msgstr "Кіру"
+
+#: templates/base.html:118
+msgid "Регистрация"
+msgstr "Тіркелу"
+
+#: templates/base.html:131 templates/base.html:167
+msgid "Пароль"
+msgstr "Құпиясөз"
+
+#: templates/base.html:137
+msgid "Запомнить меня"
+msgstr "Мені есте сақтау"
+
+#: templates/base.html:139
+msgid "Забыли пароль?"
+msgstr "Құпиясөзді ұмыттыңыз ба?"
+
+#: templates/base.html:141
+msgid "Войти"
+msgstr "Кіру"
+
+#: templates/base.html:163 templates/base.html:213
+#: templates/contacts/contact_page.html:45
+#: templates/contacts/contact_page.html:143
+msgid "Телефон"
+msgstr "Телефон"
+
+#: templates/base.html:168
+msgid "Придумайте пароль"
+msgstr "Құпиясөз ойлап табыңыз"
+
+#: templates/base.html:171
+msgid "Подтвердите пароль"
+msgstr "Құпиясөзді растаңыз"
+
+#: templates/base.html:172
+msgid "Повторите пароль"
+msgstr "Құпиясөзді қайталаңыз"
+
+#: templates/base.html:176
+msgid "Согласен с <a href=\"#\">условиями использования</a>"
+msgstr "<a href=\"#\">Пайдалану шарттарымен</a> келісемін"
+
+#: templates/base.html:178
+msgid "Зарегистрироваться"
+msgstr "Тіркелу"
+
+#: templates/base.html:230
+msgid "Редактировать профиль"
+msgstr "Профильді өңдеу"
+
+#: templates/base.html:234
+msgid "Изменить пароль"
+msgstr "Құпиясөзді өзгерту"
+
+#: templates/base.html:246
+msgid "Выйти из аккаунта"
+msgstr "Аккаунттан шығу"
+
+#: templates/base.html:263
+msgid ""
+"Частная компания, управляющая фондами прямых инвестиций в рамках юрисдикции "
+"Международного финансового центра «Астана» (МФЦА)."
+msgstr ""
+"«Астана» халықаралық қаржы орталығының (АХҚО) юрисдикциясы аясында тікелей "
+"инвестициялар қорларын басқаратын жеке компания."
+
+#: templates/base.html:281 templates/contacts/contact_page.html:20
+msgid "Свяжитесь с нами"
+msgstr "Бізбен байланысыңыз"
+
+#: templates/base.html:298
+msgid "МФЦА, пр. Мангилик Ел 55/18,<br>Астана, Казахстан"
+msgstr "АХҚО, Мәңгілік Ел даңғ. 55/18,<br>Астана, Қазақстан"
+
+#: templates/base.html:312
+msgid "© 2024 МФЦА Управление Капиталом. Все права защищены."
+msgstr "© 2024 АХҚО Капиталды басқару. Барлық құқықтар қорғалған."
+
+#: templates/base.html:315
+msgid "Дизайн и разработка сайта <a href=\"https://bauyr.com\" target=\"_blank\" rel=\"noopener noreferrer\">bauyr.com</a>"
+msgstr "Сайттың дизайны мен әзірлеуі: <a href=\"https://bauyr.com\" target=\"_blank\" rel=\"noopener noreferrer\">bauyr.com</a>"
+
+#: templates/base.html:315 templates/core/anti_corruption.html:15
+#: templates/core/anti_corruption.html:17
+msgid "Антикоррупционная политика"
+msgstr "Сыбайлас жемқорлыққа қарсы саясат"
+
+#: templates/base.html:328
+msgid "Введите корректный email адрес"
+msgstr "Дұрыс email мекенжайын енгізіңіз"
+
+#: templates/base.html:329
+msgid "Вход..."
+msgstr "Кіру..."
+
+#: templates/base.html:330
+msgid "Регистрация..."
+msgstr "Тіркелу..."
+
+#: templates/base.html:331
+msgid "Отправка..."
+msgstr "Жіберілуде..."
+
+#: templates/base.html:332
+msgid "Произошла ошибка. Попробуйте ещё раз."
+msgstr "Қате орын алды. Қайталап көріңіз."
+
+#: templates/base.html:333
+msgid "Произошла ошибка. Попробуйте еще раз."
+msgstr "Қате орын алды. Қайталап көріңіз."
+
+#: templates/base.html:335
+msgid "Произошла ошибка при отправке. Попробуйте ещё раз."
+msgstr "Жіберу кезінде қате орын алды. Қайталап көріңіз."
+
+#: templates/contacts/contact_page.html:4
+msgid "Контакты - QICM Ltd."
+msgstr "Байланыс - QICM Ltd."
+
+#: templates/contacts/contact_page.html:5
+msgid "Свяжитесь с QICM Ltd. Контакты, адрес, телефон и форма обратной связи."
+msgstr ""
+"QICM Ltd. компаниясымен байланысыңыз. Байланыс деректері, мекенжай, телефон "
+"және кері байланыс формасы."
+
+#: templates/contacts/contact_page.html:36
+msgid "Юридический адрес"
+msgstr "Заңды мекенжай"
+
+#: templates/contacts/contact_page.html:37
+msgid "пр. Мәңгілік Ел, 55А, Z05T2H3, Астана"
+msgstr "Мәңгілік Ел даңғ., 55А, Z05T2H3, Астана"
+
+#: templates/contacts/contact_page.html:54
+msgid "Общие вопросы"
+msgstr "Жалпы сұрақтар"
+
+#: templates/contacts/contact_page.html:63
+msgid "Режим работы"
+msgstr "Жұмыс уақыты"
+
+#: templates/contacts/contact_page.html:64
+msgid "Пн–Пт: 09:00 – 18:00"
+msgstr "Дс-Жм: 09:00-18:00"
+
+#: templates/contacts/contact_page.html:83
+msgid "По вопросам проектов и сделок"
+msgstr "Жобалар мен мәмілелер бойынша"
+
+#: templates/contacts/contact_page.html:95
+msgid "Темы обращений"
+msgstr "Өтініш тақырыптары"
+
+#: templates/contacts/contact_page.html:98
+msgid "Инвесторы"
+msgstr "Инвесторлар"
+
+#: templates/contacts/contact_page.html:100
+msgid "Партнёрство"
+msgstr "Серіктестік"
+
+#: templates/contacts/contact_page.html:101
+msgid "СМИ"
+msgstr "БАҚ"
+
+#: templates/contacts/contact_page.html:107
+msgid ""
+"Информация, размещённая на данном сайте, носит исключительно информационный "
+"характер и не является предложением или приглашением к совершению сделок с "
+"ценными бумагами либо иными финансовыми инструментами."
+msgstr ""
+"Осы сайтта орналастырылған ақпарат тек ақпараттық сипатта және бағалы "
+"қағаздармен немесе өзге қаржы құралдарымен мәмілелер жасауға ұсыныс немесе "
+"шақыру болып табылмайды."
+
+#: templates/contacts/contact_page.html:108
+msgid ""
+"Доступ к инвестиционным продуктам и фондам QICM Ltd. предоставляется "
+"исключительно квалифицированным и/или институциональным инвесторам в "
+"соответствии с применимыми требованиями."
+msgstr ""
+"QICM Ltd. инвестициялық өнімдері мен қорларына қолжетімділік қолданылатын "
+"талаптарға сәйкес тек білікті және/немесе институционалдық инвесторларға "
+"беріледі."
+
+#: templates/contacts/contact_page.html:116
+msgid "Напишите нам"
+msgstr "Бізге жазыңыз"
+
+#: templates/contacts/contact_page.html:117
+msgid "Заполните форму, и команда QICM Ltd. свяжется с вами в кратчайшие сроки"
+msgstr ""
+"Форманы толтырыңыз, QICM Ltd. командасы сізбен жақын арада байланысады."
+
+#: templates/contacts/contact_page.html:150
+msgid "Тема обращения"
+msgstr "Өтініш тақырыбы"
+
+#: templates/contacts/contact_page.html:168
+msgid "Отправить сообщение"
+msgstr "Хабарлама жіберу"
+
+#: templates/core/anti_corruption.html:4
+msgid "Антикоррупционная политика - QICM Ltd."
+msgstr "Сыбайлас жемқорлыққа қарсы саясат - QICM Ltd."
+
+#: templates/core/anti_corruption.html:29
+msgid ""
+"QICM Ltd. проводит активную работу по противодействию коррупции, внедряя "
+"функции контроля по профилактике, предупреждению и выявлению коррупции, а "
+"также формированию в организации атмосферы жёсткого неприятия коррупции в "
+"любых её проявлениях."
+msgstr ""
+"QICM Ltd. сыбайлас жемқорлықтың алдын алу, болдырмау және анықтау бойынша "
+"бақылау функцияларын енгізіп, оның кез келген көрінісіне қатаң төзбеушілік "
+"мәдениетін қалыптастыру арқылы белсенді жұмыс жүргізеді."
+
+#: templates/core/anti_corruption.html:32
+msgid ""
+"В этих целях Советом директоров утверждена Политика противодействия "
+"коррупции, предусматривающая комплекс мер по борьбе с коррупцией, а также "
+"формирование антикоррупционной культуры работников QICM Ltd., обеспечивающей "
+"соблюдение принципов честности и прозрачности при выполнении трудовых "
+"обязанностей."
+msgstr ""
+"Осы мақсатта Директорлар кеңесі сыбайлас жемқорлыққа қарсы іс-қимыл "
+"жөніндегі шаралар кешенін және QICM Ltd. қызметкерлерінің адалдық пен "
+"ашықтық қағидаттарын сақтауын қамтамасыз ететін мәдениетті көздейтін "
+"саясатты бекітті."
+
+#: templates/core/disclaimers.html:4
+msgid "Disclaimers - QICM Ltd."
+msgstr "Жауапкершіліктен бас тарту - QICM Ltd."
+
+#: templates/core/disclaimers.html:17
+msgid "Disclaimers (Отказ от ответственности)"
+msgstr "Жауапкершіліктен бас тарту"
+
+#: templates/core/disclaimers.html:27
+msgid "Отказ от ответственности"
+msgstr "Жауапкершіліктен бас тарту"
+
+#: templates/core/disclaimers.html:28
+msgid ""
+"Информация, размещенная на настоящем сайте, носит ознакомительный и "
+"информационный характер. Она не является публичной офертой, приглашением к "
+"инвестированию или осуществлению сделок с ценными бумагами и другими "
+"финансовыми инструментами."
+msgstr ""
+"Осы сайтта орналастырылған ақпарат танысу және ақпараттық сипатта. Ол жария "
+"оферта, инвестициялауға шақыру немесе бағалы қағаздармен және басқа қаржы "
+"құралдарымен мәмілелер жасауға ұсыныс болып табылмайды."
+
+#: templates/core/disclaimers.html:30
+msgid "Ключевые положения:"
+msgstr "Негізгі ережелер:"
+
+#: templates/core/disclaimers.html:32
+msgid ""
+"<strong>Риски инвестирования:</strong> Инвестиции связаны с риском. Будущая "
+"доходность не может быть гарантирована прошлыми результатами. QICM Ltd. не "
+"несет ответственности за возможные убытки инвесторов."
+msgstr ""
+"<strong>Инвестиция тәуекелдері:</strong> Инвестициялар тәуекелмен "
+"байланысты. Болашақ кірістілік өткен нәтижелермен кепілдендірілмейді. QICM "
+"Ltd. инвесторлардың ықтимал шығындары үшін жауап бермейді."
+
+#: templates/core/disclaimers.html:33
+msgid ""
+"<strong>Доступность для инвесторов:</strong> Участие в фондах QICM Ltd. "
+"может быть ограничено законодательством, правилами МФЦА и внутренними "
+"политиками Компании, и предоставляется только лицам, отвечающим "
+"квалификационным критериям."
+msgstr ""
+"<strong>Инвесторлар үшін қолжетімділік:</strong> QICM Ltd. қорларына қатысу "
+"заңнама, АХҚО қағидалары және Компанияның ішкі саясаттарымен шектелуі мүмкін "
+"және тек біліктілік критерийлеріне сай тұлғаларға беріледі."
+
+#: templates/core/disclaimers.html:34
+msgid ""
+"<strong>Регулирование:</strong> Qazaqstan Investment Capital Management Ltd. "
+"зарегистрирована в МФЦА и обладает соответствующими лицензиями на управление "
+"инвестициями и схемами коллективного инвестирования."
+msgstr ""
+"<strong>Реттеу:</strong> Qazaqstan Investment Capital Management Ltd. АХҚО-"
+"да тіркелген және инвестицияларды әрі ұжымдық инвестициялау схемаларын "
+"басқаруға тиісті лицензияларға ие."
+
+#: templates/core/disclaimers.html:35
+msgid ""
+"<strong>Отсутствие гарантий:</strong> Мы прилагаем все усилия для "
+"обеспечения точности предоставляемой информации, однако не даем гарантий ее "
+"полноты или абсолютной точности на момент прочтения."
+msgstr ""
+"<strong>Кепілдіктердің болмауы:</strong> Біз ақпараттың дәлдігін қамтамасыз "
+"етуге күш саламыз, алайда оның толықтығына немесе оқылған сәттегі абсолютті "
+"дәлдігіне кепілдік бермейміз."
+
+#: templates/core/home.html:4
+msgid "QICM Ltd. — Управление инвестиционными фондами, МФЦА"
+msgstr "QICM Ltd. - АХҚО инвестициялық қорларын басқару"
+
+#: templates/core/home.html:23
+msgid ""
+"Инвестиции в <br>будущее <span class=\"highlight\">Центральной Азии</span>"
+msgstr ""
+"<span class=\"highlight\">Орталық Азияның</span><br>болашағына инвестициялар"
+
+#: templates/core/home.html:26
+msgid ""
+"Стратегическое <span class=\"highlight\">управление портфелем</span><br>для "
+"роста"
+msgstr ""
+"Өсу үшін стратегиялық <span class=\"highlight\">портфельді басқару</span>"
+
+#: templates/core/home.html:29
+msgid "Создание <span class=\"highlight\">устойчивой</span><br>инфраструктуры"
+msgstr "<span class=\"highlight\">Тұрақты</span><br>инфрақұрылым құру"
+
+#: templates/core/home.html:32
+msgid ""
+"Специализируемся на прямых инвестициях и несырьевых секторах в рамках "
+"институциональной структуры\n"
+"                    МФЦА."
+msgstr ""
+"АХҚО институционалдық құрылымы аясында тікелей инвестициялар мен шикізаттық "
+"емес секторларға маманданамыз."
+
+#: templates/core/home.html:36
+msgid ""
+"Обеспечиваем исключительную доходность через стратегические инвестиции в "
+"быстрорастущие компании\n"
+"                    Центральной Азии."
+msgstr ""
+"Орталық Азиядағы жылдам өсіп келе жатқан компанияларға стратегиялық "
+"инвестициялар арқылы жоғары кірістілікке қол жеткіземіз."
+
+#: templates/core/home.html:40
+msgid ""
+"Инвестируем в возобновляемую энергетику и современную инфраструктуру для "
+"экономической\n"
+"                    диверсификации."
+msgstr ""
+"Экономиканы әртараптандыру үшін жаңартылатын энергетика мен заманауи "
+"инфрақұрылымға инвестиция саламыз."
+
+#: templates/core/home.html:44 templates/holdings/funds_page.html:14
+#: templates/holdings/funds_page.html:22 templates/holdings/funds_page.html:25
+msgid "Наши фонды"
+msgstr "Біздің қорлар"
+
+#: templates/core/home.html:68
+msgid "About Us"
+msgstr "Біз туралы"
+
+#: templates/core/home.html:69
+msgid "О компании"
+msgstr "Компания туралы"
+
+#: templates/core/home.html:71
+msgid ""
+"Частная компания Qazaqstan Investment Capital Management Ltd. (QICM Ltd.) "
+"является управляющей компанией, зарегистрированной на территории "
+"Международного финансового центра «Астана» (МФЦА), и специализируется на "
+"управлении фондами прямых инвестиций в Республике Казахстан."
+msgstr ""
+"Qazaqstan Investment Capital Management Ltd. (QICM Ltd.) - «Астана» "
+"халықаралық қаржы орталығының (АХҚО) аумағында тіркелген және Қазақстан "
+"Республикасында тікелей инвестициялар қорларын басқаруға маманданған "
+"басқарушы компания."
+
+#: templates/core/home.html:74
+msgid ""
+"QICM Ltd. является дочерней организацией АО «Qazaqstan Investment "
+"Corporation» (QIC) – фонда фондов прямых инвестиций, входящего в структуру "
+"АО «НИХ «Байтерек»."
+msgstr ""
+"QICM Ltd. - «Бәйтерек» ҰБХ» АҚ құрылымына кіретін тікелей инвестициялар "
+"қорларының қоры «Qazaqstan Investment Corporation» АҚ-ның еншілес ұйымы."
+
+#: templates/core/home.html:80
+msgid "Лицензия MIS"
+msgstr "MIS лицензиясы"
+
+#: templates/core/home.html:87
+msgid "Лицензия MI"
+msgstr "MI лицензиясы"
+
+#: templates/core/home.html:102
+msgid "Our Mission"
+msgstr "Біздің миссия"
+
+#: templates/core/home.html:103
+msgid "Наша миссия"
+msgstr "Біздің миссия"
+
+#: templates/core/home.html:105
+msgid ""
+"Направлять частный и институциональный капитал в устойчивые проекты "
+"несырьевых секторов\n"
+"                    экономики Республики Казахстан, формируя и развивая "
+"прозрачные рыночные структуры на базе МФЦА."
+msgstr ""
+"Жеке және институционалдық капиталды Қазақстан Республикасының шикізаттық "
+"емес секторларындағы тұрақты жобаларға бағыттап, АХҚО базасында ашық "
+"нарықтық құрылымдарды қалыптастыру және дамыту."
+
+#: templates/core/home.html:110
+msgid "Strategic Development"
+msgstr "Стратегиялық даму"
+
+#: templates/core/home.html:111
+msgid "Стратегические цели"
+msgstr "Стратегиялық мақсаттар"
+
+#: templates/core/home.html:116
+msgid "Институциональный General Partner"
+msgstr "Институционалдық General Partner"
+
+#: templates/core/home.html:117
+msgid ""
+"Закрепить роль QICM Ltd. в качестве управляющей компании с полной "
+"инвестиционной экспертизой в сфере прямых инвестиций."
+msgstr ""
+"QICM Ltd. компаниясының тікелей инвестициялар саласында толық инвестициялық "
+"сараптамасы бар басқарушы компания ретіндегі рөлін нығайту."
+
+#: templates/core/home.html:123
+msgid "Мобилизация долгосрочного капитала"
+msgstr "Ұзақ мерзімді капиталды жұмылдыру"
+
+#: templates/core/home.html:124
+msgid ""
+"Привлечение инвестиций в проекты с высокой добавленной стоимостью и значимым "
+"эффектом для экономики, занятости и экспорта."
+msgstr ""
+"Экономикаға, жұмыспен қамтуға және экспортқа елеулі әсер ететін жоғары "
+"қосылған құны бар жобаларға инвестициялар тарту."
+
+#: templates/core/home.html:130
+msgid "Корпоративное управление и ESG"
+msgstr "Корпоративтік басқару және ESG"
+
+#: templates/core/home.html:131
+msgid ""
+"Повышать стандарты корпоративного управления, устойчивости и прозрачности в "
+"портфельных компаниях, развивая инфраструктуру Private Equity в Республике "
+"Казахстан."
+msgstr ""
+"Портфельдік компанияларда корпоративтік басқару, тұрақтылық және ашықтық "
+"стандарттарын арттырып, Қазақстан Республикасында Private Equity "
+"инфрақұрылымын дамыту."
+
+#: templates/core/home.html:144
+msgid "Sustainability & ESG"
+msgstr "Тұрақтылық және ESG"
+
+#: templates/core/home.html:145
+msgid "ESG и устойчивость"
+msgstr "ESG және тұрақтылық"
+
+#: templates/core/home.html:149
+msgid ""
+"QICM Ltd. интегрирует ESG-факторы в свою деятельность, ориентируясь на "
+"международные практики\n"
+"            ответственного инвестирования. ESG-критерии используются для "
+"оценки рисков и возможностей,\n"
+"            в особенности в таких секторах, как инфраструктура, энергетика, "
+"агропромышленный комплекс\n"
+"            и обрабатывающая промышленность."
+msgstr ""
+"QICM Ltd. жауапты инвестициялаудың халықаралық тәжірибелеріне сүйене отырып, "
+"ESG факторларын өз қызметіне енгізеді. ESG критерийлері тәуекелдер мен "
+"мүмкіндіктерді, әсіресе инфрақұрылым, энергетика, агроөнеркәсіптік кешен "
+"және өңдеу өнеркәсібі салаларында бағалау үшін қолданылады."
+
+#: templates/core/home.html:159
+msgid "Устойчивый рост"
+msgstr "Тұрақты өсу"
+
+#: templates/core/home.html:162
+msgid "Устойчивый рост и повышение ресурсной эффективности."
+msgstr "Тұрақты өсу және ресурстық тиімділікті арттыру."
+
+#: templates/core/home.html:168 templates/holdings/funds_page.html:63
+msgid "Зелёные технологии"
+msgstr "Жасыл технологиялар"
+
+#: templates/core/home.html:171
+msgid ""
+"Поддержка проектов, способствующих декарбонизации, развитию «зелёных» "
+"технологий и повышению энергоэффективности."
+msgstr ""
+"Декарбонизацияға, жасыл технологияларды дамытуға және энергия тиімділігін "
+"арттыруға ықпал ететін жобаларды қолдау."
+
+#: templates/core/home.html:177
+msgid "Корпоративное управление"
+msgstr "Корпоративтік басқару"
+
+#: templates/core/home.html:180
+msgid ""
+"Улучшение стандартов корпоративного управления и прозрачности в портфельных "
+"компаниях."
+msgstr ""
+"Портфельдік компанияларда корпоративтік басқару және ашықтық стандарттарын "
+"жақсарту."
+
+#: templates/core/home.html:191
+msgid "Our Team"
+msgstr "Біздің команда"
+
+#: templates/core/home.html:192
+msgid "Наша команда"
+msgstr "Біздің команда"
+
+#: templates/core/privacy_notice.html:36
+msgid "Введение"
+msgstr "Кіріспе"
+
+#: templates/core/privacy_notice.html:37 templates/core/privacy_notice.html:76
+#: templates/core/submit_request.html:155
+msgid "Какие данные мы собираем"
+msgstr "Қандай деректерді жинаймыз"
+
+#: templates/core/privacy_notice.html:38
+msgid "Для чего используем"
+msgstr "Не үшін пайдаланамыз"
+
+#: templates/core/privacy_notice.html:39
+msgid "Правовые основания"
+msgstr "Құқықтық негіздер"
+
+#: templates/core/privacy_notice.html:40
+msgid "Кому передаём"
+msgstr "Кімге береміз"
+
+#: templates/core/privacy_notice.html:41 templates/core/privacy_notice.html:160
+#: templates/core/submit_request.html:233
+msgid "Хранение данных"
+msgstr "Деректерді сақтау"
+
+#: templates/core/privacy_notice.html:42 templates/core/privacy_notice.html:175
+#: templates/core/submit_request.html:245
+msgid "Ваши права"
+msgstr "Сіздің құқықтарыңыз"
+
+#: templates/core/privacy_notice.html:45
+msgid "По вопросам обработки данных:"
+msgstr "Деректерді өңдеу мәселелері бойынша:"
+
+#: templates/core/privacy_notice.html:61 templates/core/submit_request.html:146
+msgid ""
+"Личный кабинет заявителя предоставляется частной компанией <strong>Qazaqstan "
+"Investment Capital Management Ltd.</strong> (далее — QICM Ltd.), "
+"зарегистрированной в Международном финансовом центре «Астана» (AIFC), "
+"регулируемой соответствующими органами AIFC."
+msgstr ""
+"Өтініш берушінің жеке кабинетін <strong>Qazaqstan Investment Capital "
+"Management Ltd.</strong> (QICM Ltd.) жеке компаниясы ұсынады, ол «Астана» "
+"халықаралық қаржы орталығында (AIFC) тіркелген және AIFC тиісті органдарымен "
+"реттеледі."
+
+#: templates/core/privacy_notice.html:64
+msgid ""
+"Ваши данные обрабатываются совместно Частной компанией Qazaqstan Investment "
+"Capital Management Ltd. (МФЦА) и АО «Qazaqstan Investment "
+"Corporation» (далее — QIC) (Республика Казахстан). Мы являемся Совместными "
+"контролерами ваших данных."
+msgstr ""
+"Сіздің деректеріңізді Qazaqstan Investment Capital Management Ltd. (АХҚО) "
+"және «Qazaqstan Investment Corporation» АҚ (QIC) (Қазақстан Республикасы) "
+"бірлесіп өңдейді. Біз сіздің деректеріңіздің бірлескен контролерлеріміз."
+
+#: templates/core/privacy_notice.html:67 templates/core/submit_request.html:148
+msgid ""
+"Информационная система находится в режиме опытной эксплуатации. В "
+"соответствии с требованиями МФЦА, такая обработка классифицируется как "
+"деятельность с высоким уровнем риска. Компания принимает все надлежащие "
+"технические и организационные меры для обеспечения безопасности Ваших данных "
+"в соответствии со стандартами МФЦА."
+msgstr ""
+"Ақпараттық жүйе тәжірибелік пайдалану режимінде. АХҚО талаптарына сәйкес "
+"мұндай өңдеу жоғары тәуекел деңгейі бар қызмет ретінде жіктеледі. Компания "
+"сіздің деректеріңіздің қауіпсіздігін АХҚО стандарттарына сәйкес қамтамасыз "
+"ету үшін барлық тиісті техникалық және ұйымдастырушылық шараларды қабылдайды."
+
+#: templates/core/privacy_notice.html:78 templates/core/submit_request.html:157
+msgid "При регистрации и подаче заявки через Личный кабинет мы можем собирать:"
+msgstr ""
+"Жеке кабинет арқылы тіркелу және өтінім беру кезінде біз келесі деректерді "
+"жинауымыз мүмкін:"
+
+#: templates/core/privacy_notice.html:82 templates/core/submit_request.html:160
+msgid "Приём и экспертиза инвестиционных заявок, структурирование сделок:"
+msgstr ""
+"Инвестициялық өтінімдерді қабылдау және сараптау, мәмілелерді құрылымдау:"
+
+#: templates/core/privacy_notice.html:84 templates/core/submit_request.html:162
+msgid ""
+"ФИО, должность и контактные данные представителей заявителя, но не "
+"ограничиваясь;"
+msgstr ""
+"өтініш беруші өкілдерінің аты-жөні, лауазымы және байланыс деректері, бірақ "
+"мұнымен шектелмейді;"
+
+#: templates/core/privacy_notice.html:85 templates/core/submit_request.html:163
+msgid ""
+"данные, необходимые для идентификации (ИИН/паспорт и т.п., но не "
+"ограничиваясь);"
+msgstr ""
+"сәйкестендіруге қажетті деректер (ЖСН/паспорт және т.б., бірақ мұнымен "
+"шектелмейді);"
+
+#: templates/core/privacy_notice.html:86 templates/core/submit_request.html:164
+msgid ""
+"информацию о компании и проекте (реквизиты, финансовая отчётность, структура "
+"собственности, но не ограничиваясь);"
+msgstr ""
+"компания және жоба туралы ақпарат (деректемелер, қаржылық есептілік, меншік "
+"құрылымы, бірақ мұнымен шектелмейді);"
+
+#: templates/core/privacy_notice.html:87 templates/core/submit_request.html:165
+msgid ""
+"данные о бенефициарах и ключевых лицах для KYC/AML и оценки риска, в том "
+"числе сведения из кредитного бюро и другие финансовые данные;"
+msgstr ""
+"KYC/AML және тәуекелді бағалау үшін бенефициарлар мен негізгі тұлғалар "
+"туралы деректер, соның ішінде кредиттік бюро мәліметтері және басқа қаржылық "
+"деректер;"
+
+#: templates/core/privacy_notice.html:88 templates/core/submit_request.html:166
+msgid ""
+"техническую информацию об использовании Личного кабинета (IP-адрес, лог-"
+"записи входа и действий) для целей безопасности и аудита."
+msgstr ""
+"қауіпсіздік және аудит мақсаттары үшін Жеке кабинетті пайдалану туралы "
+"техникалық ақпарат (IP мекенжайы, кіру және әрекеттер журналдары)."
+
+#: templates/core/privacy_notice.html:94 templates/core/submit_request.html:171
+msgid ""
+"Техническое обеспечение Личного кабинета, мониторинг инвестиционной "
+"деятельности Группы и формирование корпоративной отчётности."
+msgstr ""
+"Жеке кабинетті техникалық қамтамасыз ету, Топтың инвестициялық қызметін "
+"мониторингтеу және корпоративтік есептілікті қалыптастыру."
+
+#: templates/core/privacy_notice.html:102
+#: templates/core/submit_request.html:178
+msgid "Для чего мы используем данные"
+msgstr "Деректерді не үшін пайдаланамыз"
+
+#: templates/core/privacy_notice.html:104
+#: templates/core/submit_request.html:180
+msgid "Ваши данные используются для:"
+msgstr "Сіздің деректеріңіз келесі мақсаттарда пайдаланылады:"
+
+#: templates/core/privacy_notice.html:106
+#: templates/core/submit_request.html:182
+msgid "регистрации и управления вашей учётной записью в Личном кабинете;"
+msgstr "Жеке кабинеттегі есептік жазбаңызды тіркеу және басқару үшін;"
+
+#: templates/core/privacy_notice.html:107
+#: templates/core/submit_request.html:183
+msgid "приёма, рассмотрения и структурирования вашей заявки;"
+msgstr "өтініміңізді қабылдау, қарау және құрылымдау үшін;"
+
+#: templates/core/privacy_notice.html:108
+#: templates/core/submit_request.html:184
+msgid "проведения KYC/AML и иных комплаенс-процедур;"
+msgstr "KYC/AML және басқа комплаенс-рәсімдерді жүргізу үшін;"
+
+#: templates/core/privacy_notice.html:109
+#: templates/core/submit_request.html:185
+msgid "подготовки и исполнения договоров и сделок;"
+msgstr "шарттар мен мәмілелерді дайындау және орындау үшін;"
+
+#: templates/core/privacy_notice.html:110
+#: templates/core/submit_request.html:186
+msgid "выполнения требований регуляторов и законодательства;"
+msgstr "реттеушілер мен заңнама талаптарын орындау үшін;"
+
+#: templates/core/privacy_notice.html:111
+#: templates/core/submit_request.html:187
+msgid "обеспечения безопасности и корректной работы наших систем."
+msgstr "жүйелеріміздің қауіпсіздігі мен дұрыс жұмысын қамтамасыз ету үшін."
+
+#: templates/core/privacy_notice.html:119
+#: templates/core/submit_request.html:194
+msgid "Правовые основания обработки"
+msgstr "Өңдеудің құқықтық негіздері"
+
+#: templates/core/privacy_notice.html:121
+#: templates/core/submit_request.html:196
+msgid "Мы обрабатываем ваши данные на основе:"
+msgstr "Біз сіздің деректеріңізді келесі негіздерде өңдейміз:"
+
+#: templates/core/privacy_notice.html:125
+#: templates/core/submit_request.html:200
+msgid "Необходимости для рассмотрения вашей заявки"
+msgstr "Өтініміңізді қарау қажеттілігі"
+
+#: templates/core/privacy_notice.html:129
+#: templates/core/submit_request.html:204
+msgid ""
+"Выполнения юридических обязательств (KYC/AML и иные требования регуляторов)"
+msgstr ""
+"Заңды міндеттемелерді орындау (KYC/AML және реттеушілердің басқа талаптары)"
+
+#: templates/core/privacy_notice.html:133
+#: templates/core/submit_request.html:208
+msgid ""
+"Наших законных интересов по управлению рисками и защите прав, при соблюдении "
+"баланса с вашими правами"
+msgstr ""
+"Тәуекелдерді басқару және құқықтарды қорғау жөніндегі заңды мүдделеріміз, "
+"сіздің құқықтарыңызбен теңгерімді сақтай отырып"
+
+#: templates/core/privacy_notice.html:137
+#: templates/core/submit_request.html:212
+msgid "Вашего согласия"
+msgstr "Сіздің келісіміңіз"
+
+#: templates/core/privacy_notice.html:146
+#: templates/core/submit_request.html:220
+msgid "Кому мы передаём данные"
+msgstr "Деректерді кімге береміз"
+
+#: templates/core/privacy_notice.html:148
+#: templates/core/submit_request.html:222
+msgid "Ваши данные могут передаваться:"
+msgstr "Сіздің деректеріңіз келесі тұлғаларға берілуі мүмкін:"
+
+#: templates/core/privacy_notice.html:150
+#: templates/core/submit_request.html:224
+msgid ""
+"нашей материнской компании АО «Qazaqstan Investment Corporation», которая "
+"предоставляет ИТ-инфраструктуру и сопровождение Личного кабинета; АО «НИХ "
+"«Байтерек», выступающего в качестве получателя отчётности Группы, а также "
+"партнёрам ЧК QICM Ltd.;"
+msgstr ""
+"Жеке кабинеттің IT-инфрақұрылымы мен сүйемелдеуін қамтамасыз ететін "
+"«Qazaqstan Investment Corporation» АҚ бас компаниямызға; Топ есептілігін "
+"алушы ретінде «Бәйтерек» ҰБХ» АҚ-ға, сондай-ақ QICM Ltd. серіктестеріне;"
+
+#: templates/core/privacy_notice.html:151
+#: templates/core/submit_request.html:225
+msgid ""
+"банкам, аудиторам, юридическим и финансовым консультантам, иным партнёрам, "
+"вовлечённым в структурирование сделок;"
+msgstr ""
+"мәмілелерді құрылымдауға қатысатын банктерге, аудиторларға, заң және қаржы "
+"кеңесшілеріне, басқа серіктестерге;"
+
+#: templates/core/privacy_notice.html:152
+#: templates/core/submit_request.html:226
+msgid "государственным органам и регуляторам, если это предусмотрено законом."
+msgstr "егер заңда көзделсе, мемлекеттік органдар мен реттеушілерге."
+
+#: templates/core/privacy_notice.html:163
+#: templates/core/submit_request.html:235
+msgid ""
+"Данные будут храниться на серверах АО «Qazaqstan Investment Corporation». "
+"Ваши данные хранятся в течение срока рассмотрения заявки и реализации "
+"потенциальной сделки, а затем — в течение сроков, предусмотренных "
+"законодательством и нашими внутренними правилами по архивированию."
+msgstr ""
+"Деректер «Qazaqstan Investment Corporation» АҚ серверлерінде сақталады. "
+"Сіздің деректеріңіз өтінімді қарау және ықтимал мәмілені іске асыру мерзімі "
+"ішінде, кейін заңнамада және ішкі архивтеу қағидаларымызда көзделген "
+"мерзімдер бойы сақталады."
+
+#: templates/core/privacy_notice.html:167
+msgid ""
+"Обращаем Ваше внимание, что данные передаются в АО «Qazaqstan Investment "
+"Corporation», находящейся в юрисдикции Республики Казахстан (вне МФЦА). "
+"Поскольку юрисдикция Республики Казахстан признаётся Третьей страной, не "
+"имеющей статуса защиты в МФЦА, передача осуществляется с применением "
+"надлежащих мер безопасности, соответствующих требованиям AIFC Data "
+"Protection Regulations."
+msgstr ""
+"Деректер Қазақстан Республикасының юрисдикциясында (АХҚО-дан тыс) орналасқан "
+"«Qazaqstan Investment Corporation» АҚ-ға берілетініне назар аударамыз. "
+"Қазақстан Республикасы АХҚО-да жеткілікті қорғау мәртебесі жоқ үшінші ел "
+"ретінде танылатындықтан, беру AIFC Data Protection Regulations талаптарына "
+"сәйкес тиісті қауіпсіздік шараларын қолдану арқылы жүзеге асырылады."
+
+#: templates/core/privacy_notice.html:177
+#: templates/core/submit_request.html:247
+msgid "Вы имеете право:"
+msgstr "Сіздің құқықтарыңыз:"
+
+#: templates/core/privacy_notice.html:179
+#: templates/core/submit_request.html:249
+msgid "запросить доступ к вашим персональным данным;"
+msgstr "жеке деректеріңізге қол жеткізуді сұрау;"
+
+#: templates/core/privacy_notice.html:180
+#: templates/core/submit_request.html:250
+msgid "требовать исправления или блокировки неточных или устаревших данных;"
+msgstr ""
+"дәл емес немесе ескірген деректерді түзетуді немесе бұғаттауды талап ету;"
+
+#: templates/core/privacy_notice.html:181
+#: templates/core/submit_request.html:251
+msgid ""
+"просить удалить или ограничить обработку данных в предусмотренных случаях;"
+msgstr "көзделген жағдайларда деректерді жоюды немесе өңдеуді шектеуді сұрау;"
+
+#: templates/core/privacy_notice.html:182
+#: templates/core/submit_request.html:252
+msgid ""
+"возражать против определённых видов обработки, основанных на законных "
+"интересах;"
+msgstr "заңды мүдделерге негізделген өңдеудің белгілі түрлеріне қарсы болу;"
+
+#: templates/core/privacy_notice.html:183
+#: templates/core/submit_request.html:253
+msgid "отозвать своё согласие, если обработка основана на согласии;"
+msgstr "өңдеу келісімге негізделсе, келісіміңізді қайтарып алу;"
+
+#: templates/core/privacy_notice.html:184
+#: templates/core/submit_request.html:254
+msgid "подать жалобу в офис AIFC Commissioner of Data Protection;"
+msgstr "AIFC Commissioner of Data Protection кеңсесіне шағым беру;"
+
+#: templates/core/privacy_notice.html:185
+#: templates/core/submit_request.html:255
+msgid ""
+"по запросу получать письменное подтверждение о способе, целях обработки и "
+"категориях данных;"
+msgstr ""
+"сұрау бойынша өңдеу тәсілі, мақсаттары және деректер санаттары туралы "
+"жазбаша растау алу;"
+
+#: templates/core/privacy_notice.html:186
+#: templates/core/submit_request.html:256
+msgid "иные права в соответствии с применимым законодательством."
+msgstr "қолданылатын заңнамаға сәйкес өзге де құқықтар."
+
+#: templates/core/privacy_notice.html:192
+#: templates/core/submit_request.html:261
+msgid "Для реализации своих прав свяжитесь с нами:"
+msgstr "Құқықтарыңызды іске асыру үшін бізге хабарласыңыз:"
+
+#: templates/core/submit_request.html:4 templates/users/cabinet.html:4
+msgid "Личный кабинет - МФЦА Управление Капиталом"
+msgstr "Жеке кабинет - АХҚО Капиталды басқару"
+
+#: templates/core/submit_request.html:26
+msgid "Этапы рассмотрения заявок по инвестиционным проектам"
+msgstr "Инвестициялық жобалар бойынша өтінімдерді қарау кезеңдері"
+
+#: templates/core/submit_request.html:29
+msgid ""
+"После получения полного пакета, перед началом рассмотрения Заявки, "
+"подписывается Соглашение о конфиденциальности и неразглашения информации "
+"(NDA) и Согласие на сбор, обработку персональных данных. А также, информация "
+"по Заявителю направляется в ИС Бақылауда для соответствующей проверки:"
+msgstr ""
+"Толық пакет алынғаннан кейін, өтінімді қарау басталғанға дейін құпиялылық "
+"және ақпаратты жария етпеу туралы келісім (NDA) және жеке деректерді "
+"жинауға, өңдеуге келісімге қол қойылады. Сондай-ақ өтініш беруші туралы "
+"ақпарат тиісті тексеру үшін Бақылауда АЖ-ға жіберіледі:"
+
+#: templates/core/submit_request.html:33
+msgid "Заявка подается через Личный кабинет"
+msgstr "Өтінім Жеке кабинет арқылы беріледі"
+
+#: templates/core/submit_request.html:43
+msgid "Индикативный этап"
+msgstr "Индикативтік кезең"
+
+#: templates/core/submit_request.html:46
+msgid "Срок: 25 рабочих дней"
+msgstr "Мерзімі: 25 жұмыс күні"
+
+#: templates/core/submit_request.html:49
+msgid ""
+"На 1 этапе определяются индикативные (предварительные) условия "
+"финансирования, в рамках которых проводится экспертиза проекта, включающая в "
+"себя финансово-экономическую, юридическую, экологическую и социальную оценку "
+"проекта и оценка рисков. Срок проведения: в течение 25 рабочих дней со дня "
+"предоставления Заявителем полного пакета документов."
+msgstr ""
+"1-кезеңде қаржыландырудың индикативтік (алдын ала) шарттары айқындалады. "
+"Жоба сараптамасы қаржы-экономикалық, құқықтық, экологиялық және әлеуметтік "
+"бағалауды және тәуекелдерді бағалауды қамтиды. Өткізу мерзімі: өтініш беруші "
+"толық құжаттар пакетін ұсынған күннен бастап 25 жұмыс күні ішінде."
+
+#: templates/core/submit_request.html:60
+msgid "Финальный этап"
+msgstr "Қорытынды кезең"
+
+#: templates/core/submit_request.html:63
+msgid "Срок: 35 рабочих дней"
+msgstr "Мерзімі: 35 жұмыс күні"
+
+#: templates/core/submit_request.html:66
+msgid ""
+"На 2 этапе – финальном этапе рассмотрения проекта проводится экспертиза "
+"проекта, включающая в себя финансово-экономическую, юридическую, "
+"экологическую и социальную оценку проекта и оценка рисков с учетом "
+"исполнения отлагательных условий, принятых в ходе индикативного этапа "
+"рассмотрения и предоставления независимых экспертиз по проекту (при "
+"необходимости). Срок проведения: в течение 35 рабочих дней со дня "
+"предоставления Заявителем полного пакета документов, исполнения полного "
+"перечня отлагательных условий, включая анализ и утверждение основных условий "
+"финансирования по проекту."
+msgstr ""
+"2-кезеңде - жобаны қорытынды қарау кезеңінде қаржы-экономикалық, құқықтық, "
+"экологиялық және әлеуметтік бағалау және тәуекелдерді бағалау жүргізіледі. "
+"Бұл индикативтік кезеңде қабылданған кейінге қалдыру шарттарының орындалуын "
+"және қажет болған жағдайда тәуелсіз сараптамаларды ескере отырып "
+"жүргізіледі. Өткізу мерзімі: өтініш беруші толық құжаттар пакетін ұсынған, "
+"барлық кейінге қалдыру шарттарын орындаған және жобаны қаржыландырудың "
+"негізгі шарттарын талдау мен бекітуді қоса алғанда 35 жұмыс күні ішінде."
+
+#: templates/core/submit_request.html:74
+msgid "Контакты для связи"
+msgstr "Байланыс тұлғалары"
+
+#: templates/core/submit_request.html:82
+msgid "Джурабекова Сания Едыгеевна"
+msgstr "Сания Джурабекова"
+
+#: templates/core/submit_request.html:83 templates/core/submit_request.html:104
+msgid "Инвестиционный директор"
+msgstr "Инвестициялық директор"
+
+#: templates/core/submit_request.html:103
+msgid "Сердалин Алмас Амантаевич"
+msgstr "Алмас Сердалин"
+
+#: templates/core/submit_request.html:120
+msgid "Готовы подать заявку?"
+msgstr "Өтінім беруге дайынсыз ба?"
+
+#: templates/core/submit_request.html:121
+msgid "Перейдите в личный кабинет"
+msgstr "Жеке кабинетке өтіңіз"
+
+#: templates/core/submit_request.html:123
+msgid "ПЕРЕЙТИ В ЛИЧНЫЙ КАБИНЕТ"
+msgstr "ЖЕКЕ КАБИНЕТКЕ ӨТУ"
+
+#: templates/core/submit_request.html:147
+msgid ""
+"Ваши данные обрабатываются совместно Частной компанией Qazaqstan Investment "
+"Capital Management Ltd. (МФЦА) и АО «Qazaqstan Investment "
+"Corporation» (далее — QIC) (Республика Казахстан). Мы являемся "
+"<strong>Совместными контролерами</strong> ваших данных."
+msgstr ""
+"Сіздің деректеріңізді Qazaqstan Investment Capital Management Ltd. (АХҚО) "
+"және «Qazaqstan Investment Corporation» АҚ (QIC) (Қазақстан Республикасы) "
+"бірлесіп өңдейді. Біз сіздің деректеріңіздің бірлескен контролерлеріміз."
+
+#: templates/core/submit_request.html:238
+msgid ""
+"Обращаем Ваше внимание, что данные передаются в АО «Qazaqstan Investment "
+"Corporation», находящейся в юрисдикции Республики Казахстан (вне МФЦА). "
+"Поскольку юрисдикция Республики Казахстан признаётся Третьей страной, не "
+"имеющей статуса адекватной защиты в МФЦА, передача осуществляется с "
+"применением надлежащих мер безопасности, соответствующих требованиям AIFC "
+"Data Protection Regulations."
+msgstr ""
+"Деректер Қазақстан Республикасының юрисдикциясында (АХҚО-дан тыс) орналасқан "
+"«Qazaqstan Investment Corporation» АҚ-ға берілетініне назар аударамыз. "
+"Қазақстан Республикасы АХҚО-да жеткілікті қорғау мәртебесі жоқ үшінші ел "
+"ретінде танылатындықтан, беру AIFC Data Protection Regulations талаптарына "
+"сәйкес тиісті қауіпсіздік шараларын қолдану арқылы жүзеге асырылады."
+
+#: templates/core/submit_request.html:271
+msgid "Перейти в личный кабинет"
+msgstr "Жеке кабинетке өту"
+
+#: templates/core/submit_request.html:280
+msgid "Перечень документов"
+msgstr "Құжаттар тізімі"
+
+#: templates/core/submit_request.html:284
+msgid "Пакет документов для предварительного рассмотрения"
+msgstr "Алдын ала қарауға арналған құжаттар пакеті"
+
+#: templates/core/submit_request.html:290
+msgid "Пакет документов для финального рассмотрения"
+msgstr "Қорытынды қарауға арналған құжаттар пакеті"
+
+#: templates/core/submit_request.html:296
+msgid "Пакет документов для реструктуризации"
+msgstr "Қайта құрылымдауға арналған құжаттар пакеті"
+
+#: templates/core/submit_request.html:302
+msgid "Анкета для юридического лица — AML"
+msgstr "Заңды тұлғаға арналған сауалнама - AML"
+
+#: templates/core/submit_request.html:308
+msgid "Паспорт проекта"
+msgstr "Жоба паспорты"
+
+#: templates/core/submit_request.html:314
+msgid "Образец Инвестиционного тизера"
+msgstr "Инвестициялық тизер үлгісі"
+
+#: templates/core/submit_request.html:320
+msgid "Сведения об аффилированных лицах"
+msgstr "Үлестес тұлғалар туралы мәліметтер"
+
+#: templates/core/submit_request.html:326
+msgid "Согласия в ПКБ"
+msgstr "Кредиттік бюроға келісімдер"
+
+#: templates/core/submit_request.html:332
+msgid "Анализ контрактов по сырью"
+msgstr "Шикізат бойынша келісімшарттарды талдау"
+
+#: templates/core/submit_request.html:338
+msgid "Анализ контрактов, обеспечивающих выручку и сбыт продукции"
+msgstr "Түсім мен өнім өткізуге байланысты келісімшарттарды талдау"
+
+#: templates/core/submit_request.html:344
+msgid "Опросник для проведения ESG Due Diligence"
+msgstr "ESG Due Diligence жүргізуге арналған сауалнама"
+
+#: templates/core/submit_request.html:350
+msgid "Перечень инвестиционных затрат по основным категориям расходов"
+msgstr "Негізгі шығыс санаттары бойынша инвестициялық шығындар тізімі"
+
+#: templates/core/submit_request.html:356
+msgid "План-график инвестиционной фазы проекта"
+msgstr "Жобаның инвестициялық кезеңінің жоспар-кестесі"
+
+#: templates/core/submit_request.html:362
+msgid "Требования соответствия"
+msgstr "Сәйкестік талаптары"
+
+#: templates/core/submit_request.html:366
+msgid ""
+"Требования к договорам в рамках инвестпроектов, финансируемых фондами прямых "
+"инвестиций ЧК"
+msgstr ""
+"QICM тікелей инвестициялар қорлары қаржыландыратын инвестициялық жобалар "
+"аясындағы шарттарға қойылатын талаптар"
+
+#: templates/core/submit_request.html:372
+msgid ""
+"Требования к договорам эскроу и контролю расходных операций по счетам БВУ в "
+"инвестпроектах"
+msgstr ""
+"Инвестициялық жобалардағы ЕДБ шоттары бойынша эскроу шарттарына және шығыс "
+"операцияларын бақылауға қойылатын талаптар"
+
+#: templates/core/submit_request.html:378
+msgid "Требования к маркетинговому отчёту, предоставляемому в ЧК"
+msgstr "QICM-ге ұсынылатын маркетингтік есепке қойылатын талаптар"
+
+#: templates/core/submit_request.html:384
+msgid ""
+"Требования к оценке гарантоспособности гаранта в рамках реализации "
+"инвестпроектов ЧК"
+msgstr ""
+"QICM инвестициялық жобалары аясында кепілгердің кепілдік қабілетін бағалауға "
+"қойылатын талаптар"
+
+#: templates/core/submit_request.html:390
+msgid ""
+"Требования к оценке технической проработанности и закупок инвестиционных "
+"проектов"
+msgstr ""
+"Инвестициялық жобалардың техникалық пысықталуын және сатып алуларын "
+"бағалауға қойылатын талаптар"
+
+#: templates/core/submit_request.html:396
+msgid "Требования к условиям страхования в рамках реализации инвестпроектов ЧК"
+msgstr ""
+"QICM инвестициялық жобалары аясындағы сақтандыру шарттарына қойылатын "
+"талаптар"
+
+#: templates/core/submit_request.html:402
+msgid ""
+"Требования к финансово-техническому контролёру по мониторингу и управлению "
+"затратами инвестиционных проектов ЧК"
+msgstr ""
+"QICM инвестициялық жобалары шығындарын мониторингтеу және басқару жөніндегі "
+"қаржы-техникалық контролерге қойылатын талаптар"
+
+#: templates/core/submit_request.html:408
+msgid ""
+"Требования к финансово-техническому контролёру по мониторингу и управлению "
+"затратами инвестиционных проектов ЧК (копия)"
+msgstr ""
+"QICM инвестициялық жобалары шығындарын мониторингтеу және басқару жөніндегі "
+"қаржы-техникалық контролерге қойылатын талаптар (көшірме)"
+
+#: templates/holdings/funds_page.html:4
+msgid "Наши фонды - QICM Ltd."
+msgstr "Біздің қорлар - QICM Ltd."
+
+#: templates/holdings/funds_page.html:5
+msgid ""
+"Информация о фондах QICM Ltd.: Adal Fund LP и Kokzhiyek Fund LP - "
+"инвестиционные фонды для развития несырьевых секторов Казахстана"
+msgstr ""
+"QICM Ltd. қорлары туралы ақпарат: Adal Fund LP және Kokzhiyek Fund LP - "
+"Қазақстанның шикізаттық емес секторларын дамытуға арналған инвестициялық "
+"қорлар"
+
+#: templates/holdings/funds_page.html:27
+msgid ""
+"QICM Ltd. управляет специализированными фондами прямых инвестиций, "
+"направленными на развитие ключевых секторов экономики Казахстана и "
+"Центральной Азии."
+msgstr ""
+"QICM Ltd. Қазақстан мен Орталық Азия экономикасының негізгі секторларын "
+"дамытуға бағытталған мамандандырылған тікелей инвестициялар қорларын "
+"басқарады."
+
+#: templates/holdings/funds_page.html:39
+msgid "Investment Approach"
+msgstr "Инвестициялық тәсіл"
+
+#: templates/holdings/funds_page.html:40
+msgid "Инвестиционная философия"
+msgstr "Инвестициялық философия"
+
+#: templates/holdings/funds_page.html:42
+msgid ""
+"Фокус на компаниях и проектах с прозрачной бизнес-моделью, устойчивыми "
+"денежными\n"
+"                        потоками и потенциалом для масштабирования как в "
+"регионе, так и за его пределами.\n"
+"                        Активное участие QICM Ltd. в создании стоимости "
+"через стратегическое развитие,\n"
+"                        операционные улучшения и привлечение дополнительных "
+"источников финансирования."
+msgstr ""
+"Айқын бизнес-моделі, тұрақты ақша ағымдары және өңірде де, одан тыс жерлерде "
+"де ауқымдану әлеуеті бар компаниялар мен жобаларға назар аудару. QICM Ltd. "
+"стратегиялық даму, операциялық жақсартулар және қосымша қаржыландыру "
+"көздерін тарту арқылы құн құруға белсенді қатысады."
+
+#: templates/holdings/funds_page.html:49
+msgid "География:"
+msgstr "География:"
+
+#: templates/holdings/funds_page.html:49
+msgid "Казахстан как ключевой рынок"
+msgstr "Қазақстан негізгі нарық ретінде"
+
+#: templates/holdings/funds_page.html:53
+msgid "Приоритетные отрасли"
+msgstr "Басым салалар"
+
+#: templates/holdings/funds_page.html:55
+msgid "Торговля и экспортные операции"
+msgstr "Сауда және экспорттық операциялар"
+
+#: templates/holdings/funds_page.html:56
+msgid "Агропромышленный комплекс"
+msgstr "Агроөнеркәсіптік кешен"
+
+#: templates/holdings/funds_page.html:57
+msgid "Обрабатывающая промышленность"
+msgstr "Өңдеу өнеркәсібі"
+
+#: templates/holdings/funds_page.html:58
+msgid "Горно-металлургическая промышленность"
+msgstr "Тау-кен металлургия өнеркәсібі"
+
+#: templates/holdings/funds_page.html:59
+msgid "Пищевая промышленность"
+msgstr "Тамақ өнеркәсібі"
+
+#: templates/holdings/funds_page.html:60
+msgid "Транспорт и логистика"
+msgstr "Көлік және логистика"
+
+#: templates/holdings/funds_page.html:61
+msgid "Энергетика и инфраструктура"
+msgstr "Энергетика және инфрақұрылым"
+
+#: templates/holdings/funds_page.html:62
+msgid "Здравоохранение и образование"
+msgstr "Денсаулық сақтау және білім беру"
+
+#: templates/holdings/funds_page.html:64
+msgid "Туризм"
+msgstr "Туризм"
+
+#: templates/holdings/funds_page.html:65
+msgid "Информация и связь"
+msgstr "Ақпарат және байланыс"
+
+#: templates/holdings/funds_page.html:66
+msgid ""
+"Экспортно-ориентированные проекты, а также проекты, направленные на "
+"повышение производительности труда в различных секторах экономики"
+msgstr ""
+"Экспортқа бағдарланған жобалар, сондай-ақ экономиканың түрлі секторларында "
+"еңбек өнімділігін арттыруға бағытталған жобалар"
+
+#: templates/holdings/funds_page.html:67
+msgid ""
+"Иные сектора в соответствии со стратегическими документами АО «НИХ "
+"«Байтерек», QIC и управляющей компании"
+msgstr ""
+"«Бәйтерек» ҰБХ» АҚ, QIC және басқарушы компанияның стратегиялық құжаттарына "
+"сәйкес өзге секторлар"
+
+#: templates/holdings/funds_page.html:78
+msgid "Our Funds"
+msgstr "Біздің қорлар"
+
+#: templates/holdings/funds_page.html:79
+msgid "Фонды под управлением"
+msgstr "Басқарудағы қорлар"
+
+#: templates/news/category_news.html:5
+#, python-format
+msgid "Новости категории \"%(category_name)s\" от компании QICM Ltd."
+msgstr "QICM Ltd. компаниясының \"%(category_name)s\" санатындағы жаңалықтары"
+
+#: templates/news/category_news.html:22
+msgid "Категория новостей"
+msgstr "Жаңалықтар санаты"
+
+#: templates/news/category_news.html:27
+#, python-format
+msgid "Все новости из категории \"%(category_name)s\""
+msgstr "\"%(category_name)s\" санатындағы барлық жаңалықтар"
+
+#: templates/news/category_news.html:35
+msgid "Все"
+msgstr "Барлығы"
+
+#: templates/news/category_news.html:97
+#: templates/projects/category_projects.html:129
+#: templates/projects/project_list.html:210
+#, python-format
+msgid "Страница %(number)s из %(total)s"
+msgstr "%(number)s / %(total)s бет"
+
+#: templates/news/category_news.html:113
+msgid "Новостей пока нет"
+msgstr "Әзірге жаңалық жоқ"
+
+#: templates/news/category_news.html:114
+msgid "В этой категории пока нет опубликованных новостей"
+msgstr "Бұл санатта әзірге жарияланған жаңалық жоқ"
+
+#: templates/news/category_news.html:115 templates/news/news_detail.html:142
+msgid "Все новости"
+msgstr "Барлық жаңалықтар"
+
+#: templates/news/news_detail.html:44 templates/projects/project_detail.html:55
+msgid "просмотров"
+msgstr "қаралым"
+
+#: templates/news/news_detail.html:69
+msgid "Поделиться новостью:"
+msgstr "Жаңалықпен бөлісу:"
+
+#: templates/news/news_detail.html:101
+msgid "Похожие новости"
+msgstr "Ұқсас жаңалықтар"
+
+#: templates/news/news_list.html:4
+msgid "Новости - QICM Ltd."
+msgstr "Жаңалықтар - QICM Ltd."
+
+#: templates/news/news_list.html:5
+msgid "Новости QICM Ltd., холдинга Байтерек и QIC"
+msgstr "QICM Ltd., Бәйтерек холдингі және QIC жаңалықтары"
+
+#: templates/news/news_list.html:11
+msgid "Новости QICM Ltd."
+msgstr "QICM Ltd. жаңалықтары"
+
+#: templates/news/news_list.html:22
+msgid "Актуальные события и обновления QICM Ltd."
+msgstr "QICM Ltd. өзекті оқиғалары мен жаңартулары"
+
+#: templates/news/news_list.html:32
+#, fuzzy
+#| msgid "Новости QICM Ltd."
+msgid "ЧК QICM Ltd."
+msgstr "QICM Ltd. жаңалықтары"
+
+#: templates/news/news_list.html:34
+msgid "АО «НИХ «Байтерек»"
+msgstr "«Бәйтерек» ҰБХ» АҚ"
+
+#: templates/news/news_list.html:36
+msgid "АО «QIC»"
+msgstr "«QIC» АҚ"
+
+#: templates/news/news_list.html:68
+msgid "просм."
+msgstr "қаралым"
+
+#: templates/news/news_list.html:100
+msgid "Новости не найдены"
+msgstr "Жаңалықтар табылмады"
+
+#: templates/news/news_list.html:127
+msgid "Байтерек"
+msgstr "Бәйтерек"
+
+#: templates/news/news_list.html:154 templates/news/news_list.html:208
+msgid "Нет данных. Запустите <code>python manage.py fetch_external_news</code>"
+msgstr ""
+"Деректер жоқ. <code>python manage.py fetch_external_news</code> іске қосыңыз"
+
+#: templates/projects/category_projects.html:5
+#, python-format
+msgid "Проекты категории \"%(category_name)s\" от компании QICM Ltd."
+msgstr "QICM Ltd. компаниясының \"%(category_name)s\" санатындағы жобалары"
+
+#: templates/projects/category_projects.html:22
+msgid "Категория проектов"
+msgstr "Жобалар санаты"
+
+#: templates/projects/category_projects.html:32
+#, python-format
+msgid "Инвестиционные проекты в категории \"%(category_name)s\""
+msgstr "\"%(category_name)s\" санатындағы инвестициялық жобалар"
+
+#: templates/projects/category_projects.html:39
+#: templates/projects/project_list.html:63
+msgid "Все категории"
+msgstr "Барлық санаттар"
+
+#: templates/projects/category_projects.html:145
+msgid "Проектов пока нет"
+msgstr "Әзірге жобалар жоқ"
+
+#: templates/projects/category_projects.html:146
+msgid "В этой категории пока нет опубликованных проектов"
+msgstr "Бұл санатта әзірге жарияланған жобалар жоқ"
+
+#: templates/projects/category_projects.html:147
+#: templates/projects/project_detail.html:230
+#: templates/projects/project_detail.html:321
+#: templates/projects/project_list.html:46
+msgid "Все проекты"
+msgstr "Барлық жобалар"
+
+#: templates/projects/project_detail.html:83
+msgid "О проекте"
+msgstr "Жоба туралы"
+
+#: templates/projects/project_detail.html:92
+msgid "Партнеры и инвесторы"
+msgstr "Серіктестер мен инвесторлар"
+
+#: templates/projects/project_detail.html:101
+msgid "Поделиться проектом:"
+msgstr "Жобамен бөлісу:"
+
+#: templates/projects/project_detail.html:137
+msgid "Ключевая информация"
+msgstr "Негізгі ақпарат"
+
+#: templates/projects/project_detail.html:157
+msgid "Ожидаемая доходность"
+msgstr "Күтілетін кірістілік"
+
+#: templates/projects/project_detail.html:205
+msgid "Местоположение"
+msgstr "Орналасқан жері"
+
+#: templates/projects/project_detail.html:218
+msgid "Связаться с нами"
+msgstr "Бізбен байланысу"
+
+#: templates/projects/project_detail.html:225
+msgid "Навигация"
+msgstr "Навигация"
+
+#: templates/projects/project_detail.html:244
+#, python-format
+msgid "Проекты со статусом \"%(status)s\""
+msgstr "\"%(status)s\" мәртебесіндегі жобалар"
+
+#: templates/projects/project_detail.html:255
+msgid "Похожие проекты"
+msgstr "Ұқсас жобалар"
+
+#: templates/projects/project_list.html:4
+msgid "Инвестиционные проекты - QICM Ltd."
+msgstr "Инвестициялық жобалар - QICM Ltd."
+
+#: templates/projects/project_list.html:5
+msgid "Каталог инвестиционных проектов компании QICM Ltd."
+msgstr "QICM Ltd. инвестициялық жобалар каталогы"
+
+#: templates/projects/project_list.html:20
+msgid "Наши проекты"
+msgstr "Біздің жобалар"
+
+#: templates/projects/project_list.html:23
+msgid ""
+"Перспективные инвестиционные проекты с высоким потенциалом доходности. "
+"Выберите подходящий проект для развития вашего бизнеса."
+msgstr ""
+"Кірістілік әлеуеті жоғары перспективалы инвестициялық жобалар. Бизнесіңізді "
+"дамытуға лайықты жобаны таңдаңыз."
+
+#: templates/projects/project_list.html:33
+msgid "Поиск проектов..."
+msgstr "Жобаларды іздеу..."
+
+#: templates/projects/project_list.html:81
+msgid "Избранные проекты"
+msgstr "Таңдаулы жобалар"
+
+#: templates/projects/project_list.html:92
+msgid "Избранный"
+msgstr "Таңдаулы"
+
+#: templates/projects/project_list.html:226
+msgid "Проекты не найдены"
+msgstr "Жобалар табылмады"
+
+#: templates/projects/project_list.html:227
+msgid "Попробуйте изменить параметры поиска или фильтры"
+msgstr "Іздеу параметрлерін немесе сүзгілерді өзгертіп көріңіз"
+
+#: templates/projects/project_list.html:228
+msgid "Показать все проекты"
+msgstr "Барлық жобаларды көрсету"

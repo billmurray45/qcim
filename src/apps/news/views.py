@@ -25,8 +25,14 @@ class NewsListView(ListView):
         if search_query:
             queryset = queryset.filter(
                 Q(title__icontains=search_query) |
+                Q(title_kk__icontains=search_query) |
+                Q(title_en__icontains=search_query) |
                 Q(content__icontains=search_query) |
+                Q(content_kk__icontains=search_query) |
+                Q(content_en__icontains=search_query) |
                 Q(excerpt__icontains=search_query)
+                | Q(excerpt_kk__icontains=search_query)
+                | Q(excerpt_en__icontains=search_query)
             )
 
         return queryset

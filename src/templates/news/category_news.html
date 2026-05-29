@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
-{% load static %}
+{% load static i18n i18n_extras %}
 
-{% block title %}{{ category.name }} - Новости - Business Consulting{% endblock %}
-{% block meta_description %}Новости категории "{{ category.name }}" от компании Business Consulting{% endblock %}
+{% block title %}{{ category|localized:'name' }} - {% trans 'Новости' %} - QICM Ltd.{% endblock %}
+{% block meta_description %}{% blocktrans with category_name=category|localized:'name' %}Новости категории "{{ category_name }}" от компании QICM Ltd.{% endblocktrans %}{% endblock %}
 
 {% block content %}
 <main class="main">
@@ -10,21 +10,21 @@
     <div class="container">
       <!-- Breadcrumbs -->
       <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="{% url 'core:home' %}">Главная</a>
+        <a href="{% url 'core:home' %}">{% trans 'Главная' %}</a>
         <span>/</span>
-        <a href="{% url 'news:list' %}">Новости</a>
+        <a href="{% url 'news:list' %}">{% trans 'Новости' %}</a>
         <span>/</span>
-        <span>{{ category.name }}</span>
+        <span>{{ category|localized:'name' }}</span>
       </nav>
 
       <!-- Page Header -->
       <header class="page-header">
-        <div class="page-header__eyebrow">Категория новостей</div>
-        <h1 class="page-header__title">{{ category.name }}</h1>
-        {% if category.description %}
-        <p class="page-header__subtitle">{{ category.description }}</p>
+        <div class="page-header__eyebrow">{% trans 'Категория новостей' %}</div>
+        <h1 class="page-header__title">{{ category|localized:'name' }}</h1>
+        {% if category|localized:'description' %}
+        <p class="page-header__subtitle">{{ category|localized:'description' }}</p>
         {% else %}
-        <p class="page-header__subtitle">Все новости из категории "{{ category.name }}"</p>
+        <p class="page-header__subtitle">{% blocktrans with category_name=category|localized:'name' %}Все новости из категории "{{ category_name }}"{% endblocktrans %}</p>
         {% endif %}
       </header>
 
@@ -32,11 +32,11 @@
       <!-- Category Filter -->
       <div class="news-categories">
         <a href="{% url 'news:list' %}" class="category-tag">
-          Все
+          {% trans 'Все' %}
         </a>
         {% for cat in categories %}
         <a href="{% url 'news:category' cat.slug %}" class="category-tag {% if cat.id == category.id %}is-active{% endif %}">
-          {{ cat.name }}
+          {{ cat|localized:'name' }}
         </a>
         {% endfor %}
       </div>
@@ -49,7 +49,7 @@
           <a href="{{ news.get_absolute_url }}" class="news-card__link">
             {% if news.image %}
             <div class="news-card__image">
-              <img src="{{ news.image.url }}" alt="{{ news.title }}">
+              <img src="{{ news.image.url }}" alt="{{ news|localized:'title' }}">
             </div>
             {% else %}
             <div class="news-card__image news-card__image--placeholder">
@@ -59,11 +59,11 @@
 
             <div class="news-card__content">
               {% if news.category %}
-              <span class="news-card__category">{{ news.category.name }}</span>
+              <span class="news-card__category">{{ news.category|localized:'name' }}</span>
               {% endif %}
 
-              <h3 class="news-card__title">{{ news.title }}</h3>
-              <p class="news-card__excerpt">{{ news.excerpt|truncatewords:20 }}</p>
+              <h3 class="news-card__title">{{ news|localized:'title' }}</h3>
+              <p class="news-card__excerpt">{{ news|localized:'excerpt'|truncatewords:20 }}</p>
 
               <div class="news-card__meta">
                 <span class="news-card__date">
@@ -94,7 +94,7 @@
         {% endif %}
 
         <span class="pagination__current">
-          Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+          {% blocktrans with number=page_obj.number total=page_obj.paginator.num_pages %}Страница {{ number }} из {{ total }}{% endblocktrans %}
         </span>
 
         {% if page_obj.has_next %}
@@ -110,9 +110,9 @@
       {% else %}
       <div class="no-results">
         <i class="fas fa-newspaper"></i>
-        <h3>Новостей пока нет</h3>
-        <p>В этой категории пока нет опубликованных новостей</p>
-        <a href="{% url 'news:list' %}" class="btn btn--primary">Все новости</a>
+        <h3>{% trans 'Новостей пока нет' %}</h3>
+        <p>{% trans 'В этой категории пока нет опубликованных новостей' %}</p>
+        <a href="{% url 'news:list' %}" class="btn btn--primary">{% trans 'Все новости' %}</a>
       </div>
       {% endif %}
     </div>

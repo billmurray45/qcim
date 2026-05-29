@@ -8,6 +8,7 @@ from django.views.generic import TemplateView
 from django.http import JsonResponse
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
+from django.utils.translation import gettext_lazy as _
 
 from .models import CustomUser
 from apps.common.utils import get_client_ip
@@ -33,7 +34,8 @@ def login_view(request):
 
     if user is not None:
         login(request, user)
-        messages.success(request, 'Вы успешно вошли в систему!')
+        success_message = _('Вы успешно вошли в систему!')
+        messages.success(request, success_message)
 
         # Логируем успешный вход
         logger.info(
@@ -43,7 +45,7 @@ def login_view(request):
 
         return JsonResponse({
             'success': True,
-            'message': 'Вы успешно вошли в систему!'
+            'message': str(success_message)
         })
     else:
         security_logger.warning(
@@ -54,7 +56,7 @@ def login_view(request):
 
         return JsonResponse({
             'success': False,
-            'error': 'Неверный email или пароль.'
+            'error': str(_('Неверный email или пароль.'))
         })
 
 
@@ -72,7 +74,7 @@ def logout_view(request):
         user_id = request.user.id
 
         logout(request)
-        messages.success(request, 'Вы вышли из системы.')
+        messages.success(request, _('Вы вышли из системы.'))
 
         # Логируем выход
         logger.info(
@@ -108,44 +110,44 @@ def register_view(request):
 
     # Валидация имени
     if not first_name:
-        errors['first_name'] = 'Введите имя'
+        errors['first_name'] = str(_('Введите имя'))
     elif len(first_name) < 2:
-        errors['first_name'] = 'Имя слишком короткое'
+        errors['first_name'] = str(_('Имя слишком короткое'))
 
     # Валидация фамилии
     if not last_name:
-        errors['last_name'] = 'Введите фамилию'
+        errors['last_name'] = str(_('Введите фамилию'))
     elif len(last_name) < 2:
-        errors['last_name'] = 'Фамилия слишком короткая'
+        errors['last_name'] = str(_('Фамилия слишком короткая'))
 
     # Валидация email
     if not email:
-        errors['email'] = 'Введите email'
+        errors['email'] = str(_('Введите email'))
     else:
         try:
             validate_email(email)
         except ValidationError:
-            errors['email'] = 'Некорректный email адрес'
+            errors['email'] = str(_('Некорректный email адрес'))
         else:
             # Проверяем, не занят ли email
             if CustomUser.objects.filter(email=email).exists():
-                errors['email'] = 'Пользователь с таким email уже существует'
+                errors['email'] = str(_('Пользователь с таким email уже существует'))
 
     # Валидация пароля
     if not password:
-        errors['password'] = 'Введите пароль'
+        errors['password'] = str(_('Введите пароль'))
     elif len(password) < 8:
-        errors['password'] = 'Пароль должен содержать минимум 8 символов'
+        errors['password'] = str(_('Пароль должен содержать минимум 8 символов'))
     elif password.isdigit():
-        errors['password'] = 'Пароль не может состоять только из цифр'
+        errors['password'] = str(_('Пароль не может состоять только из цифр'))
 
     # Проверка совпадения паролей
     if password != password2:
-        errors['password2'] = 'Пароли не совпадают'
+        errors['password2'] = str(_('Пароли не совпадают'))
 
     # Проверка согласия
     if not agree:
-        errors['agree'] = 'Необходимо принять условия использования'
+        errors['agree'] = str(_('Необходимо принять условия использования'))
 
     # Если есть ошибки — возвращаем их
     if errors:
@@ -153,7 +155,7 @@ def register_view(request):
         return JsonResponse({
             'success': False,
             'errors': errors,
-            'message': 'Пожалуйста, исправьте ошибки в форме'
+            'message': str(_('Пожалуйста, исправьте ошибки в форме'))
         })
 
     try:
@@ -176,11 +178,11 @@ def register_view(request):
         # Указываем backend, т.к. пользователь создан напрямую, а не через authenticate()
         login(request, user, backend='django.contrib.auth.backends.ModelBackend')
 
-        messages.success(request, f'Добро пожаловать, {user.first_name}! Регистрация прошла успешно.')
+        messages.success(request, _('Добро пожаловать, %(name)s! Регистрация прошла успешно.') % {'name': user.first_name})
 
         return JsonResponse({
             'success': True,
-            'message': 'Регистрация прошла успешно!'
+            'message': str(_('Регистрация прошла успешно!'))
         })
 
     except Exception as e:
@@ -189,7 +191,7 @@ def register_view(request):
         logger.error(traceback.format_exc())
         return JsonResponse({
             'success': False,
-            'message': 'Произошла ошибка при регистрации. Попробуйте позже.'
+            'message': str(_('Произошла ошибка при регистрации. Попробуйте позже.'))
         })
 
 
@@ -198,5 +200,4 @@ class CabinetView(LoginRequiredMixin, TemplateView):
     Личный кабинет пользователя.
     """
     template_name = 'users/cabinet.html'
-
 

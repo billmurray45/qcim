@@ -10,6 +10,11 @@ const isMobileDevice = (() => {
   return () => result;
 })();
 
+const qicmT = (key, fallback) => {
+  if (window.QICM_I18N && window.QICM_I18N[key]) return window.QICM_I18N[key];
+  return fallback;
+};
+
 // ========================================
 // Mobile Menu Toggle
 // ========================================
@@ -151,7 +156,7 @@ const initNewsletterForm = () => {
 
     // Simple validation
     if (!email || !email.includes('@')) {
-      showToast('error', 'Ошибка', 'Введите корректный email адрес');
+      showToast('error', qicmT('error', 'Ошибка'), qicmT('invalidEmail', 'Введите корректный email адрес'));
       return;
     }
 
@@ -547,7 +552,7 @@ const initModals = () => {
 
       // Disable button and show loading state
       submitButton.disabled = true;
-      submitButton.textContent = 'Вход...';
+      submitButton.textContent = qicmT('loginLoading', 'Вход...');
 
       fetch(loginForm.action, {
         method: 'POST',
@@ -579,7 +584,7 @@ const initModals = () => {
           // Show generic error
           const errorDiv = document.createElement('div');
           errorDiv.className = 'modal__error';
-          errorDiv.textContent = 'Произошла ошибка. Попробуйте еще раз.';
+          errorDiv.textContent = qicmT('genericErrorNoYo', 'Произошла ошибка. Попробуйте еще раз.');
           loginForm.insertBefore(errorDiv, loginForm.firstChild);
 
           // Re-enable button
@@ -634,7 +639,7 @@ function showToast(type, label, text) {
       '<p class="toast__label">' + label + '</p>' +
       '<p class="toast__text">' + text + '</p>' +
     '</div>' +
-    '<button class="toast__close" aria-label="Закрыть">' +
+    '<button class="toast__close" aria-label="' + qicmT('close', 'Закрыть') + '">' +
       '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>' +
     '</button>' +
     '<div class="toast__progress"></div>';
@@ -689,7 +694,7 @@ const initContactForm = () => {
     form.querySelectorAll('.form-error').forEach(el => el.remove());
 
     submitButton.disabled = true;
-    submitButton.innerHTML = 'Отправка...';
+    submitButton.innerHTML = qicmT('sending', 'Отправка...');
 
     try {
       const response = await fetch(form.action, {
@@ -702,7 +707,7 @@ const initContactForm = () => {
 
       if (data.success) {
         form.reset();
-        showToast('success', 'Успешно', data.message);
+        showToast('success', qicmT('success', 'Успешно'), data.message);
       } else {
         if (data.errors) {
           for (const [field, errors] of Object.entries(data.errors)) {
@@ -715,10 +720,10 @@ const initContactForm = () => {
             }
           }
         }
-        showToast('error', 'Ошибка', data.message || 'Пожалуйста, исправьте ошибки в форме.');
+        showToast('error', qicmT('error', 'Ошибка'), data.message || qicmT('formFix', 'Пожалуйста, исправьте ошибки в форме.'));
       }
     } catch (err) {
-      showToast('error', 'Ошибка', 'Произошла ошибка при отправке. Попробуйте ещё раз.');
+      showToast('error', qicmT('error', 'Ошибка'), qicmT('sendError', 'Произошла ошибка при отправке. Попробуйте ещё раз.'));
     } finally {
       submitButton.disabled = false;
       submitButton.innerHTML = originalHTML;
@@ -964,7 +969,7 @@ async function handleAuthFormSubmit(e) {
 
   // Disable button and show loading
   submitBtn.disabled = true;
-  submitBtn.textContent = isLogin ? 'Вход...' : 'Регистрация...';
+  submitBtn.textContent = isLogin ? qicmT('loginLoading', 'Вход...') : qicmT('registerLoading', 'Регистрация...');
 
   try {
     const formData = new FormData(form);
@@ -1009,7 +1014,7 @@ async function handleAuthFormSubmit(e) {
     console.error('Auth form error:', error);
     const generalError = document.createElement('div');
     generalError.className = 'auth-form__general-error';
-    generalError.textContent = 'Произошла ошибка. Попробуйте ещё раз.';
+    generalError.textContent = qicmT('genericError', 'Произошла ошибка. Попробуйте ещё раз.');
     form.insertBefore(generalError, form.firstChild);
   } finally {
     submitBtn.disabled = false;

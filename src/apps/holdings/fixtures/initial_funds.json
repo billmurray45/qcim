@@ -11,7 +11,17 @@
       "registration_date": "2025-12-31",
       "is_dark": false,
       "is_active": true,
-      "order": 1
+      "order": 1,
+      "name_kk": "Adal Fund LP",
+      "name_en": "Adal Fund LP",
+      "badge_kk": "Ашық қор",
+      "badge_en": "Open fund",
+      "fund_type_kk": "АХҚО аясындағы қолшатыр түріндегі ашық мамандандырылған тікелей инвестициялар қоры",
+      "fund_type_en": "Open specialised umbrella-type private equity fund · AIFC",
+      "target_size_kk": "$1 млрд",
+      "target_size_en": "$1 billion",
+      "lifespan_kk": "10 жыл",
+      "lifespan_en": "10 years"
     }
   },
   {
@@ -26,7 +36,17 @@
       "registration_date": "2025-07-21",
       "is_dark": true,
       "is_active": true,
-      "order": 2
+      "order": 2,
+      "name_kk": "Kokzhiyek Fund LP",
+      "name_en": "Kokzhiyek Fund LP",
+      "badge_kk": "Жабық қор",
+      "badge_en": "Closed fund",
+      "fund_type_kk": "Жабық тікелей инвестициялар қоры · АХҚО",
+      "fund_type_en": "Closed private equity fund · AIFC",
+      "target_size_kk": "$4 млрд",
+      "target_size_en": "$4 billion",
+      "lifespan_kk": "40 жыл",
+      "lifespan_en": "40 years"
     }
   },
   {
@@ -35,7 +55,9 @@
     "fields": {
       "fund": 1,
       "text": "Расширение экспортного потенциала аграрного сектора Республики Казахстан.",
-      "order": 1
+      "order": 1,
+      "text_kk": "Қазақстан Республикасының аграрлық секторының экспорттық әлеуетін кеңейту.",
+      "text_en": "Expanding the export potential of the agrarian sector of the Republic of Kazakhstan."
     }
   },
   {
@@ -44,7 +66,9 @@
     "fields": {
       "fund": 1,
       "text": "Обеспечение стабильных каналов сбыта для отечественных производителей.",
-      "order": 2
+      "order": 2,
+      "text_kk": "Отандық өндірушілер үшін тұрақты өткізу арналарын қамтамасыз ету.",
+      "text_en": "Ensuring stable sales channels for domestic producers."
     }
   },
   {
@@ -53,7 +77,9 @@
     "fields": {
       "fund": 1,
       "text": "Привлечение долгосрочного иностранного капитала в цепочки добавленной стоимости агропромышленного комплекса (АПК).",
-      "order": 3
+      "order": 3,
+      "text_kk": "Агроөнеркәсіптік кешеннің қосылған құн тізбектеріне ұзақ мерзімді шетел капиталын тарту.",
+      "text_en": "Attracting long-term foreign capital into agro-industrial value chains."
     }
   },
   {
@@ -62,7 +88,9 @@
     "fields": {
       "fund": 2,
       "text": "Поддержка крупнейших предприятий Республики Казахстан.",
-      "order": 1
+      "order": 1,
+      "text_kk": "Қазақстан Республикасының ірі кәсіпорындарын қолдау.",
+      "text_en": "Supporting the largest enterprises of the Republic of Kazakhstan."
     }
   },
   {
@@ -71,7 +99,9 @@
     "fields": {
       "fund": 2,
       "text": "Увеличение объемов производства продукции и повышение экспортного потенциала.",
-      "order": 2
+      "order": 2,
+      "text_kk": "Өнім өндіру көлемін ұлғайту және экспорттық әлеуетті арттыру.",
+      "text_en": "Increasing production volumes and export potential."
     }
   },
   {
@@ -80,7 +110,9 @@
     "fields": {
       "fund": 2,
       "text": "Проведение модернизации и увеличение существующих производственных мощностей.",
-      "order": 3
+      "order": 3,
+      "text_kk": "Жаңғырту жүргізу және қолданыстағы өндірістік қуаттарды арттыру.",
+      "text_en": "Modernising and expanding existing production capacities."
     }
   }
 ]

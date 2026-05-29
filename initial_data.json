@@ -1,5 +1,153 @@
 [
   {
+    "model": "contacts.office",
+    "pk": 1,
+    "fields": {
+      "city": "Астана",
+      "address": "район Есиль, Пр. Мангилик ел 55А, Блок С, Z05T2H3",
+      "phone": "+7 (7172) 554-222",
+      "email": "info@qicm.kz",
+      "working_hours": "Пн-Пт 9:00-18:00",
+      "latitude": null,
+      "longitude": null,
+      "instagram": "https://example.com",
+      "facebook": "https://example.com",
+      "linkedin": "",
+      "twitter": "",
+      "youtube": "https://example.com",
+      "telegram": "https://example.com",
+      "whatsapp": "https://example.com",
+      "tiktok": "",
+      "is_main": true,
+      "is_active": true,
+      "order": 0,
+      "created_at": "2026-01-06T09:41:30.759Z",
+      "updated_at": "2026-01-27T04:20:39.663Z",
+      "city_kk": "Астана",
+      "city_en": "Astana",
+      "address_kk": "Есіл ауданы, Мәңгілік Ел даңғылы 55А, C блогы, Z05T2H3",
+      "address_en": "Yesil district, 55A Mangilik El Ave., Block C, Z05T2H3",
+      "working_hours_kk": "Дс-Жм 9:00-18:00",
+      "working_hours_en": "Mon-Fri 9:00-18:00"
+    }
+  },
+  {
+    "model": "holdings.fund",
+    "pk": 1,
+    "fields": {
+      "name": "Adal Fund LP",
+      "badge": "Открытый фонд",
+      "fund_type": "Открытый специализированный фонд прямых инвестиций зонтичного типа · МФЦА",
+      "target_size": "$1 млрд",
+      "lifespan": "10 лет",
+      "registration_date": "2025-12-31",
+      "is_dark": false,
+      "is_active": true,
+      "order": 1,
+      "name_kk": "Adal Fund LP",
+      "name_en": "Adal Fund LP",
+      "badge_kk": "Ашық қор",
+      "badge_en": "Open fund",
+      "fund_type_kk": "АХҚО аясындағы қолшатыр түріндегі ашық мамандандырылған тікелей инвестициялар қоры",
+      "fund_type_en": "Open specialised umbrella-type private equity fund · AIFC",
+      "target_size_kk": "$1 млрд",
+      "target_size_en": "$1 billion",
+      "lifespan_kk": "10 жыл",
+      "lifespan_en": "10 years"
+    }
+  },
+  {
+    "model": "holdings.fund",
+    "pk": 2,
+    "fields": {
+      "name": "Kokzhiyek Fund LP",
+      "badge": "Закрытый фонд",
+      "fund_type": "Закрытый фонд прямых инвестиций · МФЦА",
+      "target_size": "$4 млрд",
+      "lifespan": "40 лет",
+      "registration_date": "2025-07-21",
+      "is_dark": true,
+      "is_active": true,
+      "order": 2,
+      "name_kk": "Kokzhiyek Fund LP",
+      "name_en": "Kokzhiyek Fund LP",
+      "badge_kk": "Жабық қор",
+      "badge_en": "Closed fund",
+      "fund_type_kk": "Жабық тікелей инвестициялар қоры · АХҚО",
+      "fund_type_en": "Closed private equity fund · AIFC",
+      "target_size_kk": "$4 млрд",
+      "target_size_en": "$4 billion",
+      "lifespan_kk": "40 жыл",
+      "lifespan_en": "40 years"
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 1,
+    "fields": {
+      "fund": 1,
+      "text": "Расширение экспортного потенциала аграрного сектора Республики Казахстан.",
+      "order": 1,
+      "text_kk": "Қазақстан Республикасының аграрлық секторының экспорттық әлеуетін кеңейту.",
+      "text_en": "Expanding the export potential of the agrarian sector of the Republic of Kazakhstan."
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 2,
+    "fields": {
+      "fund": 1,
+      "text": "Обеспечение стабильных каналов сбыта для отечественных производителей.",
+      "order": 2,
+      "text_kk": "Отандық өндірушілер үшін тұрақты өткізу арналарын қамтамасыз ету.",
+      "text_en": "Ensuring stable sales channels for domestic producers."
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 3,
+    "fields": {
+      "fund": 1,
+      "text": "Привлечение долгосрочного иностранного капитала в цепочки добавленной стоимости агропромышленного комплекса (АПК).",
+      "order": 3,
+      "text_kk": "Агроөнеркәсіптік кешеннің қосылған құн тізбектеріне ұзақ мерзімді шетел капиталын тарту.",
+      "text_en": "Attracting long-term foreign capital into agro-industrial value chains."
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 4,
+    "fields": {
+      "fund": 2,
+      "text": "Поддержка крупнейших предприятий Республики Казахстан.",
+      "order": 1,
+      "text_kk": "Қазақстан Республикасының ірі кәсіпорындарын қолдау.",
+      "text_en": "Supporting the largest enterprises of the Republic of Kazakhstan."
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 5,
+    "fields": {
+      "fund": 2,
+      "text": "Увеличение объемов производства продукции и повышение экспортного потенциала.",
+      "order": 2,
+      "text_kk": "Өнім өндіру көлемін ұлғайту және экспорттық әлеуетті арттыру.",
+      "text_en": "Increasing production volumes and export potential."
+    }
+  },
+  {
+    "model": "holdings.fundgoal",
+    "pk": 6,
+    "fields": {
+      "fund": 2,
+      "text": "Проведение модернизации и увеличение существующих производственных мощностей.",
+      "order": 3,
+      "text_kk": "Жаңғырту жүргізу және қолданыстағы өндірістік қуаттарды арттыру.",
+      "text_en": "Modernising and expanding existing production capacities."
+    }
+  },
+  {
     "model": "core.teammember",
     "pk": 1,
     "fields": {

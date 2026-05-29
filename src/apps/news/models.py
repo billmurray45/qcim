@@ -37,6 +37,16 @@ class Category(models.Model):
         unique=True,
         verbose_name=_('Название')
     )
+    name_kk = models.CharField(
+        max_length=100,
+        blank=True,
+        verbose_name=_('Название (казахский)')
+    )
+    name_en = models.CharField(
+        max_length=100,
+        blank=True,
+        verbose_name=_('Название (английский)')
+    )
     slug = models.SlugField(
         max_length=100,
         unique=True,
@@ -46,6 +56,14 @@ class Category(models.Model):
     description = models.TextField(
         blank=True,
         verbose_name=_('Описание')
+    )
+    description_kk = models.TextField(
+        blank=True,
+        verbose_name=_('Описание (казахский)')
+    )
+    description_en = models.TextField(
+        blank=True,
+        verbose_name=_('Описание (английский)')
     )
     is_active = models.BooleanField(
         default=True,
@@ -81,6 +99,16 @@ class News(models.Model):
         max_length=255,
         verbose_name=_('Заголовок')
     )
+    title_kk = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('Заголовок (казахский)')
+    )
+    title_en = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('Заголовок (английский)')
+    )
     slug = models.SlugField(
         max_length=255,
         unique=True,
@@ -99,8 +127,26 @@ class News(models.Model):
         max_length=500,
         verbose_name=_('Краткое описание')
     )
+    excerpt_kk = models.TextField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('Краткое описание (казахский)')
+    )
+    excerpt_en = models.TextField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('Краткое описание (английский)')
+    )
     content = models.TextField(
         verbose_name=_('Содержание')
+    )
+    content_kk = models.TextField(
+        blank=True,
+        verbose_name=_('Содержание (казахский)')
+    )
+    content_en = models.TextField(
+        blank=True,
+        verbose_name=_('Содержание (английский)')
     )
     image = models.ImageField(
         upload_to='news/%Y/%m/%d/',
@@ -131,15 +177,45 @@ class News(models.Model):
         blank=True,
         verbose_name=_('SEO заголовок')
     )
+    meta_title_kk = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('SEO заголовок (казахский)')
+    )
+    meta_title_en = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('SEO заголовок (английский)')
+    )
     meta_description = models.TextField(
         max_length=500,
         blank=True,
         verbose_name=_('SEO описание')
     )
+    meta_description_kk = models.TextField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('SEO описание (казахский)')
+    )
+    meta_description_en = models.TextField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('SEO описание (английский)')
+    )
     meta_keywords = models.CharField(
         max_length=255,
         blank=True,
         verbose_name=_('SEO ключевые слова')
+    )
+    meta_keywords_kk = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('SEO ключевые слова (казахский)')
+    )
+    meta_keywords_en = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('SEO ключевые слова (английский)')
     )
 
     # Timestamps
@@ -205,6 +281,16 @@ class ExternalNews(models.Model):
     title = models.CharField(
         max_length=500,
         verbose_name=_('Заголовок')
+    )
+    title_kk = models.CharField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('Заголовок (казахский)')
+    )
+    title_en = models.CharField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('Заголовок (английский)')
     )
     url = models.URLField(
         max_length=1000,

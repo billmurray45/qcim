@@ -14,6 +14,16 @@ class ProjectCategory(models.Model):
         unique=True,
         verbose_name=_('Название')
     )
+    name_kk = models.CharField(
+        max_length=100,
+        blank=True,
+        verbose_name=_('Название (казахский)')
+    )
+    name_en = models.CharField(
+        max_length=100,
+        blank=True,
+        verbose_name=_('Название (английский)')
+    )
     slug = models.SlugField(
         max_length=100,
         unique=True,
@@ -23,6 +33,14 @@ class ProjectCategory(models.Model):
     description = models.TextField(
         blank=True,
         verbose_name=_('Описание')
+    )
+    description_kk = models.TextField(
+        blank=True,
+        verbose_name=_('Описание (казахский)')
+    )
+    description_en = models.TextField(
+        blank=True,
+        verbose_name=_('Описание (английский)')
     )
     icon = models.CharField(
         max_length=50,
@@ -73,6 +91,16 @@ class Project(models.Model):
         max_length=255,
         verbose_name=_('Название проекта')
     )
+    title_kk = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('Название проекта (казахский)')
+    )
+    title_en = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('Название проекта (английский)')
+    )
     slug = models.SlugField(
         max_length=255,
         unique=True,
@@ -95,8 +123,26 @@ class Project(models.Model):
         max_length=500,
         verbose_name=_('Краткое описание')
     )
+    short_description_kk = models.TextField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('Краткое описание (казахский)')
+    )
+    short_description_en = models.TextField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('Краткое описание (английский)')
+    )
     description = models.TextField(
         verbose_name=_('Полное описание')
+    )
+    description_kk = models.TextField(
+        blank=True,
+        verbose_name=_('Полное описание (казахский)')
+    )
+    description_en = models.TextField(
+        blank=True,
+        verbose_name=_('Полное описание (английский)')
     )
 
     image = models.ImageField(
@@ -163,16 +209,44 @@ class Project(models.Model):
         blank=True,
         verbose_name=_('Местоположение (город/регион)')
     )
+    location_kk = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('Местоположение (казахский)')
+    )
+    location_en = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('Местоположение (английский)')
+    )
     country = models.CharField(
         max_length=100,
         default='Kazakhstan',
         verbose_name=_('Страна')
+    )
+    country_kk = models.CharField(
+        max_length=100,
+        blank=True,
+        verbose_name=_('Страна (казахский)')
+    )
+    country_en = models.CharField(
+        max_length=100,
+        blank=True,
+        verbose_name=_('Страна (английский)')
     )
 
     # Партнеры
     partners = models.TextField(
         blank=True,
         verbose_name=_('Партнеры/инвесторы')
+    )
+    partners_kk = models.TextField(
+        blank=True,
+        verbose_name=_('Партнеры/инвесторы (казахский)')
+    )
+    partners_en = models.TextField(
+        blank=True,
+        verbose_name=_('Партнеры/инвесторы (английский)')
     )
 
     # SEO поля
@@ -181,15 +255,45 @@ class Project(models.Model):
         blank=True,
         verbose_name=_('SEO заголовок')
     )
+    meta_title_kk = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('SEO заголовок (казахский)')
+    )
+    meta_title_en = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('SEO заголовок (английский)')
+    )
     meta_description = models.TextField(
         max_length=500,
         blank=True,
         verbose_name=_('SEO описание')
     )
+    meta_description_kk = models.TextField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('SEO описание (казахский)')
+    )
+    meta_description_en = models.TextField(
+        max_length=500,
+        blank=True,
+        verbose_name=_('SEO описание (английский)')
+    )
     meta_keywords = models.CharField(
         max_length=255,
         blank=True,
         verbose_name=_('SEO ключевые слова')
+    )
+    meta_keywords_kk = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('SEO ключевые слова (казахский)')
+    )
+    meta_keywords_en = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name=_('SEO ключевые слова (английский)')
     )
 
     # Статистика
