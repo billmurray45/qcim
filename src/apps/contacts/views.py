@@ -106,7 +106,12 @@ def contact_submit(request):
         )
 
         # Отправляем email уведомление
-        send_contact_email(contact_message)
+        email_sent = send_contact_email(contact_message)
+        if not email_sent:
+            logger.warning(
+                f'Email уведомление НЕ отправлено для сообщения #{contact_message.id} '
+                f'от {contact_message.email} — проверьте SMTP настройки в .env'
+            )
 
         # Формируем ответ
         success_message = _('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.')

@@ -4,7 +4,6 @@
 {% block title %}{% trans 'Личный кабинет - МФЦА Управление Капиталом' %}{% endblock %}
 
 {% block content %}
-<!-- Page Header -->
 <section class="page-header-section">
   <div class="container">
     <nav class="breadcrumbs">
@@ -18,6 +17,131 @@
 
 <section class="cabinet-section">
   <div class="container">
+    <div class="cabinet-grid">
+
+      <!-- Profile card -->
+      <div class="cabinet-card">
+        <div class="cabinet-card__header">
+          <div class="cabinet-avatar">
+            {{ user.first_name|slice:":1" }}{{ user.last_name|slice:":1" }}
+          </div>
+          <div>
+            <h2 class="cabinet-name">{{ user.get_full_name }}</h2>
+            <p class="cabinet-role">{{ user.get_role_display }}</p>
+          </div>
+        </div>
+        <div class="cabinet-fields">
+          <div class="cabinet-field">
+            <span class="cabinet-field__label">Email</span>
+            <span class="cabinet-field__value">{{ user.email }}</span>
+          </div>
+          {% if user.phone %}
+          <div class="cabinet-field">
+            <span class="cabinet-field__label">{% trans 'Телефон' %}</span>
+            <span class="cabinet-field__value">{{ user.phone }}</span>
+          </div>
+          {% endif %}
+          <div class="cabinet-field">
+            <span class="cabinet-field__label">{% trans 'Дата регистрации' %}</span>
+            <span class="cabinet-field__value">{{ user.date_joined|date:"d.m.Y" }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact messages history -->
+      <div class="cabinet-messages">
+        <h3 class="cabinet-section-title">{% trans 'История обращений' %}</h3>
+        {% if contact_messages %}
+        <div class="cabinet-table-wrap">
+          <table class="cabinet-table">
+            <thead>
+              <tr>
+                <th>{% trans 'Дата' %}</th>
+                <th>{% trans 'Тема' %}</th>
+                <th>{% trans 'Статус' %}</th>
+                <th>{% trans 'Сообщение' %}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for msg in contact_messages %}
+              <tr>
+                <td>{{ msg.created_at|date:"d.m.Y H:i" }}</td>
+                <td>{{ msg.get_subject_display }}</td>
+                <td><span class="cabinet-status {{ msg.get_status_badge_class }}">{{ msg.get_status_display }}</span></td>
+                <td class="cabinet-msg-preview">{{ msg.message|truncatewords:12 }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% else %}
+        <p class="cabinet-empty">{% trans 'У вас пока нет обращений.' %} <a href="{% url 'contacts:page' %}">{% trans 'Написать нам' %}</a></p>
+        {% endif %}
+      </div>
+
+    </div>
   </div>
 </section>
+
+{% block extra_css %}
+<style>
+.cabinet-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+@media (max-width: 768px) {
+  .cabinet-grid { grid-template-columns: 1fr; }
+}
+.cabinet-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 2rem;
+  align-self: start;
+}
+.cabinet-card__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.cabinet-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary, #007d44);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.cabinet-name { font-size: 1.1rem; font-weight: 700; margin: 0; }
+.cabinet-role { font-size: 0.8rem; color: #6b7280; margin: 0; }
+.cabinet-fields { display: flex; flex-direction: column; gap: 0.75rem; }
+.cabinet-field { display: flex; flex-direction: column; gap: 2px; }
+.cabinet-field__label { font-size: 0.75rem; color: #6b7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+.cabinet-field__value { font-size: 0.95rem; color: #111827; }
+.cabinet-messages { }
+.cabinet-section-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 1.25rem; }
+.cabinet-table-wrap { overflow-x: auto; }
+.cabinet-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.cabinet-table th { text-align: left; padding: 0.75rem 1rem; background: #f9fafb; color: #6b7280; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; border-bottom: 1px solid #e5e7eb; }
+.cabinet-table td { padding: 0.875rem 1rem; border-bottom: 1px solid #f3f4f6; color: #374151; }
+.cabinet-table tbody tr:last-child td { border-bottom: none; }
+.cabinet-msg-preview { color: #6b7280; }
+.cabinet-status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+.status--new { background: #dbeafe; color: #1d4ed8; }
+.status--read { background: #f3f4f6; color: #374151; }
+.status--progress { background: #fef3c7; color: #92400e; }
+.status--replied { background: #d1fae5; color: #065f46; }
+.status--cancelled { background: #fee2e2; color: #991b1b; }
+.cabinet-empty { color: #6b7280; font-size: 0.95rem; }
+.cabinet-empty a { color: var(--primary, #007d44); }
+</style>
+{% endblock %}
 {% endblock %}

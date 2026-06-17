@@ -59,8 +59,8 @@
           {{ news|localized:'excerpt' }}
         </div>
 
-        <div class="news-detail__body">
-          {{ news|localized:'content'|linebreaks }}
+        <div class="news-detail__body ck-content">
+          {{ news|localized:'content'|safe }}
         </div>
       </div>
 

@@ -1,6 +1,8 @@
 from django.contrib import admin
+from django.db import models
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
+from django_ckeditor_5.widgets import CKEditor5Widget
 from .models import Category, News, ExternalNews
 
 
@@ -44,6 +46,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        models.TextField: {'widget': CKEditor5Widget(config_name='default')}
+    }
     list_display = [
         'title',
         'category',

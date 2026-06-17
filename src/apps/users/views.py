@@ -1,4 +1,5 @@
 import logging
+import re
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
@@ -12,6 +13,7 @@ from django.utils.translation import gettext_lazy as _
 
 from .models import CustomUser
 from apps.common.utils import get_client_ip
+from apps.contacts.models import ContactMessage
 
 logger = logging.getLogger('apps.users')
 security_logger = logging.getLogger('security')
@@ -24,9 +26,15 @@ def login_view(request):
 
     Логирует успешные и неудачные попытки входа.
     """
-    email = request.POST.get('email')
-    password = request.POST.get('password')
+    email = request.POST.get('email', '').strip()
+    password = request.POST.get('password', '')
     client_ip = get_client_ip(request)
+
+    if not email or not password:
+        return JsonResponse({
+            'success': False,
+            'error': str(_('Введите email и пароль.'))
+        })
 
     logger.info(f'Попытка входа: email={email}, IP={client_ip}')
 
@@ -145,6 +153,10 @@ def register_view(request):
     if password != password2:
         errors['password2'] = str(_('Пароли не совпадают'))
 
+    # Валидация телефона
+    if phone and not re.match(r'^\+?[0-9\s\-\(\)]{7,20}$', phone):
+        errors['phone'] = str(_('Введите корректный номер телефона.'))
+
     # Проверка согласия
     if not agree:
         errors['agree'] = str(_('Необходимо принять условия использования'))
@@ -200,4 +212,11 @@ class CabinetView(LoginRequiredMixin, TemplateView):
     Личный кабинет пользователя.
     """
     template_name = 'users/cabinet.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['contact_messages'] = ContactMessage.objects.filter(
+            user=self.request.user
+        ).order_by('-created_at')[:20]
+        return context
 

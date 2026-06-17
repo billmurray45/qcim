@@ -127,16 +127,12 @@ class ContactForm(forms.ModelForm):
 
     def clean_email(self):
         """Дополнительная валидация email."""
+        from disposable_email_domains import blocklist
+
         email = self.cleaned_data.get('email', '').lower().strip()
 
-        # Проверка на одноразовые email сервисы
-        disposable_domains = [
-            'tempmail.com', 'throwaway.email', '10minutemail.com',
-            'guerrillamail.com', 'mailinator.com'
-        ]
-
         domain = email.split('@')[-1] if '@' in email else ''
-        if domain in disposable_domains:
+        if domain in blocklist:
             raise forms.ValidationError(_('Пожалуйста, используйте постоянный email адрес.'))
 
         return email

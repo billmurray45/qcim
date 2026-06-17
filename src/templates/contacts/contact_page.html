@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static i18n %}
+{% load static i18n i18n_extras %}
 
 {% block title %}{% trans 'Контакты - QICM Ltd.' %}{% endblock %}
 {% block meta_description %}{% trans 'Свяжитесь с QICM Ltd. Контакты, адрес, телефон и форма обратной связи.' %}{% endblock %}
@@ -34,7 +34,9 @@
           </div>
           <div>
             <p class="ct-strip__label">{% trans 'Юридический адрес' %}</p>
-            <p class="ct-strip__value">{% trans 'пр. Мәңгілік Ел, 55А, Z05T2H3, Астана' %}</p>
+            <p class="ct-strip__value">
+              {% if main_office %}{{ main_office|localized:'address' }}{% else %}{% trans 'пр. Мәңгілік Ел, 55А, Z05T2H3, Астана' %}{% endif %}
+            </p>
           </div>
         </div>
         <div class="ct-strip__item">
@@ -43,7 +45,11 @@
           </div>
           <div>
             <p class="ct-strip__label">{% trans 'Телефон' %}</p>
+            {% if main_office and main_office.phone %}
+            <a href="tel:{{ main_office.phone }}" class="ct-strip__value ct-strip__value--link">{{ main_office.phone }}</a>
+            {% else %}
             <a href="tel:+77172554222" class="ct-strip__value ct-strip__value--link">+7 (7172) 554-222</a>
+            {% endif %}
           </div>
         </div>
         <div class="ct-strip__item">
@@ -52,7 +58,11 @@
           </div>
           <div>
             <p class="ct-strip__label">{% trans 'Общие вопросы' %}</p>
+            {% if main_office and main_office.email %}
+            <a href="mailto:{{ main_office.email }}" class="ct-strip__value ct-strip__value--link">{{ main_office.email }}</a>
+            {% else %}
             <a href="mailto:info@qicm.kz" class="ct-strip__value ct-strip__value--link">info@qicm.kz</a>
+            {% endif %}
           </div>
         </div>
         <div class="ct-strip__item">
@@ -61,7 +71,9 @@
           </div>
           <div>
             <p class="ct-strip__label">{% trans 'Режим работы' %}</p>
-            <p class="ct-strip__value">{% trans 'Пн–Пт: 09:00 – 18:00' %}</p>
+            <p class="ct-strip__value">
+              {% if main_office %}{{ main_office|localized:'working_hours' }}{% else %}{% trans 'Пн–Пт: 09:00 – 18:00' %}{% endif %}
+            </p>
           </div>
         </div>
       </div>

@@ -187,12 +187,16 @@ class Command(BaseCommand):
         if source in ('all', 'baiterek'):
             self.stdout.write('Парсинг Байтерек...')
             items = fetch_baiterek(limit=limit)
+            if not items:
+                logger.warning('Байтерек: парсер вернул 0 новостей — возможно изменилась структура сайта')
             save_items(items)
             self.stdout.write(f'  Байтерек: {len(items)} новостей обработано')
 
         if source in ('all', 'qic'):
             self.stdout.write('Парсинг QIC...')
             items = fetch_qic(limit=limit)
+            if not items:
+                logger.warning('QIC: парсер вернул 0 новостей — возможно изменилась структура сайта')
             save_items(items)
             self.stdout.write(f'  QIC: {len(items)} новостей обработано')
 

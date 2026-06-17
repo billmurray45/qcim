@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'axes',
     'compressor',
     'htmlmin',
+    'django_ckeditor_5',
 
     # Local apps
     'apps.core',
@@ -211,6 +212,22 @@ CONTACT_EMAIL_RECIPIENTS = os.getenv(
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# CKEditor 5
+CKEDITOR_5_CONFIGS = {
+    'default': {
+        'toolbar': [
+            'heading', '|',
+            'bold', 'italic', 'underline', 'strikethrough', '|',
+            'bulletedList', 'numberedList', 'blockQuote', '|',
+            'link', 'imageUpload', '|',
+            'undo', 'redo',
+        ],
+        'height': 400,
+    },
+}
+CKEDITOR_5_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
 
 # Jazzmin Settings
