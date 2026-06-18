@@ -1091,7 +1091,7 @@ msgstr "Contacts"
 #: templates/core/submit_request.html:13 templates/core/submit_request.html:16
 #: templates/users/cabinet.html:13 templates/users/cabinet.html:15
 msgid "Личный кабинет"
-msgstr "Personal account"
+msgstr "Client Portal"
 
 #: templates/base.html:73 templates/base.html:238
 msgid "Уведомления"
@@ -1259,7 +1259,7 @@ msgstr "General inquiries"
 
 #: templates/contacts/contact_page.html:63
 msgid "Режим работы"
-msgstr "Working hours"
+msgstr "Business Hours"
 
 #: templates/contacts/contact_page.html:64
 msgid "Пн–Пт: 09:00 – 18:00"
@@ -1496,7 +1496,7 @@ msgid ""
 "АО «НИХ «Байтерек»."
 msgstr ""
 "QICM Ltd. is a subsidiary of Qazaqstan Investment Corporation JSC (QIC), a "
-"fund of private equity funds within the structure of Baiterek NMH JSC."
+"fund of private equity funds within the structure of Baiterek NIH JSC."
 
 #: templates/core/home.html:80
 msgid "Лицензия MIS"
@@ -1676,7 +1676,7 @@ msgid ""
 "зарегистрированной в Международном финансовом центре «Астана» (AIFC), "
 "регулируемой соответствующими органами AIFC."
 msgstr ""
-"The applicant’s personal account is provided by <strong>Qazaqstan Investment "
+"The applicant’s client portal is provided by <strong>Qazaqstan Investment "
 "Capital Management Ltd.</strong> (QICM Ltd.), registered in the Astana "
 "International Financial Centre (AIFC) and regulated by the relevant AIFC "
 "authorities."
@@ -1708,7 +1708,7 @@ msgstr ""
 #: templates/core/privacy_notice.html:78 templates/core/submit_request.html:157
 msgid "При регистрации и подаче заявки через Личный кабинет мы можем собирать:"
 msgstr ""
-"When registering and submitting an application through the personal account, "
+"When registering and submitting an application through the Client Portal, "
 "we may collect:"
 
 #: templates/core/privacy_notice.html:82 templates/core/submit_request.html:160
@@ -1857,7 +1857,7 @@ msgid ""
 "партнёрам ЧК QICM Ltd.;"
 msgstr ""
 "our parent company Qazaqstan Investment Corporation JSC, which provides IT "
-"infrastructure and support for the personal account; Baiterek NMH JSC as the "
+"infrastructure and support for the personal account; Baiterek NIH JSC as the "
 "recipient of Group reporting; and QICM Ltd. partners;"
 
 #: templates/core/privacy_notice.html:151
@@ -1961,7 +1961,7 @@ msgstr "To exercise your rights, contact us:"
 
 #: templates/core/submit_request.html:4 templates/users/cabinet.html:4
 msgid "Личный кабинет - МФЦА Управление Капиталом"
-msgstr "Personal account - AIFC Capital Management"
+msgstr "Client Portal - AIFC Capital Management"
 
 #: templates/core/submit_request.html:26
 msgid "Этапы рассмотрения заявок по инвестиционным проектам"
@@ -1974,14 +1974,14 @@ msgid ""
 "(NDA) и Согласие на сбор, обработку персональных данных. А также, информация "
 "по Заявителю направляется в ИС Бақылауда для соответствующей проверки:"
 msgstr ""
-"After receiving the complete package and before the application review "
-"begins, a non-disclosure agreement (NDA) and consent for personal data "
-"collection and processing are signed. Information about the applicant is "
-"also sent to the Baqylauda information system for the relevant check:"
+"Upon receipt of a complete application package, a non-disclosure agreement "
+"(NDA) and a consent form for the collection and processing of personal data "
+"must be signed. Information about the applicant is also sent to the "
+"«Baqylauda» information system for the relevant verification procedures:"
 
 #: templates/core/submit_request.html:33
 msgid "Заявка подается через Личный кабинет"
-msgstr "The application is submitted through the personal account"
+msgstr "The application is submitted through the Client Portal"
 
 #: templates/core/submit_request.html:43
 msgid "Индикативный этап"
@@ -2000,9 +2000,10 @@ msgid ""
 "предоставления Заявителем полного пакета документов."
 msgstr ""
 "At stage 1, indicative preliminary financing terms are determined. The "
-"project review includes financial and economic, legal, environmental and "
-"social assessment and risk assessment. Review period: within 25 business "
-"days from the date the applicant provides the complete document package."
+"project review includes financial, economic, legal, environmental and "
+"social assessments, as well as risk assessment. Review period is up to 25 "
+"business days from the date the applicant provides the complete "
+"application package."
 
 #: templates/core/submit_request.html:60
 msgid "Финальный этап"
@@ -2024,13 +2025,13 @@ msgid ""
 "перечня отлагательных условий, включая анализ и утверждение основных условий "
 "финансирования по проекту."
 msgstr ""
-"At stage 2, the final project review includes financial and economic, legal, "
-"environmental and social assessment and risk assessment, taking into account "
-"fulfilment of conditions precedent accepted during the indicative review "
-"stage and independent project reviews, if required. Review period: within 35 "
-"business days from the date the applicant provides the complete document "
-"package and fulfils all conditions precedent, including analysis and "
-"approval of the main financing terms for the project."
+"At stage 2, the final project review includes financial, economic, legal, "
+"environmental and social, risk assessments, taking into account fulfilment "
+"of conditions precedent accepted during the indicative review stage and "
+"independent project reviews, if required. Review period is up to 35 "
+"business days from the date the applicant provides the complete "
+"application package and fulfils all conditions precedent, including "
+"analysis and approval of the main financing terms for the project."
 
 #: templates/core/submit_request.html:74
 msgid "Контакты для связи"
@@ -2038,7 +2039,7 @@ msgstr "Contact persons"
 
 #: templates/core/submit_request.html:82
 msgid "Джурабекова Сания Едыгеевна"
-msgstr "Saniya Dzhurabekova"
+msgstr "Saniya Jurabekova"
 
 #: templates/core/submit_request.html:83 templates/core/submit_request.html:104
 msgid "Инвестиционный директор"
@@ -2261,7 +2262,7 @@ msgstr "Kazakhstan as the key market"
 
 #: templates/holdings/funds_page.html:53
 msgid "Приоритетные отрасли"
-msgstr "Priority sectors"
+msgstr "Priority Sectors"
 
 #: templates/holdings/funds_page.html:55
 msgid "Торговля и экспортные операции"
@@ -2316,8 +2317,8 @@ msgid ""
 "Иные сектора в соответствии со стратегическими документами АО «НИХ "
 "«Байтерек», QIC и управляющей компании"
 msgstr ""
-"Other sectors in accordance with the strategic documents of Baiterek NMH "
-"JSC, QIC and the management company"
+"Other sectors in accordance with the strategic documents of Baiterek NIH "
+"JSC, QIC JSC and the management company"
 
 #: templates/holdings/funds_page.html:78
 msgid "Our Funds"
@@ -2400,7 +2401,7 @@ msgstr "QICM Ltd. news"
 
 #: templates/news/news_list.html:34
 msgid "АО «НИХ «Байтерек»"
-msgstr "Baiterek NMH JSC"
+msgstr "Baiterek NIH JSC"
 
 #: templates/news/news_list.html:36
 msgid "АО «QIC»"

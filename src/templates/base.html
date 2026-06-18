@@ -175,7 +175,8 @@
             </div>
             <label class="auth-form__checkbox">
               <input type="checkbox" name="agree" required>
-              <span>{% blocktrans %}Согласен с <a href="{% url 'core:privacy_notice' %}">условиями использования</a>{% endblocktrans %}</span>
+              {% url 'core:privacy_notice' as privacy_url %}
+              <span>{% blocktrans %}Согласен с <a href="{{ privacy_url }}">условиями использования</a>{% endblocktrans %}</span>
             </label>
             <button type="submit" class="auth-form__submit">{% trans 'Зарегистрироваться' %}</button>
           </form>

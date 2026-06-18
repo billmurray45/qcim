@@ -1,9 +1,26 @@
+from django.conf import settings
+from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils.translation import gettext_lazy as _
 from django.views.generic import TemplateView
 from apps.news.models import News
 from apps.contacts.models import Office
 from .models import TeamMember
+
+
+def robots_txt(request):
+    if settings.DEBUG:
+        content = 'User-agent: *\nDisallow: /\n'
+    else:
+        sitemap_url = request.build_absolute_uri('/sitemap.xml')
+        content = (
+            'User-agent: *\n'
+            'Disallow: /admin/\n'
+            'Disallow: /auth/\n'
+            'Disallow: /ckeditor5/\n'
+            f'Sitemap: {sitemap_url}\n'
+        )
+    return HttpResponse(content, content_type='text/plain')
 
 
 class SubmitRequestView(TemplateView):

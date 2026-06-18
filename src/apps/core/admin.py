@@ -1,23 +1,24 @@
+import nested_admin
 from django.contrib import admin
 from django.utils.html import format_html
 from .models import TeamMember, TeamMemberBioSection, TeamMemberBioItem
 
 
-class TeamMemberBioItemInline(admin.TabularInline):
+class TeamMemberBioItemInline(nested_admin.NestedTabularInline):
     model = TeamMemberBioItem
     extra = 1
     fields = ('text', 'text_kk', 'text_en', 'order')
 
 
-class TeamMemberBioSectionInline(admin.StackedInline):
+class TeamMemberBioSectionInline(nested_admin.NestedStackedInline):
     model = TeamMemberBioSection
     extra = 1
     fields = ('title', 'title_kk', 'title_en', 'order')
-    show_change_link = True
+    inlines = [TeamMemberBioItemInline]
 
 
 @admin.register(TeamMember)
-class TeamMemberAdmin(admin.ModelAdmin):
+class TeamMemberAdmin(nested_admin.NestedModelAdmin):
     list_display = ('photo_preview', 'get_full_name', 'position', 'group', 'is_active', 'order')
     list_filter = ('group', 'is_active')
     list_editable = ('order',)
@@ -64,10 +65,3 @@ class TeamMemberAdmin(admin.ModelAdmin):
             )
         return 'Фото не загружено'
     photo_preview_large.short_description = 'Текущее фото'
-
-
-@admin.register(TeamMemberBioSection)
-class TeamMemberBioSectionAdmin(admin.ModelAdmin):
-    list_display = ('member', 'title', 'order')
-    search_fields = ('member__last_name', 'title', 'title_kk', 'title_en')
-    inlines = [TeamMemberBioItemInline]

@@ -12,3 +12,4 @@ beautifulsoup4==4.14.3
 Pillow==12.2.0
 disposable-email-domains==0.0.203
 django-ckeditor-5==0.2.20
+django-nested-admin==4.1.6

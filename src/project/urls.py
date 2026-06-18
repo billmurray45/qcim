@@ -17,13 +17,30 @@ Including another URLconf
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.sitemaps.views import sitemap
 from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, include
+
+from apps.core.views import robots_txt
+from apps.news.sitemaps import NewsSitemap, NewsCategorySitemap
+from apps.projects.sitemaps import ProjectSitemap, ProjectCategorySitemap
+from apps.common.sitemaps import StaticViewSitemap
+
+sitemaps = {
+    'static': StaticViewSitemap,
+    'news': NewsSitemap,
+    'news-categories': NewsCategorySitemap,
+    'projects': ProjectSitemap,
+    'project-categories': ProjectCategorySitemap,
+}
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('i18n/', include('django.conf.urls.i18n')),
     path('ckeditor5/', include('django_ckeditor_5.urls')),
+    path('_nested_admin/', include('nested_admin.urls')),
+    path('robots.txt', robots_txt, name='robots_txt'),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
 ]
 
 urlpatterns += i18n_patterns(
