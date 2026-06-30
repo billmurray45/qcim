@@ -130,7 +130,7 @@ class Office(models.Model):
     address_en = models.CharField(_('адрес (английский)'), max_length=255, blank=True)
     phone = models.CharField(_('телефон'), max_length=50)
     email = models.EmailField(_('email'), blank=True)
-    working_hours = models.CharField(_('режим работы'), max_length=200, default='Пн-Пт 9:00-18:00')
+    working_hours = models.CharField(_('режим работы'), max_length=200, default='Пн-Пт: 08:30-18:00 (Астана, GMT+5)')
     working_hours_kk = models.CharField(_('режим работы (казахский)'), max_length=200, blank=True)
     working_hours_en = models.CharField(_('режим работы (английский)'), max_length=200, blank=True)
 

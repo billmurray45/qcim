@@ -20,14 +20,14 @@ FUND_DATA = {
     'Adal Fund LP': {
         'name_en': 'Adal Fund LP',
         'badge_en': 'Open-ended fund',
-        'fund_type_en': 'Open-ended specialised umbrella private equity fund · AIFC',
+        'fund_type_en': 'Fund Structure: open-ended specialised umbrella private equity fund',
         'target_size_en': '$1 billion',
         'lifespan_en': '10 years',
     },
     'Kokzhiyek Fund LP': {
         'name_en': 'Kokzhiyek Fund LP',
         'badge_en': 'Closed-end fund',
-        'fund_type_en': 'Closed-end private equity fund · AIFC',
+        'fund_type_en': 'Fund Structure: closed-end private equity fund',
         'target_size_en': '$4 billion',
         'lifespan_en': '40 years',
     },
@@ -50,8 +50,8 @@ GOAL_TRANSLATIONS = {
 
 OFFICE_DATA = {
     'city_en': 'Astana',
-    'address_en': 'Yesil District, 55A Mangilik El Ave., Block C, Z05T2H3, Astana, Republic of Kazakhstan',
-    'working_hours_en': 'Mon-Fri 08:30-18:00 (Astana, GMT+5)',
+    'address_en': 'Yesil district, 55A Mangilik El Ave., Block C, Z05T2H3, Astana, Republic of Kazakhstan',
+    'working_hours_en': 'Monday-Friday: 08:30-18:00 (Astana, GMT+5)',
 }
 
 

@@ -35,7 +35,7 @@
           <div>
             <p class="ct-strip__label">{% trans 'Юридический адрес' %}</p>
             <p class="ct-strip__value">
-              {% if main_office %}{{ main_office|localized:'address' }}{% else %}{% trans 'пр. Мәңгілік Ел, 55А, Z05T2H3, Астана' %}{% endif %}
+              {% if main_office %}{{ main_office|localized:'address' }}{% else %}{% trans 'пр. Мәңгілік Ел, 55А, Z05T2H3, Астана, Республика Казахстан' %}{% endif %}
             </p>
           </div>
         </div>
@@ -72,7 +72,7 @@
           <div>
             <p class="ct-strip__label">{% trans 'Режим работы' %}</p>
             <p class="ct-strip__value">
-              {% if main_office %}{{ main_office|localized:'working_hours' }}{% else %}{% trans 'Пн–Пт: 09:00 – 18:00' %}{% endif %}
+              {% if main_office %}{{ main_office|localized:'working_hours' }}{% else %}{% trans 'Пн–Пт: 08:30–18:00 (Астана, GMT+5)' %}{% endif %}
             </p>
           </div>
         </div>

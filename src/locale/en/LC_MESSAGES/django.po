@@ -1250,8 +1250,8 @@ msgid "Юридический адрес"
 msgstr "Legal address"
 
 #: templates/contacts/contact_page.html:37
-msgid "пр. Мәңгілік Ел, 55А, Z05T2H3, Астана"
-msgstr "55A Mangilik El Ave., Z05T2H3, Astana"
+msgid "пр. Мәңгілік Ел, 55А, Z05T2H3, Астана, Республика Казахстан"
+msgstr "55A Mangilik El Ave., Z05T2H3, Astana, Republic of Kazakhstan"
 
 #: templates/contacts/contact_page.html:54
 msgid "Общие вопросы"
@@ -1262,8 +1262,8 @@ msgid "Режим работы"
 msgstr "Business Hours"
 
 #: templates/contacts/contact_page.html:64
-msgid "Пн–Пт: 09:00 – 18:00"
-msgstr "Mon-Fri: 09:00-18:00"
+msgid "Пн–Пт: 08:30–18:00 (Астана, GMT+5)"
+msgstr "Monday-Friday: 08:30-18:00 (Astana, GMT+5)"
 
 #: templates/contacts/contact_page.html:83
 msgid "По вопросам проектов и сделок"
@@ -1751,7 +1751,7 @@ msgid ""
 "техническую информацию об использовании Личного кабинета (IP-адрес, лог-"
 "записи входа и действий) для целей безопасности и аудита."
 msgstr ""
-"technical information on personal account use (IP address, login and "
+"technical information on Client Portal use (IP address, login and "
 "activity logs) for security and audit purposes."
 
 #: templates/core/privacy_notice.html:94 templates/core/submit_request.html:171
@@ -1759,7 +1759,7 @@ msgid ""
 "Техническое обеспечение Личного кабинета, мониторинг инвестиционной "
 "деятельности Группы и формирование корпоративной отчётности."
 msgstr ""
-"Technical support for the personal account, monitoring Group investment "
+"Technical support for the Client Portal, monitoring Group investment "
 "activity and preparing corporate reporting."
 
 #: templates/core/privacy_notice.html:102
@@ -1775,7 +1775,7 @@ msgstr "Your data is used for:"
 #: templates/core/privacy_notice.html:106
 #: templates/core/submit_request.html:182
 msgid "регистрации и управления вашей учётной записью в Личном кабинете;"
-msgstr "registering and managing your personal account;"
+msgstr "registering and managing your Client Portal account;"
 
 #: templates/core/privacy_notice.html:107
 #: templates/core/submit_request.html:183
@@ -1857,7 +1857,7 @@ msgid ""
 "партнёрам ЧК QICM Ltd.;"
 msgstr ""
 "our parent company Qazaqstan Investment Corporation JSC, which provides IT "
-"infrastructure and support for the personal account; Baiterek NIH JSC as the "
+"infrastructure and support for the Client Portal; Baiterek NIH JSC as the "
 "recipient of Group reporting; and QICM Ltd. partners;"
 
 #: templates/core/privacy_notice.html:151
@@ -2055,11 +2055,11 @@ msgstr "Ready to apply?"
 
 #: templates/core/submit_request.html:121
 msgid "Перейдите в личный кабинет"
-msgstr "Go to the personal account"
+msgstr "Go to the Client Portal"
 
 #: templates/core/submit_request.html:123
 msgid "ПЕРЕЙТИ В ЛИЧНЫЙ КАБИНЕТ"
-msgstr "GO TO PERSONAL ACCOUNT"
+msgstr "GO TO CLIENT PORTAL"
 
 #: templates/core/submit_request.html:147
 msgid ""
@@ -2089,7 +2089,7 @@ msgstr ""
 
 #: templates/core/submit_request.html:271
 msgid "Перейти в личный кабинет"
-msgstr "Go to personal account"
+msgstr "Go to Client Portal"
 
 #: templates/core/submit_request.html:280
 msgid "Перечень документов"
@@ -2247,9 +2247,9 @@ msgid ""
 "источников финансирования."
 msgstr ""
 "Focus on companies and projects with transparent business models, "
-"sustainable cash flows and scaling potential both in the region and beyond. "
+"sustainable cash flows and scaling potential within the region and beyond. "
 "QICM Ltd. actively contributes to value creation through strategic "
-"development, operational improvements and attracting additional sources of "
+"development, operational enhancements and attracting additional sources of "
 "financing."
 
 #: templates/holdings/funds_page.html:49
@@ -2383,7 +2383,7 @@ msgstr "News - QICM Ltd."
 
 #: templates/news/news_list.html:5
 msgid "Новости QICM Ltd., холдинга Байтерек и QIC"
-msgstr "News from QICM Ltd., Baiterek holding and QIC"
+msgstr "News from QICM Ltd., Baiterek NIH JSC and QIC JSC"
 
 #: templates/news/news_list.html:11
 msgid "Новости QICM Ltd."
@@ -2394,10 +2394,8 @@ msgid "Актуальные события и обновления QICM Ltd."
 msgstr "Latest events and updates from QICM Ltd."
 
 #: templates/news/news_list.html:32
-#, fuzzy
-#| msgid "Новости QICM Ltd."
 msgid "ЧК QICM Ltd."
-msgstr "QICM Ltd. news"
+msgstr "QICM Ltd."
 
 #: templates/news/news_list.html:34
 msgid "АО «НИХ «Байтерек»"

@@ -1256,8 +1256,8 @@ msgid "Юридический адрес"
 msgstr "Юридический адрес"
 
 #: templates/contacts/contact_page.html:37
-msgid "пр. Мәңгілік Ел, 55А, Z05T2H3, Астана"
-msgstr "пр. Мәңгілік Ел, 55А, Z05T2H3, Астана"
+msgid "пр. Мәңгілік Ел, 55А, Z05T2H3, Астана, Республика Казахстан"
+msgstr "пр. Мәңгілік Ел, 55А, Z05T2H3, Астана, Республика Казахстан"
 
 #: templates/contacts/contact_page.html:54
 msgid "Общие вопросы"
@@ -1268,8 +1268,8 @@ msgid "Режим работы"
 msgstr "Режим работы"
 
 #: templates/contacts/contact_page.html:64
-msgid "Пн–Пт: 09:00 – 18:00"
-msgstr "Пн–Пт: 09:00 – 18:00"
+msgid "Пн–Пт: 08:30–18:00 (Астана, GMT+5)"
+msgstr "Пн–Пт: 08:30–18:00 (Астана, GMT+5)"
 
 #: templates/contacts/contact_page.html:83
 msgid "По вопросам проектов и сделок"
@@ -2432,10 +2432,8 @@ msgid "Актуальные события и обновления QICM Ltd."
 msgstr "Актуальные события и обновления QICM Ltd."
 
 #: templates/news/news_list.html:32
-#, fuzzy
-#| msgid "Новости QICM Ltd."
 msgid "ЧК QICM Ltd."
-msgstr "Новости QICM Ltd."
+msgstr "QICM Ltd."
 
 #: templates/news/news_list.html:34
 msgid "АО «НИХ «Байтерек»"

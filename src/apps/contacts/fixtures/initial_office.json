@@ -7,7 +7,7 @@
       "address": "район Есиль, Пр. Мангилик ел 55А, Блок С, Z05T2H3",
       "phone": "+7 (7172) 554-222",
       "email": "info@qicm.kz",
-      "working_hours": "Пн-Пт 9:00-18:00",
+      "working_hours": "Пн-Пт: 08:30-18:00 (Астана, GMT+5)",
       "latitude": null,
       "longitude": null,
       "instagram": "https://example.com",
@@ -26,9 +26,9 @@
       "city_kk": "Астана",
       "city_en": "Astana",
       "address_kk": "Есіл ауданы, Мәңгілік Ел даңғылы 55А, C блогы, Z05T2H3",
-      "address_en": "Yesil district, 55A Mangilik El Ave., Block C, Z05T2H3",
-      "working_hours_kk": "Дс-Жм 9:00-18:00",
-      "working_hours_en": "Mon-Fri 9:00-18:00"
+      "address_en": "Yesil district, 55A Mangilik El Ave., Block C, Z05T2H3, Astana, Republic of Kazakhstan",
+      "working_hours_kk": "Дс-Жм: 08:30-18:00 (Астана, GMT+5)",
+      "working_hours_en": "Monday-Friday: 08:30-18:00 (Astana, GMT+5)"
     }
   }
 ]
